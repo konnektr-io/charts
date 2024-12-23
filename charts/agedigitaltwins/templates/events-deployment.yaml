@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "agedigitaltwins.events.fullname" . }}
+  labels:
+    {{- include "agedigitaltwins.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "agedigitaltwins.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.events.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "agedigitaltwins.labels" . | nindent 8 }}
+        {{- with .Values.events.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.events.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "agedigitaltwins.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.events.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.events.securityContext | nindent 12 }}
+          image: "{{ .Values.events.image.repository }}:{{ .Values.events.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.events.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.events.service.port }}
+              protocol: TCP
+          livenessProbe:
+            {{- toYaml .Values.events.livenessProbe | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.events.readinessProbe | nindent 12 }}
+          resources:
+            {{- toYaml .Values.events.resources | nindent 12 }}
+          {{- with .Values.events.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with .Values.events.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.events.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.events.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.events.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
