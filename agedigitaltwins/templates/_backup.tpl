@@ -1,4 +1,4 @@
-{{- define "cluster.backup" -}}
+{{- define "agedigitaltwins.cluster.backup" -}}
 {{- if .Values.backups.enabled }}
 backup:
   target: "prefer-standby"
@@ -14,6 +14,6 @@ backup:
       jobs: {{ .Values.backups.data.jobs }}
 
     {{- $d := dict "chartFullname" (include "cluster.fullname" .) "scope" .Values.backups "secretPrefix" "backup" }}
-    {{- include "cluster.barmanObjectStoreConfig" $d | nindent 2 }}
+    {{- include "agedigitaltwins.cluster.barmanObjectStoreConfig" $d | nindent 2 }}
 {{- end }}
 {{- end }}

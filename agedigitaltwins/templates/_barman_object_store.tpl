@@ -1,4 +1,4 @@
-{{- define "cluster.barmanObjectStoreConfig" -}}
+{{- define "agedigitaltwins.cluster.barmanObjectStoreConfig" -}}
 
 {{- if .scope.endpointURL }}
   endpointURL: {{ .scope.endpointURL | quote }}

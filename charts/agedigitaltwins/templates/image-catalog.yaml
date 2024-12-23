@@ -1,8 +1,0 @@
-apiVersion: postgresql.cnpg.io/v1
-kind: ImageCatalog
-metadata:
-  name: { { include "agedigitaltwins.fullname" . } }
-spec:
-  images:
-    - major: 16
-      image: ghcr.io/konnektr-io/age:16.6-2-bookworm

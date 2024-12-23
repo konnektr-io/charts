@@ -5,11 +5,10 @@ metadata:
   labels:
     {{- include "agedigitaltwins.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{ .Values.api.service.port }}
       targetPort: 8080
       protocol: TCP
-      name: http
   selector:
     app: {{ include "agedigitaltwins.name" . }}-api

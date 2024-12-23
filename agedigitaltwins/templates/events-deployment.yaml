@@ -25,19 +25,15 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "agedigitaltwins.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.events.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.events.securityContext | nindent 12 }}
-          image: "{{ .Values.events.image.repository }}:{{ .Values.events.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.events.image.pullPolicy }}
+          image: "{{- include "agedigitaltwins.api.imageName" . }}"
           ports:
-            - name: http
-              containerPort: {{ .Values.events.service.port }}
-              protocol: TCP
+            - containerPort: 8080
           livenessProbe:
             {{- toYaml .Values.events.livenessProbe | nindent 12 }}
           readinessProbe:
