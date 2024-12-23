@@ -31,7 +31,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.events.securityContext | nindent 12 }}
-          image: "{{- include "agedigitaltwins.api.imageName" . }}"
+          image: "{{- include "agedigitaltwins.events.imageName" . }}"
           ports:
             - containerPort: 8080
           env:
