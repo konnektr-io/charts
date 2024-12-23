@@ -3,7 +3,18 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 0.7.11
-    created: "2024-12-23T17:04:58.4621097+01:00"
+    created: "2024-12-23T17:21:05.9018932+01:00"
+    description: Deploys and manages the AGE Digital Twins API, events and Apache
+      AGE database
+    digest: fcd20ba20566a229dc8047957fa33bc7a17afa6fce0726fe6e13f20f3480fb9b
+    name: agedigitaltwins
+    type: application
+    urls:
+    - https://charts.konnektr.io/agedigitaltwins-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.7.11
+    created: "2024-12-23T17:21:05.9003117+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 87fc0533d76b7765cb087669eabf35434c3fc8c8592def583601d0651e7a25bf
@@ -12,37 +23,4 @@ entries:
     urls:
     - https://charts.konnektr.io/agedigitaltwins-0.1.3.tgz
     version: 0.1.3
-  - apiVersion: v2
-    appVersion: 0.7.11
-    created: "2024-12-23T17:04:58.4601105+01:00"
-    description: Deploys and manages the AGE Digital Twins API, events and Apache
-      AGE database
-    digest: cd9a34b8e79efbb27e535ab5e499642ec49c4f74f342c42f88c01cbd0ff49a68
-    name: agedigitaltwins
-    type: application
-    urls:
-    - https://charts.konnektr.io/agedigitaltwins-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 0.7.11
-    created: "2024-12-23T17:04:58.458992+01:00"
-    description: Deploys and manages the AGE Digital Twins API, events and Apache
-      AGE database
-    digest: 4c998ae5c037092a43a69d0f2321ae8041abc274a90bc85b7620f0c1ca48d8a6
-    name: agedigitaltwins
-    type: application
-    urls:
-    - https://charts.konnektr.io/agedigitaltwins-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 0.7.11
-    created: "2024-12-23T17:04:58.4572226+01:00"
-    description: Deploys and manages the AGE Digital Twins API, events and Apache
-      AGE database
-    digest: 62259572b9fd1663c8d0ebfb3c678f86acd7a47c99daf7209f755788081507bd
-    name: agedigitaltwins
-    type: application
-    urls:
-    - https://charts.konnektr.io/agedigitaltwins-0.1.0.tgz
-    version: 0.1.0
-generated: "2024-12-23T17:04:58.4545191+01:00"
+generated: "2024-12-23T17:21:05.8987525+01:00"

@@ -74,18 +74,18 @@ api:
   # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
   livenessProbe:
     httpGet:
-      path: /
-      port: http
+      path: /health
+      port: 8080
   readinessProbe:
     httpGet:
-      path: /
-      port: http
+      path: /health
+      port: 8080
 
   #This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
   autoscaling:
     enabled: false
     minReplicas: 1
-    maxReplicas: 100
+    maxReplicas: 2
     targetCPUUtilizationPercentage: 80
     # targetMemoryUtilizationPercentage: 80
 
@@ -130,12 +130,13 @@ events:
   # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
   livenessProbe:
     httpGet:
-      path: /
-      port: http
+      path: /health
+      port: 8080
   readinessProbe:
     httpGet:
-      path: /
-      port: http
+      path: /health
+      port: 8080
+      
   config:
     eventSinks:
       kafka:

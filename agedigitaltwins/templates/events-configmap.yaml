@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "agedigitaltwins.fullname" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}-events
   labels: {{- include "agedigitaltwins.labels" . | nindent 4 }}
 data:
   appsettings.json: |

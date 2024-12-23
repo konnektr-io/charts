@@ -34,6 +34,29 @@ spec:
           image: "{{- include "agedigitaltwins.api.imageName" . }}"
           ports:
             - containerPort: 8080
+          env:
+            - name: AGEDB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "agedigitaltwins.fullname" . }}-app
+                  key: port
+            - name: AGEDB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "agedigitaltwins.fullname" . }}-app
+                  key: dbname
+            - name: AGEDB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "agedigitaltwins.fullname" . }}-app
+                  key: username
+            - name: AGEDB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "agedigitaltwins.fullname" . }}-app
+                  key: password
+            - name: ConnectionStrings__agedb
+              value: "Server={{ include "agedigitaltwins.fullname" . }}-rw;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
           livenessProbe:
             {{- toYaml .Values.events.livenessProbe | nindent 12 }}
           readinessProbe:
@@ -42,10 +65,19 @@ spec:
             {{- toYaml .Values.events.resources | nindent 12 }}
           {{- with .Values.events.volumeMounts }}
           volumeMounts:
+            - name: config-volume
+              mountPath: /app
+              subPath: appsettings.json
             {{- toYaml . | nindent 12 }}
           {{- end }}
       {{- with .Values.events.volumes }}
       volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "agedigitaltwins.fullname" . }}-events
+            items:
+            - key: appsettings.json
+              path: appsettings.json
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.events.nodeSelector }}
