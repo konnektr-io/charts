@@ -140,18 +140,16 @@ events:
     eventSinks:
       kafka:
         - name: KafkaSink1
-          brokerList: evhns-digitaltwins-events-dev-weu.servicebus.windows.net:9093
-          topic: evh-digitaltwins-events-001
-          securityProtocol: SASL_SSL
+          brokerList: ""
+          topic: ""
+          securityProtocol: ""
           saslMechanism: PLAIN
-          saslUsername: $ConnectionString
+          saslUsername: ""
+          saslPasswordSecretRef: ""
       kusto:
         - name: AdxSink1
-          ingestionUri: https://ingest-adxdigitaltwinsdev001.westeurope.kusto.windows.net
-          database: dt-agedt-shared
-        - name: FabricEventHouseSink
-          ingestionUri: https://ingest-trd-y5xgygrrt13m9tdcmx.z2.kusto.fabric.microsoft.com
-          database: DigitalTwinsShared
+          ingestionUri: ""
+          database: ""
     eventRoutes:
       - sinkName: KafkaSink1
         eventFormat: EventNotification
