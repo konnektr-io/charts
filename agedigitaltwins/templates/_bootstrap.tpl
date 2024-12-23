@@ -31,7 +31,6 @@ bootstrap:
             {{- printf "- %s" . | nindent 6 }}
           {{- end -}}
       {{- end -}}
-    {{- end }}
 {{- else if eq .Values.mode "recovery" -}}
 bootstrap:
 {{- if eq .Values.recovery.method "pg_basebackup" }}

@@ -161,6 +161,8 @@ events:
       - sinkName: FabricEventHouseSink
         eventFormat: DataHistory
 
+type: 'age'
+
 # -- PostgreSQL major version to use
 # -- Currently only supported version is 16
 version: 
