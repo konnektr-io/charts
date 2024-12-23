@@ -295,7 +295,7 @@ cluster:
   imagePullSecrets: []
 
   storage:
-    size: 8Gi
+    size: 2Gi
     storageClass: ""
 
   walStorage:
