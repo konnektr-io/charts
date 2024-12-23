@@ -10,7 +10,6 @@ bootstrap:
     {{- if .Values.cluster.initdb.owner }}
     owner: {{ tpl .Values.cluster.initdb.owner . }}
     {{- end }}
-    {{- if or (eq .Values.type "postgis") (eq .Values.type "timescaledb") (not (empty .Values.cluster.initdb.postInitApplicationSQL)) }}
     postInitApplicationSQL:
       {{- if eq .Values.type "age" }}
       - CREATE EXTENSION age;
