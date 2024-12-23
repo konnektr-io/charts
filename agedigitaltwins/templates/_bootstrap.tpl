@@ -12,7 +12,14 @@ bootstrap:
     {{- end }}
     {{- if or (eq .Values.type "postgis") (eq .Values.type "timescaledb") (not (empty .Values.cluster.initdb.postInitApplicationSQL)) }}
     postInitApplicationSQL:
-      {{- if eq .Values.type "postgis" }}
+      {{- if eq .Values.type "age" }}
+      - CREATE EXTENSION age;
+      - GRANT SELECT ON ag_catalog.ag_graph TO app;
+      - GRANT USAGE ON SCHEMA ag_catalog TO app;
+      - ALTER USER app REPLICATION;
+      - CREATE PUBLICATION age_pub FOR ALL TABLES;
+      - SELECT * FROM pg_create_logical_replication_slot('age_slot', 'pgoutput');
+      {{- else if eq .Values.type "postgis" }}
       - CREATE EXTENSION IF NOT EXISTS postgis;
       - CREATE EXTENSION IF NOT EXISTS postgis_topology;
       - CREATE EXTENSION IF NOT EXISTS fuzzystrmatch;
