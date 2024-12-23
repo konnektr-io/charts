@@ -24,42 +24,6 @@ If release name contains chart name it will be used as a full name.
 {{- end }}
 
 {{/*
-Create a fully qualified api name.
-We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
-*/}}
-{{- define "agedigitaltwins.api.fullname" -}}
-{{- if .Values.api.fullnameOverride -}}
-{{- .Values.api.fullnameOverride | trunc 63 | trimSuffix "-" -}}
-{{- else -}}
-{{- $apiName := default "api" .Values.api.name -}}
-{{- $name := default .Chart.Name .Values.api.nameOverride -}}
-{{- if contains $name .Release.Name -}}
-{{- printf "%s-%s" .Release.Name $apiName | trunc 63 | trimSuffix "-" -}}
-{{- else -}}
-{{- printf "%s-%s-%s" .Release.Name $name $apiName | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-{{- end -}}
-{{- end -}}
-
-{{/*
-Create a fully qualified events name.
-We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
-*/}}
-{{- define "agedigitaltwins.events.fullname" -}}
-{{- if .Values.api.fullnameOverride -}}
-{{- .Values.api.fullnameOverride | trunc 63 | trimSuffix "-" -}}
-{{- else -}}
-{{- $eventsName := default "events" .Values.api.name -}}
-{{- $name := default .Chart.Name .Values.api.nameOverride -}}
-{{- if contains $name .Release.Name -}}
-{{- printf "%s-%s" .Release.Name $eventsName | trunc 63 | trimSuffix "-" -}}
-{{- else -}}
-{{- printf "%s-%s-%s" .Release.Name $name $eventsName | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-{{- end -}}
-{{- end -}}
-
-{{/*
 Create chart name and version as used by the chart label.
 */}}
 {{- define "agedigitaltwins.chart" -}}

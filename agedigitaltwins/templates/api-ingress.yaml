@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "agedigitaltwins.api.fullname" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}-api
   labels:
     {{- include "agedigitaltwins.labels" . | nindent 4 }}
   {{- with .Values.api.ingress.annotations }}

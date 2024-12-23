@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "agedigitaltwins.events.fullname" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}-events
   labels:
     {{- include "agedigitaltwins.labels" . | nindent 4 }}
 spec:
