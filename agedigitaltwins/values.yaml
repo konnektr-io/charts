@@ -147,6 +147,7 @@ events:
           saslMechanism: PLAIN
           saslUsername: ""
           saslPasswordSecretRef: ""
+          saslPasswordSecretKey: ""
       kusto:
         - name: AdxSink1
           ingestionUri: ""
