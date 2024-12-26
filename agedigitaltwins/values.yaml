@@ -3,9 +3,6 @@ nameOverride: ""
 # -- Override the full name of the chart
 fullnameOverride: ""
 
-# -- Configure the metadata of the generated service account
-serviceAccountTemplate: {}
-
 api: 
   # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
   logLevel: "Warning"
@@ -456,6 +453,8 @@ cluster:
     # postInitApplicationSQL: []
     # postInitTemplateSQL: []
 
+  # -- Configure the metadata of the generated service account
+  serviceAccountTemplate: {}
 
   additionalLabels: {}
   annotations: {}
