@@ -12,10 +12,10 @@
 {{- $map := first . -}}
 {{- $label := last . -}}
 {{- range $key, $val := $map -}}
-  {{- $sublabel := list $label ($key | include "toPascalCase") | join "__" -}}
+  {{- $sublabel := list $label ($key | include "toPascalCase") | compact | join "__" -}}
   {{- if kindOf $val | eq "map" -}}
     {{- list $val $sublabel | include "recurseFlattenMap" -}}
-  {{- else if kindOf $val | eq "array" -}}
+  {{- else if kindOf $val | eq "slice" -}}
     {{- range $index, $item := $val -}}
       {{- if kindOf $item | eq "map" -}}
         {{- list $item (printf "%s_%d" $sublabel $index) | include "recurseFlattenMap" -}}
@@ -27,6 +27,6 @@
   {{- else -}}
 - name: {{ $sublabel | quote }}
   value: {{ $val | quote }}
-  {{- end -}}
+{{ end -}}
 {{- end -}}
 {{- end -}}

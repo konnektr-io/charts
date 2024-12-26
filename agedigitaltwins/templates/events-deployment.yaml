@@ -65,7 +65,7 @@ spec:
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: {{ .Values.events.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
-            {{ list .Values.config | include "recurseFlattenMap" | nindent 2 }}
+            {{- list .Values.events.config "" | include "recurseFlattenMap" | nindent 12 }}
             {{- range $index, $sink := .Values.events.config.eventSinks.kafka }}
             {{- if and $sink.saslPasswordSecretRef $sink.saslPasswordSecretKey }}
             - name: "EventSinks__Kafka__{{ $index }}__SaslPassword"
