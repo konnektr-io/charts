@@ -30,7 +30,7 @@ spec:
       {{- end }}
       securityContext:
         {{- toYaml .Values.events.podSecurityContext | nindent 8 }}
-      serviceAccountName: {{ include "agedigitaltwins.serviceAccountName" . }}
+      serviceAccountName: {{ include "agedigitaltwins.events.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

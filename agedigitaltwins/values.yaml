@@ -32,6 +32,10 @@ api:
     # runAsNonRoot: true
     # runAsUser: 1000
 
+  # Allow to set a different service account for the pod
+  # If not defined, the postgres cluster service account will be used
+  serviceAccountName: ""
+
   # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
   service:
     # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
@@ -115,6 +119,10 @@ events:
     # runAsNonRoot: true
     # runAsUser: 1000
 
+  # Allow to set a different service account for the pod
+  # If not defined, the postgres cluster service account will be used
+  serviceAccountName: ""
+  
   # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
   service:
     # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types

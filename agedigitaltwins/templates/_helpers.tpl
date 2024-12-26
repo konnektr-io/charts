@@ -50,8 +50,6 @@ app.kubernetes.io/name: {{ include "agedigitaltwins.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
-
-
 {{/*
 API Image Name
 If a custom imageName is available, use it, otherwise use the defaults based on the .Values.type
@@ -74,6 +72,32 @@ If a custom imageName is available, use it, otherwise use the defaults based on 
     {{- else -}}
         {{- printf "ghcr.io/konnektr-io/pg-age-digitaltwins/agedigitaltwins-events:%s" .Chart.AppVersion -}}
     {{- end }}
+{{- end -}}
+
+{{/*
+API service account name
+*/}}
+{{- define "agedigitaltwins.api.serviceAccountName" -}}
+{{- if .Values.api.serviceAccountName -}}
+{{- .Values.api.serviceAccountName -}}
+{{- else if and .Values.cluster.serviceAccountTemplate (hasKey .Values.cluster.serviceAccountTemplate "metadata") .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- else -}}
+{{- include "agedigitaltwins.fullname" . -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Events service account name
+*/}}
+{{- define "agedigitaltwins.events.serviceAccountName" -}}
+{{- if .Values.events.serviceAccountName -}}
+{{- .Values.events.serviceAccountName -}}
+{{- else if and .Values.cluster.serviceAccountTemplate (hasKey .Values.cluster.serviceAccountTemplate "metadata") .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- else -}}
+{{- include "agedigitaltwins.fullname" . -}}
+{{- end -}}
 {{- end -}}
 
 {{/*
@@ -159,15 +183,4 @@ Postgres GID
   {{- else -}}
     {{- 26 -}}
   {{- end -}}
-{{- end -}}
-
-{{/*
-Service account name
-*/}}
-{{- define "agedigitaltwins.serviceAccountName" -}}
-{{- if and .Values.cluster.serviceAccountTemplate (hasKey .Values.cluster.serviceAccountTemplate "metadata") .Values.cluster.serviceAccountTemplate.metadata.name -}}
-{{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
-{{- else -}}
-{{- include "agedigitaltwins.fullname" . -}}
-{{- end -}}
 {{- end -}}
