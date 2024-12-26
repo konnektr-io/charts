@@ -4,6 +4,7 @@ metadata:
   name: {{ include "agedigitaltwins.fullname" . }}-events
   labels:
     {{- include "agedigitaltwins.labels" . | nindent 4 }}
+    app: {{ include "agedigitaltwins.fullname" . }}-events
 spec:
   replicas: 1
   selector:

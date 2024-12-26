@@ -4,6 +4,7 @@ metadata:
   name: {{ include "agedigitaltwins.fullname" . }}-api
   labels:
     {{- include "agedigitaltwins.labels" . | nindent 4 }}
+    app: {{ include "agedigitaltwins.fullname" . }}-api
 spec:
   {{- if not .Values.api.autoscaling.enabled }}
   replicas: {{ .Values.api.replicaCount }}
