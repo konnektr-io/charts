@@ -3,7 +3,18 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 0.7.12
-    created: "2024-12-26T09:46:23.2445057+01:00"
+    created: "2024-12-26T10:06:32.9987862+01:00"
+    description: Deploys and manages the AGE Digital Twins API, events and Apache
+      AGE database
+    digest: 42bbe97dc0ee4f65d0556ca60072e121a0072ef92675e2eb141d4dde3279b678
+    name: agedigitaltwins
+    type: application
+    urls:
+    - https://charts.konnektr.io/agedigitaltwins-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
+    appVersion: 0.7.12
+    created: "2024-12-26T10:06:32.9972433+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 6ba84486f3caaf9964fb9ac0f1445310c68472a51126865a6b629eb645ac21c8
@@ -14,7 +25,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.7.12
-    created: "2024-12-26T09:46:23.2429698+01:00"
+    created: "2024-12-26T10:06:32.9942107+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: d66ab11a5bac68461f5e526ada51a75ca7727cc254492d88051987d48c8fe5f5
@@ -25,7 +36,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.7.12
-    created: "2024-12-26T09:46:23.2408892+01:00"
+    created: "2024-12-26T10:06:32.9922446+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 988b70dcad32df06fed67c06076e449694dfa0cd104e9a17c1bc64cd051b473c
@@ -36,7 +47,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.7.12
-    created: "2024-12-26T09:46:23.2375247+01:00"
+    created: "2024-12-26T10:06:32.990477+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: f076b1f8d59573426bf9c7e986f41222d1e1efb4a3e07f8520138d8c29e81db9
@@ -45,4 +56,4 @@ entries:
     urls:
     - https://charts.konnektr.io/agedigitaltwins-0.2.0.tgz
     version: 0.2.0
-generated: "2024-12-26T09:46:23.2342154+01:00"
+generated: "2024-12-26T10:06:32.9880107+01:00"

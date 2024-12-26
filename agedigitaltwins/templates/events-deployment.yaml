@@ -83,7 +83,6 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /app
-              subPath: appsettings.json
           {{- with .Values.events.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
