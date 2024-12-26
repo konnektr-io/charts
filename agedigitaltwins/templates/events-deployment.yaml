@@ -27,6 +27,15 @@ spec:
       {{- end }}
       securityContext:
         {{- toYaml .Values.events.podSecurityContext | nindent 8 }}
+      initContainers:
+      - name: copy-config
+        image: busybox
+        command: ['sh', '-c', 'cp /config/appsettings.json /app/appsettings.json']
+        volumeMounts:
+        - name: config-volume
+          mountPath: /config
+        - name: app-volume
+          mountPath: /app
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -81,11 +90,8 @@ spec:
           resources:
             {{- toYaml .Values.events.resources | nindent 12 }}
           volumeMounts:
-            - name: config-volume
+            - name: app-volume
               mountPath: /app
-          {{- with .Values.events.volumeMounts }}
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
       volumes:
         - name: config-volume
           configMap:
@@ -93,9 +99,8 @@ spec:
             items:
             - key: appsettings.json
               path: appsettings.json
-      {{- with .Values.events.volumes }}
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: app-volume
+          emptyDir: {}
       {{- with .Values.events.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
