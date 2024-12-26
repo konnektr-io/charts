@@ -70,7 +70,6 @@ spec:
               subPath: appsettings.json
             {{- toYaml . | nindent 12 }}
           {{- end }}
-      {{- with .Values.events.volumes }}
       volumes:
         - name: config-volume
           configMap:
@@ -78,6 +77,7 @@ spec:
             items:
             - key: appsettings.json
               path: appsettings.json
+      {{- with .Values.events.volumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.events.nodeSelector }}
