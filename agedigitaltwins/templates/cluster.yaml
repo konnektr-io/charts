@@ -12,6 +12,10 @@ metadata:
     {{ toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  {{- with .Values.cluster.inheritedMetadata }}
+  inheritedMetadata:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   instances: {{ .Values.cluster.instances }}
   {{- include "agedigitaltwins.cluster.image" . | nindent 2 }}
   imagePullPolicy: {{ .Values.cluster.imagePullPolicy }}

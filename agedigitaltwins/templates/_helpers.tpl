@@ -160,3 +160,14 @@ Postgres GID
     {{- 26 -}}
   {{- end -}}
 {{- end -}}
+
+{{/*
+Service account name
+*/}}
+{{- define "agedigitaltwins.serviceAccountName" -}}
+{{- if .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- else -}}
+{{- include "agedigitaltwins.fullname" . -}}
+{{- end -}}
+{{- end -}}

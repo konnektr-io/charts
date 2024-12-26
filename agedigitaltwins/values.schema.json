@@ -581,6 +581,15 @@
                     "type": "string"
                 }
             }
+        },
+        "serviceAccountTemplate": {
+            "type": "object"
+        },
+        "api": {
+            "type": "object"
+        },
+        "events": {
+            "type": "object"
         }
     }
 }
