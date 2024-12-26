@@ -41,7 +41,7 @@ api:
     # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
     type: ClusterIP
     # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
-    port: 80
+    port: 8080
 
   # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
   ingress:
@@ -122,13 +122,6 @@ events:
   # Allow to set a different service account for the pod
   # If not defined, the postgres cluster service account will be used
   serviceAccountName: ""
-  
-  # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
-  service:
-    # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
-    type: ClusterIP
-    # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
-    port: 80
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
