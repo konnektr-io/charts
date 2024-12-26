@@ -17,6 +17,16 @@ serviceAccount:
   name: ""
 
 api: 
+  # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
+  logLevel: "Warning"
+  # OpenTelemetry configuration
+  openTelemetry:
+    enabled: false
+    # custom service name
+    serviceName: ""
+    # export endpoint
+    exporterEndpoint: "http://otel-collector.opentelemetry.svc.cluster.local:4317"
+
   # This is for setting Kubernetes Annotations to a Pod.
   # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/ 
   podAnnotations: {}
@@ -90,6 +100,16 @@ api:
     # targetMemoryUtilizationPercentage: 80
 
 events:
+  # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
+  logLevel: "Warning"
+  # OpenTelemetry configuration
+  openTelemetry:
+    enabled: false
+    # custom service name
+    serviceName: ""
+    # export endpoint
+    exporterEndpoint: "http://otel-collector.opentelemetry.svc.cluster.local:4317"
+
   # This is for setting Kubernetes Annotations to a Pod.
   # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/ 
   podAnnotations: {}
@@ -138,6 +158,9 @@ events:
       port: 8080
 
   config:
+    # Custom event source URI to be used as a source in cloud events
+    customEventSource: ""
+    # Event sinks configuration
     eventSinks:
       kafka:
         - name: KafkaSink1
@@ -152,6 +175,7 @@ events:
         - name: AdxSink1
           ingestionUri: ""
           database: ""
+    # Event routes configuration
     eventRoutes:
       - sinkName: KafkaSink1
         eventFormat: EventNotification
@@ -159,8 +183,8 @@ events:
         eventFormat: DataHistory
       - sinkName: AdxSink1
         eventFormat: DataHistory
-      - sinkName: FabricEventHouseSink
-        eventFormat: DataHistory
+      # - sinkName: FabricEventHouseSink
+      #   eventFormat: DataHistory
 
 type: 'age'
 
@@ -168,6 +192,7 @@ type: 'age'
 # -- Currently only supported version is 16
 version: 
   age: '16'
+  # todo: agepgvector, agepostgis
 
 ###
 # -- Cluster mode of operation. Available modes:
