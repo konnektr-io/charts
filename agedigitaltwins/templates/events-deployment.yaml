@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       {{- include "agedigitaltwins.selectorLabels" . | nindent 6 }}
+      app: {{ include "agedigitaltwins.fullname" . }}-events
   template:
     metadata:
       {{- with .Values.events.podAnnotations }}
@@ -56,7 +57,7 @@ spec:
                   name: {{ include "agedigitaltwins.fullname" . }}-app
                   key: password
             - name: ConnectionStrings__agedb
-              value: "Server={{ include "agedigitaltwins.fullname" . }}-r;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
+              value: "Server={{ include "agedigitaltwins.fullname" . }}-rw;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
             - name: Logging__LogLevel__Default
               value: {{ .Values.events.logLevel | quote }}
             {{- if .Values.events.openTelemetry.enabled }}

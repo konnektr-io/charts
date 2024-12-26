@@ -11,6 +11,7 @@ spec:
   selector:
     matchLabels:
       {{- include "agedigitaltwins.selectorLabels" . | nindent 6 }}
+      app: {{ include "agedigitaltwins.fullname" . }}-api
   template:
     metadata:
       {{- with .Values.api.podAnnotations }}
