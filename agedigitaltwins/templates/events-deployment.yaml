@@ -22,6 +22,7 @@ spec:
         {{- with .Values.events.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
+        app: {{ include "agedigitaltwins.fullname" . }}-events
     spec:
       {{- with .Values.events.imagePullSecrets }}
       imagePullSecrets:

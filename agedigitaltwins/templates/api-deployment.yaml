@@ -24,6 +24,7 @@ spec:
         {{- with .Values.api.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
+        app: {{ include "agedigitaltwins.fullname" . }}-api
     spec:
       {{- with .Values.api.imagePullSecrets }}
       imagePullSecrets:
