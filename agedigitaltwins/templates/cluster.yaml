@@ -65,10 +65,14 @@ spec:
       {{- toYaml . | nindent 6 }}
       {{- end }}
     {{- with .Values.cluster.postgresql }}
+    {{- if .pg_hba }}
     pg_hba:
       {{- toYaml .pg_hba | nindent 6 }}
+    {{- end }}
+    {{- if .pg_ident }}
     pg_ident:
       {{- toYaml .pg_ident | nindent 6 }}
+    {{- end }}
     parameters:
       {{- toYaml .parameters | nindent 6 }}
     {{ end }}

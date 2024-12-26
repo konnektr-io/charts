@@ -2,6 +2,89 @@
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
     "properties": {
+        "api": {
+            "type": "object",
+            "properties": {
+                "logLevel": {
+                    "type": "string"
+                },
+                "openTelemetry": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "serviceName": {
+                            "type": "string"
+                        },
+                        "exporterEndpoint": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "events": {
+            "type": "object",
+            "properties": {
+                "logLevel": {
+                    "type": "string"
+                },
+                "openTelemetry": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "serviceName": {
+                            "type": "string"
+                        },
+                        "exporterEndpoint": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "config": {
+                    "type": "object",
+                    "properties": {
+                        "customEventSource": {
+                            "type": "string"
+                        },
+                        "eventSinks": {
+                            "type": "object",
+                            "properties": {
+                                "kafka": {
+                                    "type": "array"
+                                },
+                                "kusto": {
+                                    "type": "array"
+                                },
+                                "mqtt": {
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "eventRoutes": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "eventFormat": {
+                                        "type": "string"
+                                    },
+                                    "eventTypes": {
+                                        "type": "array"
+                                    },
+                                    "sinkName": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "backups": {
             "type": "object",
             "properties": {
@@ -583,12 +666,6 @@
             }
         },
         "serviceAccountTemplate": {
-            "type": "object"
-        },
-        "api": {
-            "type": "object"
-        },
-        "events": {
             "type": "object"
         }
     }
