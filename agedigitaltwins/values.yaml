@@ -150,27 +150,28 @@ events:
     customEventSource: ""
     # Event sinks configuration
     eventSinks:
-      kafka:
-        - name: KafkaSink1
-          brokerList: ""
-          topic: ""
-          securityProtocol: ""
-          saslMechanism: PLAIN
-          saslUsername: ""
-          saslPasswordSecretRef: ""
-          saslPasswordSecretKey: ""
-      kusto:
-        - name: AdxSink1
-          ingestionUri: ""
-          database: ""
+      kafka: []
+        # - name: KafkaSink1
+        #   brokerList: ""
+        #   topic: ""
+        #   securityProtocol: ""
+        #   saslMechanism: PLAIN
+        #   saslUsername: ""
+        #   saslPasswordSecretRef: ""
+        #   saslPasswordSecretKey: ""
+      kusto: []
+        # - name: AdxSink1
+        #   ingestionUri: ""
+        #   database: ""
+      mqtt: []
     # Event routes configuration
-    eventRoutes:
-      - sinkName: KafkaSink1
-        eventFormat: EventNotification
-      - sinkName: KafkaSink1
-        eventFormat: DataHistory
-      - sinkName: AdxSink1
-        eventFormat: DataHistory
+    eventRoutes: []
+      # - sinkName: KafkaSink1
+      #   eventFormat: EventNotification
+      # - sinkName: KafkaSink1
+      #   eventFormat: DataHistory
+      # - sinkName: AdxSink1
+      #   eventFormat: DataHistory
       # - sinkName: FabricEventHouseSink
       #   eventFormat: DataHistory
 
