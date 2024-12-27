@@ -65,7 +65,7 @@ spec:
               value: {{ .Values.events.logLevel | quote }}
             {{- if .Values.events.openTelemetry.enabled }}
             - name: OTEL_SERVICE_NAME
-              value: {{ .Values.events.openTelemetry.serviceName | quote }}
+              value: {{ .Values.events.openTelemetry.serviceName | default (printf "%s-events" (include "agedigitaltwins.fullname" .)) | quote }}
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: {{ .Values.events.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
