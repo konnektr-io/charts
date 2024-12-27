@@ -154,7 +154,6 @@ events:
         # - name: KafkaSink1
         #   brokerList: ""
         #   topic: ""
-        #   securityProtocol: ""
         #   saslMechanism: PLAIN
         #   saslUsername: ""
         #   saslPasswordSecretRef: ""
