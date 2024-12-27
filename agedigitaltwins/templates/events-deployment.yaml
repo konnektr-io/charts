@@ -70,6 +70,10 @@ spec:
               value: {{ .Values.events.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
             {{- list .Values.events.config "" | include "recurseFlattenMap" | nindent 12 }}
+            {{- if not .Values.events.config.customEventSource }}
+            - name: CustomEventSource
+              value: {{ include "agedigitaltwins.fullname" . }}
+            {{- end }}
             {{- range $index, $sink := .Values.events.config.eventSinks.kafka }}
             {{- if and $sink.saslPasswordSecretRef $sink.saslPasswordSecretKey }}
             - name: "EventSinks__Kafka__{{ $index }}__SaslPassword"
