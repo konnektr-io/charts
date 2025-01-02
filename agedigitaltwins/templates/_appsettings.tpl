@@ -18,9 +18,9 @@
   {{- else if kindOf $val | eq "slice" -}}
     {{- range $index, $item := $val -}}
       {{- if kindOf $item | eq "map" -}}
-        {{- list $item (printf "%s_%d" $sublabel $index) | include "recurseFlattenMap" -}}
+        {{- list $item (printf "%s__%d" $sublabel $index) | include "recurseFlattenMap" -}}
       {{- else -}}
-- name: {{ printf "%s_%d" $sublabel $index | quote }}
+- name: {{ printf "%s__%d" $sublabel $index | quote }}
   value: {{ $item | quote }}
       {{- end -}}
     {{- end -}}
