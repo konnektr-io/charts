@@ -3,7 +3,18 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 0.8.0
-    created: "2024-12-27T13:35:05.9618187+01:00"
+    created: "2025-01-02T13:00:45.8053201+01:00"
+    description: Deploys and manages the AGE Digital Twins API, events and Apache
+      AGE database
+    digest: 336c598bb62147f4a71f4a809b130e2e9bc5b3559b5758654315a5d0492a6f30
+    name: agedigitaltwins
+    type: application
+    urls:
+    - https://charts.konnektr.io/agedigitaltwins-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 0.8.0
+    created: "2025-01-02T13:00:45.8031482+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: b7f3c6562bfde6725b11db78f9c3eac03043b7212b9a103581a5328bef38d980
@@ -14,7 +25,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.7.13
-    created: "2024-12-27T13:35:05.9585194+01:00"
+    created: "2025-01-02T13:00:45.8010757+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: a060255bdc2896e0e6c15e4c54f72207be23859a1517a17bab7848971297c75a
@@ -25,7 +36,7 @@ entries:
     version: 0.3.12
   - apiVersion: v2
     appVersion: 0.7.13
-    created: "2024-12-27T13:35:05.9541769+01:00"
+    created: "2025-01-02T13:00:45.7967095+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 28ee32b7903687768f78c0904731317950bcf1829fafe86a95224b1fe63e9fdf
@@ -36,7 +47,7 @@ entries:
     version: 0.3.11
   - apiVersion: v2
     appVersion: 0.7.13
-    created: "2024-12-27T13:35:05.9517961+01:00"
+    created: "2025-01-02T13:00:45.7903105+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: be1ff5ad410192f25136d5c0f364e43efda438277b59041fd2c0891a42cec8f1
@@ -45,4 +56,4 @@ entries:
     urls:
     - https://charts.konnektr.io/agedigitaltwins-0.3.10.tgz
     version: 0.3.10
-generated: "2024-12-27T13:35:05.9491305+01:00"
+generated: "2025-01-02T13:00:45.7850949+01:00"

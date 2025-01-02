@@ -146,8 +146,6 @@ events:
       port: 8080
 
   config:
-    # Custom event source URI to be used as a source in cloud events
-    customEventSource: ""
     # Event sinks configuration
     eventSinks:
       kafka: []
