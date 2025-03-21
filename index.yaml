@@ -3,7 +3,18 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-03-21T13:53:29.2174603+01:00"
+    created: "2025-03-21T14:59:01.9913533+01:00"
+    description: Deploys and manages the AGE Digital Twins API, events and Apache
+      AGE database
+    digest: 5c9ee314d873a3619df127dd4cc6ffc2827a4599d73a80865b4625905e8dfc59
+    name: agedigitaltwins
+    type: application
+    urls:
+    - https://charts.konnektr.io/agedigitaltwins-0.6.5.tgz
+    version: 0.6.5
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2025-03-21T14:59:01.960922+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 867039aa8b7d8e0bccefbc762f8b62af600790cd2a7638d59267b8ff8a9457fc
@@ -14,7 +25,7 @@ entries:
     version: 0.6.4
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-03-21T13:53:29.2136627+01:00"
+    created: "2025-03-21T14:59:01.9565359+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 56eb209bf42ef470867dbd60ce4a8407f7baee170192cf47a89ddbf406d670aa
@@ -25,7 +36,7 @@ entries:
     version: 0.6.3
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-03-21T13:53:29.2114752+01:00"
+    created: "2025-03-21T14:59:01.9525354+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: de697518ad7165e9d0b8ad73116ff513a03b39085618aface3cc91947e0df57e
@@ -36,7 +47,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-03-21T13:53:29.2083416+01:00"
+    created: "2025-03-21T14:59:01.9485257+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 1989b888d1f68d8115cccfca5c33e945d09a6e7f79ca7b1c99bdfb0191d288fa
@@ -47,7 +58,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-03-21T13:53:29.2054448+01:00"
+    created: "2025-03-21T14:59:01.8956115+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 7665b0918864202669007b36031c3ec772ea471fd00d50dcf6d67ebfcca4e5fa
@@ -58,7 +69,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2025-03-21T13:53:29.2037928+01:00"
+    created: "2025-03-21T14:59:01.8910531+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 37b392eca8a504a91f78fcd4828f7524dd2cfd9625ec3db7ba8da81387a7235a
@@ -69,7 +80,7 @@ entries:
     version: 0.5.2
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2025-03-21T13:53:29.2010819+01:00"
+    created: "2025-03-21T14:59:01.8873083+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 8b5b85ab7509f2ef628f321c6aa63e2c8b68b01e4e621c2eba10e617c6edec70
@@ -80,7 +91,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2025-03-21T13:53:29.1988021+01:00"
+    created: "2025-03-21T14:59:01.8677835+01:00"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 05f90c917b78de5c6f8cea36bfd4207ba5940a3721ebc404ae0c701e163ace50
@@ -89,4 +100,4 @@ entries:
     urls:
     - https://charts.konnektr.io/agedigitaltwins-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-21T13:53:29.1881598+01:00"
+generated: "2025-03-21T14:59:01.8645368+01:00"
