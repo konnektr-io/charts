@@ -8,7 +8,6 @@ metadata:
       {{ toYaml . | nindent 4 }}
     {{- end }}
   name: {{ include "agedigitaltwins.fullname" . }}-alert-rules
-  namespace: {{- .Release.Namespace -}}
 spec:
   groups:
     - name: cloudnative-pg/{{ include "agedigitaltwins.fullname" . }}
