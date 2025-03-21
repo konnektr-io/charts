@@ -3,11 +3,11 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Pooler
 metadata:
-  name: {{ include "cluster.fullname" $  }}-pooler-{{ .name }}
-  namespace: {{ include "cluster.namespace" $ }}
+  name: {{ include "agedigitaltwins.fullname" $  }}-pooler-{{ .name }}
+  namespace: {{- .Release.Namespace -}}
 spec:
   cluster:
-    name: {{ include "cluster.fullname" $ }}
+    name: {{ include "agedigitaltwins.fullname" $ }}
   instances: {{ .instances }}
   type: {{ default "rw" .type }}
   pgbouncer:

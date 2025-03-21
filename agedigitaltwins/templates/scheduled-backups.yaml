@@ -6,7 +6,7 @@ apiVersion: postgresql.cnpg.io/v1
 kind: ScheduledBackup
 metadata:
   name: {{ include "agedigitaltwins.fullname" $context  }}-{{ .name }}
-  # namespace: {{ include "agedigitaltwins.namespace" $ }}
+  namespace: {{- .Release.Namespace -}}
   labels: {{ include "agedigitaltwins.labels" $context | nindent 4 }}
 spec:
   immediate: true

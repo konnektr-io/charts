@@ -2,7 +2,7 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: ImageCatalog
 metadata:
-  name: {{ include "agedigitaltwins.cluster.fullname" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}
 spec:
   images:
     {{- range $image := .Values.imageCatalog.images }}

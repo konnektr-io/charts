@@ -3,22 +3,22 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   labels:
-    {{- include "cluster.labels" . | nindent 4 }}
+    {{- include "agedigitaltwins.labels" . | nindent 4 }}
     {{- with .Values.cluster.additionalLabels }}
       {{ toYaml . | nindent 4 }}
     {{- end }}
-  name: {{ include "cluster.fullname" . }}-alert-rules
-  namespace: {{ include "cluster.namespace" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}-alert-rules
+  namespace: {{- .Release.Namespace -}}
 spec:
   groups:
-    - name: cloudnative-pg/{{ include "cluster.fullname" . }}
+    - name: cloudnative-pg/{{ include "agedigitaltwins.fullname" . }}
       rules:
         {{- $dict := dict "excludeRules" .Values.cluster.monitoring.prometheusRule.excludeRules -}}
         {{- $_ := set $dict "value"       "{{ $value }}" -}}
         {{- $_ := set $dict "namespace"   .Release.Namespace -}}
         {{- $_ := set $dict "cluster"     (include "cluster.fullname" .) -}}
         {{- $_ := set $dict "labels"      (dict "job" "{{ $labels.job }}" "node" "{{ $labels.node }}" "pod" "{{ $labels.pod }}") -}}
-        {{- $_ := set $dict "podSelector" (printf "%s-([1-9][0-9]*)$" (include "cluster.fullname" .)) -}}
+        {{- $_ := set $dict "podSelector" (printf "%s-([1-9][0-9]*)$" (include "agedigitaltwins.fullname" .)) -}}
         {{- $_ := set $dict "Values"      .Values -}}
         {{- $_ := set $dict "Template"    .Template -}}
         {{- range $path, $_ := .Files.Glob  "prometheus_rules/**.yaml" }}

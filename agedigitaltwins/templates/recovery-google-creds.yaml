@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: {{ default (printf "%s-recovery-google-creds" (include "cluster.fullname" .)) .Values.recovery.secret.name }}
-  namespace: {{ include "cluster.namespace" . }}
+  name: {{ default (printf "%s-recovery-google-creds" (include "agedigitaltwins.fullname" .)) .Values.recovery.secret.name }}
+  namespace: {{- .Release.Namespace -}}
 data:
   APPLICATION_CREDENTIALS: {{ .Values.recovery.google.applicationCredentials | b64enc | quote }}
 {{- end }}
