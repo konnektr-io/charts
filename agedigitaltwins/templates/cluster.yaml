@@ -93,7 +93,7 @@ spec:
     disableDefaultQueries: {{ .Values.cluster.monitoring.disableDefaultQueries }}
     {{- if not (empty .Values.cluster.monitoring.customQueries) }}
     customQueriesConfigMap:
-      - name: {{ include "cluster.fullname" . }}-monitoring
+      - name: {{ include "agedigitaltwins.fullname" . }}-monitoring
         key: custom-queries
     {{- end }}
     {{- if not (empty .Values.cluster.monitoring.customQueriesSecret) }}
