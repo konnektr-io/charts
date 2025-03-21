@@ -146,13 +146,13 @@ imageCatalogRef:
 imageCatalogRef:
   apiGroup: postgresql.cnpg.io
   kind: ImageCatalog
-  name: {{ include "agedigitaltwins.cluster.fullname" . }}
+  name: {{ include "agedigitaltwins.fullname" . }}
   major: {{ include "agedigitaltwins.cluster.postgresqlMajor" . }}
 {{- else if eq (include "agedigitaltwins.cluster.useTimescaleDBDefaults" .) "true" -}}
 imageCatalogRef:
   apiGroup: postgresql.cnpg.io
   kind: ImageCatalog
-  name: {{ include "agedigitaltwins.cluster.fullname" . }}-timescaledb-ha
+  name: {{ include "agedigitaltwins.fullname" . }}-timescaledb-ha
   major: {{ include "agedigitaltwins.cluster.postgresqlMajor" . }}
 {{- else }}
 imageName: {{ include "agedigitaltwins.cluster.imageName" . }}
