@@ -73,6 +73,7 @@ spec:
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: {{ .Values.api.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
+            {{- list .Values.api.config "" | include "recurseFlattenMap" | nindent 12 }}
           livenessProbe:
             {{- toYaml .Values.api.livenessProbe | nindent 12 }}
           readinessProbe:
