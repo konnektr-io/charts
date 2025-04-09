@@ -6,25 +6,13 @@ on:
       - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
-  pages: write
   id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   package-and-publish:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout code
@@ -59,11 +47,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Stash changes to avoid conflicts
-          git stash
+          # Clean up untracked files to avoid conflicts
+          git clean -fd
+          # Switch to gh-pages branch
           git checkout -b gh-pages || git checkout gh-pages
-          git stash pop || echo "Nothing to apply from stash"
+          # Copy packaged files and commit changes
           cp -r packaged/* .
           git add .
-          git commit -m "Update Helm chart repository"
+          git commit -m "Update Helm chart repository" || echo "No changes to commit"
           git push origin gh-pages
