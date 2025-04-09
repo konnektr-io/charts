@@ -13,9 +13,6 @@ jobs:
   package-charts:
     runs-on: ubuntu-latest
 
-    outputs:
-      artifact-name: ${{ steps.set-output.outputs.artifact-name }}
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -60,10 +57,7 @@ jobs:
 
       - name: Update Helm repo index
         run: |
-          mkdir -p charts
-          mv packaged/* charts/
-          helm repo index charts --url https://charts.konnektr.io
-          mv charts/* .
+          helm repo index . --url https://charts.konnektr.io
 
       - name: Commit and push changes
         env:
