@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   package-and-publish:
@@ -36,9 +37,14 @@ jobs:
         run: |
           helm repo index packaged --url https://charts.konnektr.io
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packaged
-          publish_branch: gh-pages
+      - name: Push to gh-pages branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages || git checkout gh-pages
+          cp -r packaged/* .
+          git add .
+          git commit -m "Update Helm chart repository"
+          git push origin gh-pages
