@@ -179,7 +179,7 @@ type: 'age'
 # -- PostgreSQL major version to use
 # -- Currently only supported version is 16
 version: 
-  age: '16'
+  age: '16-bookworm-4'
   # todo: agepgvector, agepostgis
 
 ###
