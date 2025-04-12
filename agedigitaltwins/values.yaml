@@ -541,7 +541,7 @@ backups:
 
 imageCatalog:
   # -- Whether to provision an image catalog. If imageCatalog.images is empty this option will be ignored.
-  create: true
+  create: false
   # -- List of images to be provisioned in an image catalog.
   images: []
     # - image: ghcr.io/your_repo/your_image:your_tag
