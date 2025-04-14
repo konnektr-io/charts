@@ -15,7 +15,7 @@
 #
 apiVersion: v2
 name: agedigitaltwins
-description: Deploys and manages the AGE Digital Twins API, events and Apache AGE database
+description: Deploys and manages the AGE Digital Twins API, events and Apache AGE database with CloudnativePG
 type: application
-version: 0.11.9
-appVersion: '1.5.9'
+version: 0.11.10
+appVersion: '1.5.10'
