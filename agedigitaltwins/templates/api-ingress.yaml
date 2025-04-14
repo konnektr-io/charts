@@ -35,9 +35,10 @@ spec:
             {{- end }}
             backend:
               service:
-                name: {{ include "agedigitaltwins.fullname" . }}-api
+                name: {{ include "agedigitaltwins.fullname" $ }}-api
                 port:
                   number: {{ $.Values.api.service.port }}
           {{- end }}
     {{- end }}
 {{- end }}
+s
