@@ -385,27 +385,4 @@ entries:
     urls:
     - https://charts.konnektr.io/agedigitaltwins-0.10.0.tgz
     version: 0.10.0
-  db-query-operator:
-  - apiVersion: v2
-    appVersion: latest
-    created: "2025-05-15T10:43:12.911478342Z"
-    description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
-      operator
-    digest: 6d77db2b252dae34e5c97706603ca615dd868180ce2e238f19390122b485db22
-    home: https://github.com/konnektr-io/db-query-operator
-    keywords:
-    - kubernetes-operator
-    - database
-    - query
-    - CRD
-    - PostgreSQL
-    maintainers:
-    - email: info@konnektr.io
-      name: Konnektr-io
-    name: db-query-operator
-    sources:
-    - https://github.com/konnektr-io/db-query-operator
-    urls:
-    - https://charts.konnektr.io/db-query-operator-0.1.0.tgz
-    version: 0.1.0
 generated: "2025-05-15T10:43:12.863809332Z"
