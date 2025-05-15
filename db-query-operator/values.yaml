@@ -56,5 +56,7 @@ readinessProbe:
 
 terminationGracePeriodSeconds: 10
 
+gvkPattern: "v1/ConfigMap"
+
 # Optionally set the namespace for deployment
 namespaceOverride: ""
