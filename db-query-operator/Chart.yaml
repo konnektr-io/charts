@@ -1,0 +1,17 @@
+apiVersion: v2
+name: db-query-operator
+description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes operator
+home: https://github.com/konnektr-io/db-query-operator
+sources:
+  - https://github.com/konnektr-io/db-query-operator
+maintainers:
+  - name: Konnektr-io
+    email: info@konnektr.io
+keywords:
+  - kubernetes-operator
+  - database
+  - query
+  - CRD
+  - PostgreSQL
+version: 0.1.0
+appVersion: "latest"

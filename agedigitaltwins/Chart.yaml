@@ -18,5 +18,15 @@ apiVersion: v2
 name: agedigitaltwins
 description: Deploys and manages the AGE Digital Twins API, events and Apache AGE database with CloudnativePG
 type: application
+home: https://github.com/konnektr-io/pg-age-digitaltwins
+maintainers:
+  - name: Konnektr.io
+    email: info@konnektr.io
+keywords:
+  - graph
+  - database
+  - postgresql
+  - digital-twins
+  - cloudnativepg
 version: 0.12.9
 appVersion: "1.6.9"
