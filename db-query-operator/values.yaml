@@ -58,5 +58,7 @@ terminationGracePeriodSeconds: 10
 
 gvkPattern: "v1/ConfigMap"
 
+includeCRDs: false
+
 # Optionally set the namespace for deployment
 namespaceOverride: ""

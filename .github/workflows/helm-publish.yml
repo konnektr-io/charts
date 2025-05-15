@@ -22,6 +22,30 @@ jobs:
         with:
           version: v3.12.0
 
+      - name: Download CRDs if chart requires them
+        id: download-crds
+        run: |
+          set -e
+          chart_dir=db-query-operator
+          chart_yaml=$chart_dir/Chart.yaml
+          # Check for 'CRD' keyword in Chart.yaml
+          if grep -q 'CRD' "$chart_yaml"; then
+            # Extract appVersion
+            app_version=$(yq e '.appVersion' "$chart_yaml")
+            # Extract crd-repo-url annotation and replace placeholder
+            crd_url=$(yq e '.annotations["crd-repo-url"]' "$chart_yaml" | sed "s/{{ .appVersion }}/$app_version/")
+            # Convert GitHub tree URL to raw URL
+            crd_url_raw=$(echo $crd_url | sed 's/github.com/raw.githubusercontent.com/' | sed 's/tree\// /' | awk '{print $1 "/" $2}')
+            # Make sure crds directory exists
+            mkdir -p $chart_dir/crds
+            # Download all CRDs in the folder
+            crd_list_url="https://api.github.com/repos/konnektr-io/db-query-operator/contents/config/crd/bases?ref=v$app_version"
+            for crd_file in $(curl -s $crd_list_url | jq -r '.[] | select(.name | endswith(".yaml")) | .download_url'); do
+              curl -sSL $crd_file -o $chart_dir/crds/$(basename $crd_file)
+            done
+          fi
+        shell: bash
+
       - name: Package Helm charts
         run: |
           mkdir -p packaged
