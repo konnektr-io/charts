@@ -28,5 +28,5 @@ keywords:
   - postgresql
   - digital-twins
   - cloudnativepg
-version: 0.17.7
-appVersion: "1.11.7"
+version: 0.17.8
+appVersion: "1.11.8"
