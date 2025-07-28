@@ -8,6 +8,8 @@ metadata:
     app: {{ include "agedigitaltwins.fullname" . }}-events
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       {{- include "agedigitaltwins.selectorLabels" . | nindent 6 }}
