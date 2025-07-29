@@ -342,6 +342,28 @@
                 "postgresUID": {
                     "type": "integer"
                 },
+                "replicationSlots": {
+                    "type": "object",
+                    "properties": {
+                        "synchronizeReplicas": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "excludePatterns": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "updateInterval": {
+                            "type": "integer"
+                        }
+                    }
+                },
                 "postgresql": {
                     "type": "object",
                     "properties": {
