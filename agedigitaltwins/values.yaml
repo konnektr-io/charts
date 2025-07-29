@@ -435,7 +435,7 @@ cluster:
       max_slot_wal_keep_size: "2GB"
       # Ensure adequate WAL levels for logical replication
       wal_level: "logical"
-      max_replication_slots: 10
+      max_replication_slots: "10"
       # max_connections: 300
     # -- Quorum-based Synchronous Replication
     synchronous: {}
