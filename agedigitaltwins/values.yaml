@@ -431,12 +431,14 @@ cluster:
   postgresql:
     # -- PostgreSQL configuration options (postgresql.conf)
     parameters: 
-      # Limit WAL retention to prevent disk space issues
-      max_slot_wal_keep_size: "2GB"
-      # Ensure adequate WAL levels for logical replication
-      wal_level: "logical"
+      max_slot_wal_keep_size: 2GB
+      wal_level: logical
       max_replication_slots: "10"
-      # max_connections: 300
+      wal_sender_timeout: 60s
+      replication_timeout: 60s
+      wal_buffers: 16MB
+      checkpoint_completion_target: "0.9"
+      checkpoint_timeout: 15min
     # -- Quorum-based Synchronous Replication
     synchronous: {}
      # method: any
