@@ -437,7 +437,7 @@ cluster:
       wal_sender_timeout: 60s
       wal_buffers: 16MB
       checkpoint_completion_target: "0.9"
-      checkpoint_timeout: 15min
+      checkpoint_timeout: 5min
     # -- Quorum-based Synchronous Replication
     synchronous: {}
      # method: any
