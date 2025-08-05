@@ -81,10 +81,84 @@ The chart has three modes of operation. These are configured via the `mode` para
 
 ### Backup configuration
 
-CNPG implements disaster recovery via [Barman](https://pgbarman.org/). The following section configures the barman object
-store where backups will be stored. Barman performs backups of the cluster filesystem base backup and WALs. Both are
-stored in the specified location. The backup provider is configured via the `backups.provider` parameter. The following
-providers are supported:
+CNPG implements disaster recovery via [Barman](https://pgbarman.org/). This chart supports three backup methods:
+
+#### 1. Volume Snapshots (Default, Recommended)
+Uses Kubernetes VolumeSnapshots for backup storage. This is the default and recommended method for most use cases.
+
+```yaml
+backups:
+  enabled: true
+  method: volumeSnapshot
+  volumeSnapshot:
+    className: "csi-driver-class"
+```
+
+#### 2. Legacy Barman Object Store (Deprecated)
+Uses the in-tree Barman implementation. **Deprecated in CloudNative-PG 1.26+ and will be removed in future versions.**
+
+```yaml
+backups:
+  enabled: true
+  method: barmanObjectStore
+  provider: s3  # or azure, google
+  # ... provider-specific configuration
+```
+
+#### 3. Barman Cloud Plugin (Recommended for Object Storage)
+Uses the new Barman Cloud Plugin for object storage backups. **This is the recommended approach for object storage in CloudNative-PG 1.26+.**
+
+**Prerequisites:**
+- CloudNative-PG 1.26 or newer
+- cert-manager installed in the cluster
+- Barman Cloud Plugin installed
+
+**Installing the Barman Cloud Plugin:**
+```console
+# Install the plugin in the same namespace as CloudNative-PG (typically cnpg-system)
+kubectl apply -f https://github.com/cloudnative-pg/plugin-barman-cloud/releases/download/v0.4.0/manifest.yaml
+
+# Verify the installation
+kubectl rollout status deployment -n cnpg-system barman-cloud
+```
+
+**Configuration:**
+```yaml
+backups:
+  enabled: true
+  method: plugin
+
+cluster:
+  plugins:
+    - name: barman-cloud.cloudnative-pg.io
+      isWALArchiver: true
+      parameters:
+        barmanObjectName: backup-store
+
+objectStore:
+  create: true
+  name: backup-store
+  configuration:
+    destinationPath: "s3://my-backup-bucket/path"
+    s3Credentials:
+      accessKeyId:
+        name: backup-credentials
+        key: ACCESS_KEY_ID
+      secretAccessKey:
+        name: backup-credentials
+        key: ACCESS_SECRET_KEY
+    wal:
+      compression: gzip
+      encryption: AES256
+    data:
+      compression: gzip
+      encryption: AES256
+  retentionPolicy: "30d"
+```
+
+#### General Backup Configuration
+
+The following section configures the barman object store where backups will be stored. Barman performs backups of the cluster filesystem base backup and WALs. Both are stored in the specified location. The backup provider is configured via the `backups.provider` parameter. The following providers are supported:
 
 * S3 or S3-compatible stores, like MinIO
 * Microsoft Azure Blob Storage

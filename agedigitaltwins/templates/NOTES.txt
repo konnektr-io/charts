@@ -88,3 +88,33 @@ Configuration
 {{- else if lt (int .Values.cluster.instances) 3 -}}
   {{- include "agedigitaltwins.cluster.color-warning" "Warning! Single instance redundancy available only. Instance failure will put the cluster at risk.\n" }}
 {{ end -}}
+
+{{- if .Values.backups.enabled }}
+{{ include "agedigitaltwins.cluster.color-info" "Backup Configuration:" }}
+  Method: {{ .Values.backups.method }}
+  {{- if eq .Values.backups.method "volumeSnapshot" }}
+  Volume Snapshot Class: {{ .Values.backups.volumeSnapshot.className | default "default" }}
+  {{- else if eq .Values.backups.method "barmanObjectStore" }}
+  {{ include "agedigitaltwins.cluster.color-warning" "Warning: barmanObjectStore method is deprecated in CloudNative-PG 1.26+. Consider migrating to the plugin method." }}
+  Provider: {{ .Values.backups.provider }}
+  {{- else if eq .Values.backups.method "plugin" }}
+  {{- if .Values.objectStore.create }}
+  ObjectStore: {{ default (printf "%s-objectstore" (include "agedigitaltwins.fullname" .)) .Values.objectStore.name }}
+  {{- end }}
+  {{ include "agedigitaltwins.cluster.color-info" "Note: Plugin method requires the Barman Cloud Plugin to be installed." }}
+  {{ include "agedigitaltwins.cluster.color-info" "Installation: kubectl apply -f https://github.com/cloudnative-pg/plugin-barman-cloud/releases/download/v0.4.0/manifest.yaml" }}
+  {{- end }}
+  Retention Policy: {{ .Values.backups.retentionPolicy }}
+  {{- if .Values.backups.scheduledBackups }}
+  Scheduled Backups: {{ len .Values.backups.scheduledBackups }}
+  {{- end }}
+{{- else }}
+{{ include "agedigitaltwins.cluster.color-warning" "Warning: Backups are disabled. Enable them to protect your data." }}
+{{- end }}
+
+{{- if and (eq .Values.backups.method "barmanObjectStore") }}
+
+{{ include "agedigitaltwins.cluster.color-info" "Migration Information:" }}
+The barmanObjectStore backup method is deprecated in CloudNative-PG 1.26+.
+See MIGRATION.md for instructions on migrating to the barman-cloud plugin.
+{{- end }}

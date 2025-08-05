@@ -2,7 +2,9 @@
 {{- if .Values.backups.enabled }}
 backup:
   target: "prefer-standby"
+  {{- if ne .Values.backups.method "plugin" }}
   retentionPolicy: {{ .Values.backups.retentionPolicy }}
+  {{- end }}
   {{- if eq .Values.backups.method "barmanObjectStore" }}
   barmanObjectStore:
     wal:

@@ -137,6 +137,22 @@
                 "enabled": {
                     "type": "boolean"
                 },
+                "method": {
+                    "type": "string",
+                    "enum": [
+                        "volumeSnapshot",
+                        "barmanObjectStore",
+                        "plugin"
+                    ]
+                },
+                "volumeSnapshot": {
+                    "type": "object",
+                    "properties": {
+                        "className": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "endpointCA": {
                     "type": "object",
                     "properties": {
@@ -216,6 +232,17 @@
                             },
                             "schedule": {
                                 "type": "string"
+                            },
+                            "pluginConfiguration": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "parameters": {
+                                        "type": "object"
+                                    }
+                                }
                             }
                         }
                     }
@@ -399,6 +426,23 @@
                 "roles": {
                     "type": "array"
                 },
+                "plugins": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "isWALArchiver": {
+                                "type": "boolean"
+                            },
+                            "parameters": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "serviceAccountTemplate": {
                     "type": "object"
                 },
@@ -443,6 +487,92 @@
                 },
                 "images": {
                     "type": "array"
+                }
+            }
+        },
+        "objectStore": {
+            "type": "object",
+            "properties": {
+                "create": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "labels": {
+                    "type": "object"
+                },
+                "annotations": {
+                    "type": "object"
+                },
+                "configuration": {
+                    "type": "object",
+                    "properties": {
+                        "endpointURL": {
+                            "type": "string"
+                        },
+                        "destinationPath": {
+                            "type": "string"
+                        },
+                        "s3Credentials": {
+                            "type": "object",
+                            "properties": {
+                                "accessKeyId": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "key": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "secretAccessKey": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "key": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "wal": {
+                            "type": "object",
+                            "properties": {
+                                "compression": {
+                                    "type": "string"
+                                },
+                                "encryption": {
+                                    "type": "string"
+                                },
+                                "maxParallel": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "data": {
+                            "type": "object",
+                            "properties": {
+                                "compression": {
+                                    "type": "string"
+                                },
+                                "encryption": {
+                                    "type": "string"
+                                },
+                                "jobs": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "retentionPolicy": {
+                    "type": "string"
                 }
             }
         },

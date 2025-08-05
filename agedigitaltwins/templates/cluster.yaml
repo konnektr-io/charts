@@ -60,6 +60,10 @@ spec:
   replicationSlots: 
     {{- toYaml . | nindent 4 }}
   {{ end }}
+  {{- with .Values.cluster.plugins }}
+  plugins:
+    {{- toYaml . | nindent 4 }}
+  {{ end }}
   postgresql:
     shared_preload_libraries:
       {{- if eq .Values.type "timescaledb" }}

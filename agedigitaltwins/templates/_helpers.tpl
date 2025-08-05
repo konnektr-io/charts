@@ -184,3 +184,15 @@ Postgres GID
     {{- 26 -}}
   {{- end -}}
 {{- end -}}
+
+{{/*
+Helper to generate barman cloud plugin configuration.
+This makes it easier to configure the barman-cloud plugin for object store backups.
+Usage: {{ include "agedigitaltwins.barmanCloudPlugin" (dict "objectStoreName" "my-store") }}
+*/}}
+{{- define "agedigitaltwins.barmanCloudPlugin" -}}
+- name: barman-cloud.cloudnative-pg.io
+  isWALArchiver: true
+  parameters:
+    barmanObjectName: {{ .objectStoreName }}
+{{- end -}}

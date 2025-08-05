@@ -11,6 +11,10 @@ spec:
   immediate: true
   schedule: {{ .schedule | quote }}
   method: {{ .method }}
+  {{- if .pluginConfiguration }}
+  pluginConfiguration:
+    {{- toYaml .pluginConfiguration | nindent 4 }}
+  {{- end }}
   backupOwnerReference: {{ .backupOwnerReference }}
   cluster:
     name: {{ include "agedigitaltwins.fullname" $context }}

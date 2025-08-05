@@ -383,6 +383,15 @@ cluster:
     #     - pg_monitor
     #     - pg_signal_backend
 
+  # -- List of plugins to load for the cluster.
+  # For CloudNative-PG 1.26+ it's recommended to use the barman-cloud plugin instead of the in-tree implementation.
+  # See: https://cloudnative-pg.io/plugin-barman-cloud/docs/0.4.0/migration/
+  plugins: []
+    # - name: barman-cloud.cloudnative-pg.io
+    #   isWALArchiver: true
+    #   parameters:
+    #     barmanObjectName: minio-backup
+
   monitoring:
     # -- Whether to enable monitoring
     enabled: false
@@ -474,20 +483,52 @@ cluster:
   annotations: {}
 
 
+# ===============================================
+# BACKUP CONFIGURATION
+# ===============================================
+# CloudNative-PG supports multiple backup methods:
+# 1. volumeSnapshot: Uses Kubernetes VolumeSnapshots (recommended)
+# 2. barmanObjectStore: Legacy in-tree barman implementation (deprecated in 1.26+)
+# 3. plugin: Uses the barman-cloud plugin (recommended for object storage)
+#
+# For CloudNative-PG 1.26+ it's recommended to use the barman-cloud plugin instead 
+# of the in-tree barman implementation for object storage backups.
+# See: https://cloudnative-pg.io/plugin-barman-cloud/docs/0.4.0/migration/
+
 backups:
   # -- You need to configure backups manually, so backups are disabled by default.
   enabled: false
 
-  # -- Explicitly set to barmanObjectStore to use legacy native barman object store backups.
+  # -- Backup method to use. Available options:
+  # * `volumeSnapshot` - Uses Kubernetes VolumeSnapshots (default, recommended)
+  # * `barmanObjectStore` - Legacy in-tree barman object store (deprecated in CloudNative-PG 1.26+)
+  # * `plugin` - Uses barman-cloud plugin (recommended for object storage in CloudNative-PG 1.26+)
+  # 
+  # NOTE: The 'plugin' method requires the Barman Cloud Plugin to be installed:
+  # kubectl apply -f https://github.com/cloudnative-pg/plugin-barman-cloud/releases/download/v0.4.0/manifest.yaml
   method: volumeSnapshot
 
-  # -- Volume snapshot configuration
+  # -- Retention policy for backups (applies to all backup methods)
+  retentionPolicy: "30d"
+
+  # ===============================================
+  # VOLUME SNAPSHOT CONFIGURATION
+  # ===============================================
+  # Used when method is 'volumeSnapshot'
   volumeSnapshot:
     className: "csi-vsc"
+    # Add any other VolumeSnapshot-specific configuration here
 
+  # ===============================================
+  # LEGACY BARMAN OBJECT STORE CONFIGURATION (DEPRECATED)
+  # ===============================================
+  # Used when method is 'barmanObjectStore'
+  # DEPRECATED: Use 'plugin' method with ObjectStore resource instead for CloudNative-PG 1.26+
+  
   # -- Overrides the provider specific default endpoint. Defaults to:
   # S3: https://s3.<region>.amazonaws.com"
   endpointURL: ""  # Leave empty if using the default S3 endpoint
+  
   # -- Specifies a CA bundle to validate a privately signed certificate.
   endpointCA:
     # -- Creates a secret with the given value if true, otherwise uses an existing secret.
@@ -501,14 +542,17 @@ backups:
   # Azure: https://<storageAccount>.<serviceName>.core.windows.net/<containerName><path>
   # Google: gs://<bucket><path>
   destinationPath: ""
+  
   # -- One of `s3`, `azure` or `google`
   provider: s3
+  
   s3:
     region: ""
     bucket: ""
     path: "/"
     accessKey: ""
     secretKey: ""
+  
   azure:
     path: "/"
     connectionString: ""
@@ -518,11 +562,13 @@ backups:
     containerName: ""
     serviceName: blob
     inheritFromAzureAD: false
+  
   google:
     path: "/"
     bucket: ""
     gkeEnvironment: false
     applicationCredentials: ""
+  
   secret:
     # -- Whether to create a secret for the backup credentials
     create: true
@@ -536,6 +582,7 @@ backups:
     encryption: AES256
     # -- Number of WAL files to be archived or restored in parallel.
     maxParallel: 1
+    
   data:
     # -- Data compression method. One of `` (for no compression), `gzip`, `bzip2` or `snappy`.
     compression: gzip
@@ -544,6 +591,9 @@ backups:
     # -- Number of data files to be archived or restored in parallel.
     jobs: 2
 
+  # ===============================================
+  # SCHEDULED BACKUPS CONFIGURATION
+  # ===============================================
   scheduledBackups:
     -
       # -- Scheduled backup name
@@ -552,10 +602,64 @@ backups:
       schedule: "0 0 0 * * *"
       # -- Backup owner reference
       backupOwnerReference: self
-      # -- Backup method, can be `volumeSnapshot` (default)
+      # -- Backup method, can be `volumeSnapshot` (default) or `plugin`
       method: volumeSnapshot
+      # -- Plugin configuration (only used when method is 'plugin')
+      # pluginConfiguration:
+      #   name: barman-cloud.cloudnative-pg.io
+      #   parameters:
+      #     barmanObjectName: backup-store
 
-  # -- Retention policy for backups
+# ===============================================
+# OBJECT STORE CONFIGURATION (BARMAN-CLOUD PLUGIN)
+# ===============================================
+# Used when backups.method is 'plugin' or for external clusters
+# This creates an ObjectStore resource for the barman-cloud plugin
+# See: https://cloudnative-pg.io/plugin-barman-cloud/docs/0.4.0/migration/
+
+objectStore:
+  # -- Whether to create an ObjectStore resource
+  create: false
+  
+  # -- Name of the ObjectStore resource
+  name: ""
+  
+  # -- Additional labels for the ObjectStore resource
+  labels: {}
+  
+  # -- Additional annotations for the ObjectStore resource
+  annotations: {}
+  
+  # -- ObjectStore configuration (maps directly to .spec.configuration in the ObjectStore resource)
+  configuration:
+    # -- Overrides the provider specific default endpoint
+    endpointURL: ""
+    
+    # -- Destination path for backups
+    destinationPath: ""
+    
+    # -- Provider-specific credentials configuration
+    s3Credentials:
+      accessKeyId:
+        name: ""
+        key: ACCESS_KEY_ID
+      secretAccessKey:
+        name: ""
+        key: ACCESS_SECRET_KEY
+    
+    # -- WAL configuration
+    wal:
+      compression: gzip
+      encryption: AES256
+      maxParallel: 1
+    
+    # -- Data backup configuration  
+    data:
+      compression: gzip
+      encryption: AES256
+      jobs: 2
+  
+  # -- Retention policy for the ObjectStore (overrides backups.retentionPolicy when using plugin method)
   retentionPolicy: "30d"
 
 

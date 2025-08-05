@@ -1,0 +1,21 @@
+{{- if .Values.objectStore.create }}
+apiVersion: barmancloud.cnpg.io/v1
+kind: ObjectStore
+metadata:
+  name: {{ default (printf "%s-objectstore" (include "agedigitaltwins.fullname" .)) .Values.objectStore.name }}
+  {{- with .Values.objectStore.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  labels:
+  {{- include "agedigitaltwins.labels" . | nindent 4 }}
+  {{- with .Values.objectStore.labels }}
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  configuration:
+    {{- toYaml .Values.objectStore.configuration | nindent 4 }}
+  {{- if .Values.objectStore.retentionPolicy }}
+  retentionPolicy: {{ .Values.objectStore.retentionPolicy }}
+  {{- end }}
+{{- end }}
