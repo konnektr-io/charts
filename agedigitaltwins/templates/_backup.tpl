@@ -3,6 +3,7 @@
 backup:
   target: "prefer-standby"
   retentionPolicy: {{ .Values.backups.retentionPolicy }}
+  {{- if eq .Values.backups.method "barmanObjectStore" }}
   barmanObjectStore:
     wal:
       compression: {{ .Values.backups.wal.compression }}
@@ -15,5 +16,9 @@ backup:
 
     {{- $d := dict "chartFullname" (include "agedigitaltwins.fullname" .) "scope" .Values.backups "secretPrefix" "backup" }}
     {{- include "agedigitaltwins.cluster.barmanObjectStoreConfig" $d | nindent 2 }}
+  {{- else if eq .Values.backups.method "volumeSnapshot" }}
+  volumeSnapshot:
+    {{- toYaml .Values.backups.volumeSnapshot | nindent 4 }}
+  {{- end }}
 {{- end }}
 {{- end }}

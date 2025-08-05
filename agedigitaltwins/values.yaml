@@ -478,6 +478,13 @@ backups:
   # -- You need to configure backups manually, so backups are disabled by default.
   enabled: false
 
+  # -- Explicitly set to barmanObjectStore to use legacy native barman object store backups.
+  method: volumeSnapshot
+
+  # -- Volume snapshot configuration
+  volumeSnapshot:
+    className: "csi-vsc"
+
   # -- Overrides the provider specific default endpoint. Defaults to:
   # S3: https://s3.<region>.amazonaws.com"
   endpointURL: ""  # Leave empty if using the default S3 endpoint
@@ -545,8 +552,8 @@ backups:
       schedule: "0 0 0 * * *"
       # -- Backup owner reference
       backupOwnerReference: self
-      # -- Backup method, can be `barmanObjectStore` (default) or `volumeSnapshot`
-      method: barmanObjectStore
+      # -- Backup method, can be `volumeSnapshot` (default)
+      method: volumeSnapshot
 
   # -- Retention policy for backups
   retentionPolicy: "30d"
