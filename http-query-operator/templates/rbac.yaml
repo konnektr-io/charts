@@ -1,0 +1,37 @@
+{{- if .Values.rbac.create }}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "htp-query-operator.serviceAccountName" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "htp-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: controller
+  {{- if .Values.namespaceOverride }}
+  namespace: {{ .Values.namespaceOverride }}
+  {{- end }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "htp-query-operator.fullname" . }}
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*" ]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "htp-query-operator.fullname" . }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "htp-query-operator.fullname" . }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "htp-query-operator.serviceAccountName" . }}
+    namespace: {{ .Release.Namespace }}
+{{- end }}

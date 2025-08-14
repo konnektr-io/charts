@@ -1,0 +1,19 @@
+apiVersion: v2
+name: http-query-operator
+description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
+home: https://github.com/konnektr-io/http-query-operator
+sources:
+  - https://github.com/konnektr-io/http-query-operator
+maintainers:
+  - name: Konnektr-io
+    email: info@konnektr.io
+keywords:
+  - kubernetes-operator
+  - database
+  - query
+  - CRD
+  - HTTP
+version: 0.1.0
+appVersion: "0.1.0"
+annotations:
+  crd-repo-url: https://github.com/konnektr-io/http-query-operator/tree/v{{ .appVersion }}/config/crd/bases
