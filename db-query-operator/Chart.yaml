@@ -16,4 +16,4 @@ keywords:
 version: 0.2.2
 appVersion: "0.2.2"
 annotations:
-  crd-repo-url: https://github.com/konnektr-io/db-query-operator/tree/v{{ .appVersion }}/config/crd/bases
+  crd-repo-url: "https://api.github.com/repos/konnektr-io/db-query-operator/contents/config/crd/bases?ref=v{{ .appVersion }}"
