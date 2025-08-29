@@ -73,6 +73,9 @@ spec:
               value: {{ .Values.api.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
             {{- list .Values.api.config "" | include "recurseFlattenMap" | nindent 12 }}
+            {{- with .Values.api.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           livenessProbe:
             {{- toYaml .Values.api.livenessProbe | nindent 12 }}
           readinessProbe:
