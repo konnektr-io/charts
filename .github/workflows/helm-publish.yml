@@ -21,6 +21,13 @@ jobs:
         with:
           version: v3.12.0
 
+      - name: Update Helm dependencies
+        run: |
+          for chart in $(find . -name Chart.yaml -exec dirname {} \;); do
+            echo "Updating dependencies for $chart"
+            helm dependency update "$chart"
+          done
+
       - name: Lint all Helm charts
         run: |
           for chart in $(find . -name Chart.yaml -exec dirname {} \;); do
