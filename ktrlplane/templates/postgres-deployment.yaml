@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: {{ .Values.database.image.repository }}:{{ .Values.database.image.tag }}
+        env:
+          - name: POSTGRES_DB
+            value: {{ .Values.database.credentials.db }}
+          - name: POSTGRES_USER
+            value: {{ .Values.database.credentials.user }}
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: ktrlplane-postgres-secret
+                key: POSTGRES_PASSWORD
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: postgres-storage
+          mountPath: /var/lib/postgresql/data
+        resources:
+          requests:
+            memory: {{ .Values.database.resources.requests.memory }}
+            cpu: {{ .Values.database.resources.requests.cpu }}
+          limits:
+            memory: {{ .Values.database.resources.limits.memory }}
+            cpu: {{ .Values.database.resources.limits.cpu }}
+      volumes:
+      - name: postgres-storage
+        persistentVolumeClaim:
+          claimName: postgres-pvc

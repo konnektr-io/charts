@@ -1,0 +1,149 @@
+namespace: ktrlplane
+backend:
+  image:
+    repository: ktrlplane/backend
+    tag: latest
+  replicas: 2
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "100m"
+    limits:
+      memory: "256Mi"
+      cpu: "200m"
+  env:
+    DB_HOST: "" # Will be set from secret
+    DB_PORT: "" # Will be set from secret
+    DB_NAME: "" # Will be set from secret
+    DB_USER: "" # Will be set from secret
+    DB_PASSWORD: "" # Will be set from secret
+    KTRLPLANE_AUTH_DOMAIN: auth.konnektr.io
+    KTRLPLANE_AUTH_AUDIENCE: https://api.ktrlplane.konnektr.io
+frontend:
+  image:
+    repository: ktrlplane/frontend
+    tag: latest
+  replicas: 2
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "128Mi"
+      cpu: "100m"
+database:
+  enabled: true # Set to false to use external database (e.g., cnpg)
+  useExternalSecret: false # If true, reference an existing secret for DB credentials
+  externalSecretName: "" # Name of the external secret (required if useExternalSecret is true)
+  image:
+    repository: postgres
+    tag: 16-alpine # Use newer version
+  storage: 10Gi
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+  credentials:
+    user: ktrlplane
+    db: ktrlplane_db
+ingress:
+  enabled: true
+  host: ktrlplane.local
+  className: nginx
+db-query-operator:
+  enabled: false
+  replicaCount: 1
+  image:
+    repository: ghcr.io/konnektr-io/db-query-operator
+    tag: "{{ .Chart.AppVersion }}"
+    pullPolicy: Always
+  nameOverride: ""
+  fullnameOverride: ""
+  serviceAccount:
+    create: true
+    name: ""
+  rbac:
+    create: true
+  resources:
+    limits:
+      cpu: 500m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+  nodeSelector: {}
+  securityContext:
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+        - "ALL"
+  livenessProbe:
+    httpGet:
+      path: /healthz
+      port: 8081
+    initialDelaySeconds: 15
+    periodSeconds: 20
+  readinessProbe:
+    httpGet:
+      path: /readyz
+      port: 8081
+    initialDelaySeconds: 5
+    periodSeconds: 10
+  terminationGracePeriodSeconds: 10
+  gvkPattern: "v1/ConfigMap"
+  includeCRDs: false
+  namespaceOverride: ""
+http-query-operator:
+  enabled: false
+  replicaCount: 1
+  image:
+    repository: ghcr.io/konnektr-io/htp-query-operator
+    tag: "{{ .Chart.AppVersion }}"
+    pullPolicy: Always
+  nameOverride: ""
+  fullnameOverride: ""
+  serviceAccount:
+    create: true
+    name: ""
+  rbac:
+    create: true
+  resources:
+    limits:
+      cpu: 500m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+  nodeSelector: {}
+  securityContext:
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+        - "ALL"
+  livenessProbe:
+    httpGet:
+      path: /healthz
+      port: 8081
+    initialDelaySeconds: 15
+    periodSeconds: 20
+  readinessProbe:
+    httpGet:
+      path: /readyz
+      port: 8081
+    initialDelaySeconds: 5
+    periodSeconds: 10
+  terminationGracePeriodSeconds: 10
+  gvkPattern: "v1/ConfigMap"
+  includeCRDs: false
+  namespaceOverride: ""
