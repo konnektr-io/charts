@@ -13,9 +13,9 @@ backend:
     limits:
       memory: "256Mi"
       cpu: "200m"
-  env:
-    KTRLPLANE_AUTH_DOMAIN: auth.konnektr.io
-    KTRLPLANE_AUTH_AUDIENCE: https://api.ktrlplane.konnektr.io
+  auth:
+    issuer: https://auth.konnektr.io/
+    audience: https://api.ktrlplane.konnektr.io
 frontend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-frontend
