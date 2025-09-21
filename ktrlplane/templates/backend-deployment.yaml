@@ -20,43 +20,43 @@ spec:
         imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
         command: ["./migrate"]
         env:
-          - name: KTRLPLANE_DB_HOST
+          - name: KTRLPLANE_DATABASE_HOST
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_HOST
-          - name: KTRLPLANE_DB_PORT
+          - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_PORT
-          - name: KTRLPLANE_DB_NAME
+          - name: KTRLPLANE_DATABASE_NAME
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_NAME
-          - name: KTRLPLANE_DB_USER
+          - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_USER
-          - name: KTRLPLANE_DB_PASSWORD
+          - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_PASSWORD
           {{- if .Values.stripe.enabled }}
-          - name: STRIPE_SECRET_KEY
+          - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
                 key: STRIPE_SECRET_KEY
-          - name: STRIPE_PUBLISHABLE_KEY
+          - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
                 key: STRIPE_PUBLISHABLE_KEY
-          - name: STRIPE_WEBHOOK_SECRET
+          - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
@@ -77,47 +77,43 @@ spec:
         ports:
         - containerPort: 8080
         env:
-          - name: KTRLPLANE_DB_HOST
+          - name: KTRLPLANE_DATABASE_HOST
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_HOST
-          - name: KTRLPLANE_DB_PORT
+          - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_PORT
-          - name: KTRLPLANE_DB_NAME
+          - name: KTRLPLANE_DATABASE_NAME
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_NAME
-          - name: KTRLPLANE_DB_USER
+          - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_USER
-          - name: KTRLPLANE_DB_PASSWORD
+          - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_PASSWORD
-          - name: KTRLPLANE_AUTH_DOMAIN
-            value: {{ .Values.backend.env.KTRLPLANE_AUTH_DOMAIN }}
-          - name: KTRLPLANE_AUTH_AUDIENCE
-            value: {{ .Values.backend.env.KTRLPLANE_AUTH_AUDIENCE }}
           {{- if .Values.stripe.enabled }}
-          - name: STRIPE_SECRET_KEY
+          - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
                 key: STRIPE_SECRET_KEY
-          - name: STRIPE_PUBLISHABLE_KEY
+          - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
                 key: STRIPE_PUBLISHABLE_KEY
-          - name: STRIPE_WEBHOOK_SECRET
+          - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeName" . }}
