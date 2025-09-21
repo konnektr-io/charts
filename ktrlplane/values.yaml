@@ -2,7 +2,8 @@ namespace: ktrlplane
 backend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-backend
-    tag: latest
+    tag: "{{ .Chart.AppVersion }}"
+    pullPolicy: Always
   replicas: 1
   resources:
     requests:
@@ -17,7 +18,8 @@ backend:
 frontend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-frontend
-    tag: latest
+    tag: "{{ .Chart.AppVersion }}"
+    pullPolicy: Always
   replicas: 1
   resources:
     requests:
@@ -45,9 +47,17 @@ database:
       memory: "512Mi"
       cpu: "500m"
 ingress:
-  enabled: true
-  host: ktrlplane.local
+  enabled: false
   className: nginx
+  annotations: 
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - ktrlplane.local
+  tls: []
+  #  - secretName: ktrlplane-tls
+  #    hosts:
+  #      - ktrlplane.local
 stripe:
   enabled: false # Enable Stripe integration
   useExternalSecret: true # If true, reference an existing secret for Stripe credentials
