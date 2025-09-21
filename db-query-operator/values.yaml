@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/konnektr-io/db-query-operator
-  tag: "{{ .Chart.AppVersion }}"
+  tag: ""
   pullPolicy: Always
 
 nameOverride: ""
