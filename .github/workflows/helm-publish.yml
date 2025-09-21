@@ -166,9 +166,8 @@ jobs:
         run: |
           for chart_package in ./packaged/*.tgz; do
             if [ -f "$chart_package" ]; then
-              chart_name=$(basename "$chart_package" | sed 's/-[0-9].*//')
-              echo "Pushing $chart_package to OCI registry at charts/$chart_name..."
-              helm push "$chart_package" oci://ghcr.io/${{ github.repository_owner }}/charts/$chart_name
+              echo "Pushing $chart_package to OCI registry at charts..."
+              helm push "$chart_package" oci://ghcr.io/${{ github.repository_owner }}/charts
             fi
           done
 
