@@ -44,7 +44,7 @@ spec:
             command:
               - pg_isready
               - -U
-              - postgres
+              - {{ .Values.database.credentials.user }}
           initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
@@ -52,7 +52,7 @@ spec:
             command:
               - pg_isready
               - -U
-              - postgres
+              - {{ .Values.database.credentials.user }}
           initialDelaySeconds: 5
           periodSeconds: 5
       volumes:
