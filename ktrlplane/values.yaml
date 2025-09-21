@@ -5,6 +5,7 @@ backend:
     tag: ""  # Empty means use Chart.AppVersion
     pullPolicy: Always
   replicas: 1
+  runMigrations: true  # Run database migrations before starting backend
   resources:
     requests:
       memory: "128Mi"

@@ -2,8 +2,8 @@ apiVersion: v2
 name: ktrlplane
 description: Helm chart for deploying the ktrlplane solution (backend, frontend, PostgreSQL)
 type: application
-version: 0.2.11
-appVersion: "latest"
+version: 0.2.12
+appVersion: "0.0.1"
 dependencies:
   - name: db-query-operator
     version: "0.2.3"
