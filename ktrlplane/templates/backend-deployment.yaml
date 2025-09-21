@@ -45,6 +45,30 @@ spec:
               secretKeyRef:
                 name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
                 key: DB_PASSWORD
+          {{- if .Values.stripe.enabled }}
+          - name: STRIPE_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "ktrlplane.stripeName" . }}
+                key: STRIPE_SECRET_KEY
+          - name: STRIPE_PUBLISHABLE_KEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "ktrlplane.stripeName" . }}
+                key: STRIPE_PUBLISHABLE_KEY
+          - name: STRIPE_WEBHOOK_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "ktrlplane.stripeName" . }}
+                key: STRIPE_WEBHOOK_SECRET
+          {{- end }}
+        {{- if .Values.stripe.enabled }}
+        volumeMounts:
+        - name: config
+          mountPath: /root/config.yaml
+          subPath: config.yaml
+          readOnly: true
+        {{- end }}
       {{- end }}
       containers:
       - name: backend
