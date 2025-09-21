@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: ktrlplane-db
   namespace: {{ .Values.namespace }}
 spec:
   replicas: 1
@@ -39,8 +39,24 @@ spec:
           limits:
             memory: {{ .Values.database.resources.limits.memory }}
             cpu: {{ .Values.database.resources.limits.cpu }}
+        livenessProbe:
+          exec:
+            command:
+              - pg_isready
+              - -U
+              - postgres
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+              - pg_isready
+              - -U
+              - postgres
+          initialDelaySeconds: 5
+          periodSeconds: 5
       volumes:
       - name: postgres-storage
         persistentVolumeClaim:
-          claimName: postgres-pvc
+          claimName: ktrlplane-db-pvc
 {{- end }}

@@ -46,13 +46,32 @@ database:
     limits:
       memory: "512Mi"
       cpu: "500m"
-  credentials:
-    user: ktrlplane
-    db: ktrlplane_db
 ingress:
   enabled: true
   host: ktrlplane.local
   className: nginx
+stripe:
+  enabled: false # Enable Stripe integration
+  useExternalSecret: true # If true, reference an existing secret for Stripe credentials
+  externalSecretName: "ktrlplane-stripe-secret" # Name of the external secret (required if useExternalSecret is true)
+  # Only set these if useExternalSecret is false (NOT RECOMMENDED for production)
+  secretKey: ""
+  publishableKey: ""
+  webhookSecret: ""
+  # Product configuration (safe to store in values)
+  products:
+    - resource_type: "Konnektr.DigitalTwins"
+      sku: "free"
+      product_id: "prod_T01txFyd6dfzao"
+    - resource_type: "Konnektr.DigitalTwins"
+      sku: "standard"
+      product_id: "prod_SzztLZsKSYqiVz"
+    - resource_type: "Konnektr.Flows"
+      sku: "free"
+      product_id: "prod_T0n3Z04EIgDZcT"
+    - resource_type: "Konnektr.Flows"
+      sku: "standard"
+      product_id: "prod_T01up7wLDULGB1"
 db-query-operator:
   enabled: false
   replicaCount: 1

@@ -1,0 +1,14 @@
+{{- if .Values.stripe.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "ktrlplane.configName" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "ktrlplane.labels" . | nindent 4 }}
+data:
+  config.yaml: |
+    stripe:
+      products:
+        {{- .Values.stripe.products | toYaml | nindent 8 }}
+{{- end }}
