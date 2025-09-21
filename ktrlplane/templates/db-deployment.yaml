@@ -25,8 +25,8 @@ spec:
           - name: POSTGRES_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: ktrlplane-postgres-secret
-                key: POSTGRES_PASSWORD
+                name: ktrlplane-db-secret
+                key: DB_PASSWORD
         ports:
         - containerPort: 5432
         volumeMounts:
