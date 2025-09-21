@@ -1,9 +1,9 @@
 namespace: ktrlplane
 backend:
   image:
-    repository: ktrlplane/backend
+    repository: ghcr.io/konnektr-io/ktrlplane-backend
     tag: latest
-  replicas: 2
+  replicas: 1
   resources:
     requests:
       memory: "128Mi"
@@ -12,18 +12,13 @@ backend:
       memory: "256Mi"
       cpu: "200m"
   env:
-    DB_HOST: "" # Will be set from secret
-    DB_PORT: "" # Will be set from secret
-    DB_NAME: "" # Will be set from secret
-    DB_USER: "" # Will be set from secret
-    DB_PASSWORD: "" # Will be set from secret
     KTRLPLANE_AUTH_DOMAIN: auth.konnektr.io
     KTRLPLANE_AUTH_AUDIENCE: https://api.ktrlplane.konnektr.io
 frontend:
   image:
-    repository: ktrlplane/frontend
+    repository: ghcr.io/konnektr-io/ktrlplane-frontend
     tag: latest
-  replicas: 2
+  replicas: 1
   resources:
     requests:
       memory: "64Mi"
@@ -35,6 +30,9 @@ database:
   enabled: true # Set to false to use external database (e.g., cnpg)
   useExternalSecret: false # If true, reference an existing secret for DB credentials
   externalSecretName: "" # Name of the external secret (required if useExternalSecret is true)
+  credentials:
+    db: ktrlplane
+    user: ktrlplane
   image:
     repository: postgres
     tag: 16-alpine # Use newer version
