@@ -2,7 +2,7 @@ namespace: ktrlplane
 backend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-backend
-    tag: "{{ .Chart.AppVersion }}"
+    tag: ""  # Empty means use Chart.AppVersion
     pullPolicy: Always
   replicas: 1
   resources:
@@ -18,7 +18,7 @@ backend:
 frontend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-frontend
-    tag: "{{ .Chart.AppVersion }}"
+    tag: ""  # Empty means use Chart.AppVersion
     pullPolicy: Always
   replicas: 1
   resources:
