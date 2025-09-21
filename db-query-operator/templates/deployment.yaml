@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: { { include "db-query-operator.fullname" . } }
+  name: {{ include "db-query-operator.fullname" . }}
   labels:
-    app.kubernetes.io/name: { { include "db-query-operator.name" . } }
-    app.kubernetes.io/instance: { { .Release.Name } }
-    app.kubernetes.io/managed-by: { { .Release.Service } }
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
     app.kubernetes.io/component: controller
 spec:
-  replicas: { { .Values.replicaCount } }
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: { { include "db-query-operator.name" . } }
-      app.kubernetes.io/instance: { { .Release.Name } }
+      app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: { { include "db-query-operator.name" . } }
-        app.kubernetes.io/instance: { { .Release.Name } }
+        app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/component: controller
     spec:
       serviceAccountName:
-        { { include "db-query-operator.serviceAccountName" . } }
+        {{ include "db-query-operator.serviceAccountName" . }}
       securityContext:
-        runAsNonRoot: { { .Values.securityContext.runAsNonRoot } }
+        runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
         seccompProfile:
-          type: { { .Values.securityContext.seccompProfile.type } }
+          type: {{ .Values.securityContext.seccompProfile.type }}
       containers:
         - name: manager
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: { { .Values.image.pullPolicy } }
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - /manager
           args:
@@ -39,31 +39,31 @@ spec:
               value: "{{ .Values.gvkPattern }}"
           securityContext:
             allowPrivilegeEscalation:
-              { { .Values.containerSecurityContext.allowPrivilegeEscalation } }
+              {{ .Values.containerSecurityContext.allowPrivilegeEscalation }}
             capabilities:
               drop:
                 - "ALL"
           livenessProbe:
             httpGet:
-              path: { { .Values.livenessProbe.httpGet.path } }
-              port: { { .Values.livenessProbe.httpGet.port } }
+              path: {{ .Values.livenessProbe.httpGet.path }}
+              port: {{ .Values.livenessProbe.httpGet.port }}
             initialDelaySeconds:
-              { { .Values.livenessProbe.initialDelaySeconds } }
-            periodSeconds: { { .Values.livenessProbe.periodSeconds } }
+              {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
           readinessProbe:
             httpGet:
-              path: { { .Values.readinessProbe.httpGet.path } }
-              port: { { .Values.readinessProbe.httpGet.port } }
+              path: {{ .Values.readinessProbe.httpGet.path }}
+              port: {{ .Values.readinessProbe.httpGet.port }}
             initialDelaySeconds:
-              { { .Values.readinessProbe.initialDelaySeconds } }
-            periodSeconds: { { .Values.readinessProbe.periodSeconds } }
+              {{ .Values.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
           resources:
             limits:
-              cpu: { { .Values.resources.limits.cpu } }
-              memory: { { .Values.resources.limits.memory } }
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
             requests:
-              cpu: { { .Values.resources.requests.cpu } }
-              memory: { { .Values.resources.requests.memory } }
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
       terminationGracePeriodSeconds:
-        { { .Values.terminationGracePeriodSeconds } }
-      nodeSelector: { { - toYaml .Values.nodeSelector | nindent 8 } }
+        {{ .Values.terminationGracePeriodSeconds }}
+      nodeSelector: {{ - toYaml .Values.nodeSelector | nindent 8 }}
