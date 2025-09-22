@@ -23,43 +23,43 @@ spec:
           - name: KTRLPLANE_DATABASE_HOST
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_HOST
           - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_PORT
           - name: KTRLPLANE_DATABASE_DBNAME
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_NAME
           - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_USER
           - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_PASSWORD
           {{- if .Values.stripe.enabled }}
           - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_SECRET_KEY
           - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_PUBLISHABLE_KEY
           - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_WEBHOOK_SECRET
           {{- end }}
         {{- if .Values.stripe.enabled }}
@@ -86,43 +86,43 @@ spec:
           - name: KTRLPLANE_DATABASE_HOST
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_HOST
           - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_PORT
           - name: KTRLPLANE_DATABASE_DBNAME
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_NAME
           - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_USER
           - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: {{ if .Values.database.enabled }}{{ if .Values.database.useExternalSecret }}{{ .Values.database.externalSecretName }}{{ else }}ktrlplane-db-secret{{ end }}{{ else }}{{ .Values.database.externalSecretName }}{{ end }}
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_PASSWORD
           {{- if .Values.stripe.enabled }}
           - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_SECRET_KEY
           - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_PUBLISHABLE_KEY
           - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
-                name: {{ include "ktrlplane.stripeName" . }}
+                name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: STRIPE_WEBHOOK_SECRET
           {{- end }}
         resources:

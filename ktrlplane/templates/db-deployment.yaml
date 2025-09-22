@@ -19,13 +19,19 @@ spec:
         image: {{ .Values.database.image.repository }}:{{ .Values.database.image.tag }}
         env:
           - name: POSTGRES_DB
-            value: {{ .Values.database.credentials.db }}
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "ktrlplane.dbSecretName" . }}
+                key: DB_NAME
           - name: POSTGRES_USER
-            value: {{ .Values.database.credentials.user }}
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "ktrlplane.dbSecretName" . }}
+                key: DB_USER
           - name: POSTGRES_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: ktrlplane-db-secret
+                name: {{ include "ktrlplane.dbSecretName" . }}
                 key: DB_PASSWORD
         ports:
         - containerPort: 5432

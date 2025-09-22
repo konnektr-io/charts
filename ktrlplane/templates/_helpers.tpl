@@ -51,9 +51,20 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+Database secret name
+*/}}
+{{- define "ktrlplane.dbSecretName" -}}
+{{- if .Values.database.useExternalSecret -}}
+{{- .Values.database.externalSecretName -}}
+{{- else -}}
+{{- printf "%s-db-secret" (include "ktrlplane.fullname" .) -}}
+{{- end -}}
+{{- end }}
+
+{{/*
 Stripe secret name
 */}}
-{{- define "ktrlplane.stripeName" -}}
+{{- define "ktrlplane.stripeSecretName" -}}
 {{- if .Values.stripe.useExternalSecret }}
 {{- .Values.stripe.externalSecretName }}
 {{- else }}
