@@ -77,6 +77,8 @@ spec:
         ports:
         - containerPort: 8080
         env:
+          - name: KTRLPLANE_SERVER_PORT
+            value: "8080"
           - name: KTRLPLANE_AUTH_ISSUER
             value: {{ .Values.backend.auth.issuer }}
           - name: KTRLPLANE_AUTH_AUDIENCE
