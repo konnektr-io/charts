@@ -36,6 +36,7 @@ database:
   credentials:
     db: ktrlplane
     user: ktrlplane
+    password: "ktrlplane"
   image:
     repository: postgres
     tag: 16-alpine # Use newer version
