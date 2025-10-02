@@ -3,10 +3,10 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2025-10-02T14:55:19.861675514Z"
+    created: "2025-10-02T15:23:04.869157669Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
-    digest: a1d1a1cb7d21530e2e350e5b9db9cc9ffbd5c9518e93141b64af4d8024e0fbc2
+    digest: 55f34cf90d96748f655c598386f24a2d2fd5cc1ba5fc169b18551d282cd5239a
     home: https://github.com/konnektr-io/pg-age-digitaltwins
     keywords:
     - graph
@@ -24,7 +24,7 @@ entries:
     version: 0.29.1
   - apiVersion: v2
     appVersion: 1.14.6
-    created: "2025-10-02T14:55:19.860108964Z"
+    created: "2025-10-02T15:23:04.867632172Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 74ff272b34ef858ae700dcabb024188e92eba62c86c8da691132178cded2c420
@@ -45,7 +45,7 @@ entries:
     version: 0.28.6
   - apiVersion: v2
     appVersion: 1.14.5
-    created: "2025-10-02T14:55:19.858503159Z"
+    created: "2025-10-02T15:23:04.866074805Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 48acf88010b26c30bf5ae94f3a4167319f722fc2b40292d76342931f7abd9abc
@@ -66,7 +66,7 @@ entries:
     version: 0.28.5
   - apiVersion: v2
     appVersion: 1.14.5
-    created: "2025-10-02T14:55:19.856121426Z"
+    created: "2025-10-02T15:23:04.863708825Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 7e3bfc97318276d4ae2f6c408621ebdc84de90739e04e6138a566c30fad5524e
@@ -87,7 +87,7 @@ entries:
     version: 0.27.5
   - apiVersion: v2
     appVersion: 1.14.4
-    created: "2025-10-02T14:55:19.854518463Z"
+    created: "2025-10-02T15:23:04.862200971Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: a5ee9adf210606f213422736dec3f690455862979fba1925c6e0dc50dd90b4be
@@ -108,7 +108,7 @@ entries:
     version: 0.27.4
   - apiVersion: v2
     appVersion: 1.14.3
-    created: "2025-10-02T14:55:19.852743552Z"
+    created: "2025-10-02T15:23:04.860661587Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 858adf1c47850052f6608f53b4cb27edc2a5445b40f2df74b8ca7d8632e5da4c
@@ -129,7 +129,7 @@ entries:
     version: 0.27.3
   - apiVersion: v2
     appVersion: 1.14.2
-    created: "2025-10-02T14:55:19.85119021Z"
+    created: "2025-10-02T15:23:04.859112175Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08b8acd9f73046c01151412e2b581d00227c8eeac69dfd8616e7d88a1306400c
@@ -150,7 +150,7 @@ entries:
     version: 0.27.2
   - apiVersion: v2
     appVersion: 1.14.1
-    created: "2025-10-02T14:55:19.849522881Z"
+    created: "2025-10-02T15:23:04.857558685Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: d6407ed817ed9cd560d1cd4cee5855f9af85f0d50cd69e97a871946d7f813d32
@@ -171,7 +171,7 @@ entries:
     version: 0.27.1
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2025-10-02T14:55:19.847542745Z"
+    created: "2025-10-02T15:23:04.855092603Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: ef2a581f0812d60f8663ae020d7c542dd46253c76c5182abb3a33c98c7cd399a
@@ -192,7 +192,7 @@ entries:
     version: 0.27.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2025-10-02T14:55:19.845580115Z"
+    created: "2025-10-02T15:23:04.853584187Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 0ee9d47aea6e9a40dd3ef1ae2097e27e155a17d2b1983feafed7855a9bd2fd78
@@ -213,7 +213,7 @@ entries:
     version: 0.26.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2025-10-02T14:55:19.844178037Z"
+    created: "2025-10-02T15:23:04.852264033Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 656facd972348e7f1eae368628c85fbf97a8bbff8e813a12db8ece0062aee9c6
@@ -234,7 +234,7 @@ entries:
     version: 0.25.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2025-10-02T14:55:19.842823684Z"
+    created: "2025-10-02T15:23:04.850923851Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: fd2fdcdf0dcac0e9ca9c2b382aabb82d0357a82bc93fbd1874fd2a2c77e06ed9
@@ -255,7 +255,7 @@ entries:
     version: 0.24.0
   - apiVersion: v2
     appVersion: 1.13.9
-    created: "2025-10-02T14:55:19.83099934Z"
+    created: "2025-10-02T15:23:04.839087197Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 60661c7dd2abd2ea4fc6607fb4ec0ae51d32333d02fda47bbf881d6841a94371
@@ -276,7 +276,7 @@ entries:
     version: 0.23.10
   - apiVersion: v2
     appVersion: 1.13.9
-    created: "2025-10-02T14:55:19.841472412Z"
+    created: "2025-10-02T15:23:04.8495838Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 1cea49bda73f78ee357012d099f6377617fa4099dfe8e1ab9608b08c17235136
@@ -297,7 +297,7 @@ entries:
     version: 0.23.9
   - apiVersion: v2
     appVersion: 1.13.8
-    created: "2025-10-02T14:55:19.840046761Z"
+    created: "2025-10-02T15:23:04.847551448Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 9ed47bc0d503338e28e30d28e143d054151750688df567987d55b5a07197c99f
@@ -318,7 +318,7 @@ entries:
     version: 0.23.8
   - apiVersion: v2
     appVersion: 1.13.7
-    created: "2025-10-02T14:55:19.838645167Z"
+    created: "2025-10-02T15:23:04.846213571Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 11fb6241b04ff38fc9c846f4c855e7d55e109fee6ccdd214269e0e33d900ac53
@@ -339,7 +339,7 @@ entries:
     version: 0.23.7
   - apiVersion: v2
     appVersion: 1.13.6
-    created: "2025-10-02T14:55:19.836454961Z"
+    created: "2025-10-02T15:23:04.844881995Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 921a7f6b5288946cc598c893199f1f05b832ad733827f009fe7857c2306e3dab
@@ -360,7 +360,7 @@ entries:
     version: 0.23.6
   - apiVersion: v2
     appVersion: 1.13.5
-    created: "2025-10-02T14:55:19.835073939Z"
+    created: "2025-10-02T15:23:04.843579614Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 5fe07cd955a6dfc651b0049eecf4c652116cc0b4639068ddeb770d6aa171662f
@@ -381,7 +381,7 @@ entries:
     version: 0.23.5
   - apiVersion: v2
     appVersion: 1.13.4
-    created: "2025-10-02T14:55:19.833711794Z"
+    created: "2025-10-02T15:23:04.842270741Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 0242478a73f4e67600af3a47d4c120046b41465e331318cbcef300d91f416365
@@ -402,7 +402,7 @@ entries:
     version: 0.23.4
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2025-10-02T14:55:19.832361528Z"
+    created: "2025-10-02T15:23:04.840927233Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c937d4c07a3b303817bf532c81ae7e5fc9632b768e5d665b97c2ef14e3c4c73e
@@ -423,7 +423,7 @@ entries:
     version: 0.23.3
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2025-10-02T14:55:19.829572433Z"
+    created: "2025-10-02T15:23:04.837584742Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: fdd93b4e221a537738e5b0f3aa6727f941c8c825d9390b92a24b21f77c2304c2
@@ -444,7 +444,7 @@ entries:
     version: 0.22.3
   - apiVersion: v2
     appVersion: 1.13.2
-    created: "2025-10-02T14:55:19.82726991Z"
+    created: "2025-10-02T15:23:04.836277662Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 640ffcbc379e3b1d93d89385edda87ffcf86e23ac7df3b0a1a4e61f31f479e5a
@@ -465,7 +465,7 @@ entries:
     version: 0.22.2
   - apiVersion: v2
     appVersion: 1.13.2
-    created: "2025-10-02T14:55:19.825918382Z"
+    created: "2025-10-02T15:23:04.834939805Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 1b05356dc3401f2b4a1781bdac9b2cc13349a9caa1ed33b04b35139d85accf94
@@ -486,7 +486,7 @@ entries:
     version: 0.21.2
   - apiVersion: v2
     appVersion: 1.13.1
-    created: "2025-10-02T14:55:19.824572077Z"
+    created: "2025-10-02T15:23:04.833652773Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 09c0d436f1ee626e34c9d207a8cf4e82bd53e31afeae263b77d4090a2753210e
@@ -507,7 +507,7 @@ entries:
     version: 0.21.1
   - apiVersion: v2
     appVersion: 1.13.0
-    created: "2025-10-02T14:55:19.823255508Z"
+    created: "2025-10-02T15:23:04.832348158Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 3d99d0a9f8e77f5475e5c012d695e122aa20cc30ffccececa1693f9955b33277
@@ -528,7 +528,7 @@ entries:
     version: 0.21.0
   - apiVersion: v2
     appVersion: 1.13.0
-    created: "2025-10-02T14:55:19.821904709Z"
+    created: "2025-10-02T15:23:04.830346191Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 93793df7ebcd3cd7da37755cda0578ae313bb8d921fd8fe1f1142169fb6d6b26
@@ -549,7 +549,7 @@ entries:
     version: 0.20.0
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2025-10-02T14:55:19.820531478Z"
+    created: "2025-10-02T15:23:04.82907055Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: dec7d3bbc150da6f3aa0e471f8eccd16395baede83c1cb35a2dcc1a1bb1ff12f
@@ -570,7 +570,7 @@ entries:
     version: 0.19.1
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2025-10-02T14:55:19.818281564Z"
+    created: "2025-10-02T15:23:04.827771785Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c112625f7f4fdb134f5e36342c91e3cd672fc396d3ae471cc2b4245a36ebd9ab
@@ -591,7 +591,7 @@ entries:
     version: 0.18.1
   - apiVersion: v2
     appVersion: 1.12.0
-    created: "2025-10-02T14:55:19.816942456Z"
+    created: "2025-10-02T15:23:04.826489231Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 3b64c32a8a83b9a107c12091631a888097f6402ad08df8af391b8a7128754ecd
@@ -612,7 +612,7 @@ entries:
     version: 0.18.0
   - apiVersion: v2
     appVersion: 1.11.8
-    created: "2025-10-02T14:55:19.815607554Z"
+    created: "2025-10-02T15:23:04.825193052Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 6f54e337801da86894ffb01f98dc0776e39d8475ed92c39191ed5c2bd735fb31
@@ -633,7 +633,7 @@ entries:
     version: 0.17.8
   - apiVersion: v2
     appVersion: 1.11.7
-    created: "2025-10-02T14:55:19.814221749Z"
+    created: "2025-10-02T15:23:04.823867017Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 806e0742bb3da7750388d919d05fac4e58fbd292048e9c0f978763f4b25b6036
@@ -654,7 +654,7 @@ entries:
     version: 0.17.7
   - apiVersion: v2
     appVersion: 1.11.6
-    created: "2025-10-02T14:55:19.812868172Z"
+    created: "2025-10-02T15:23:04.821908661Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: dc573ec8528a2200f3444e7a68edf2bc31a470f9ea4dd2c461456501a39f6ed2
@@ -675,7 +675,7 @@ entries:
     version: 0.17.6
   - apiVersion: v2
     appVersion: 1.11.5
-    created: "2025-10-02T14:55:19.811487077Z"
+    created: "2025-10-02T15:23:04.820633029Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08a418755dfef64e1e56ae97849755b515fafa558950782079e8f81581f23e9f
@@ -696,7 +696,7 @@ entries:
     version: 0.17.5
   - apiVersion: v2
     appVersion: 1.11.4
-    created: "2025-10-02T14:55:19.809394284Z"
+    created: "2025-10-02T15:23:04.819353411Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08e0c13689426288aa6dd9af9c89defbbfa74645ebb0ac8ee6b0c9331536f939
@@ -717,7 +717,7 @@ entries:
     version: 0.17.4
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2025-10-02T14:55:19.808052864Z"
+    created: "2025-10-02T15:23:04.818069725Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 27292284870f11ee3c0a93236efd598c17e2f8607b0f3a3f197285947aface94
@@ -738,7 +738,7 @@ entries:
     version: 0.17.3
   - apiVersion: v2
     appVersion: 1.11.2
-    created: "2025-10-02T14:55:19.806725446Z"
+    created: "2025-10-02T15:23:04.816758748Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 780fbaf8a81b45ad24a0269b6908ace6f9aee9f3786a58ba2f6e152e03f92173
@@ -759,7 +759,7 @@ entries:
     version: 0.17.2
   - apiVersion: v2
     appVersion: 1.11.1
-    created: "2025-10-02T14:55:19.80533596Z"
+    created: "2025-10-02T15:23:04.815424237Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c9d2cdba4c382d8fd481bcde6bd7e6cecab00b9c59beecc9e1d31e27915ff41a
@@ -780,7 +780,7 @@ entries:
     version: 0.17.1
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2025-10-02T14:55:19.804020834Z"
+    created: "2025-10-02T15:23:04.814045704Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: e71f9646ca6f5be4f9641a6066fbb432c24d4679feaa764994be10f9d3037e00
@@ -801,7 +801,7 @@ entries:
     version: 0.17.0
   - apiVersion: v2
     appVersion: 1.10.2
-    created: "2025-10-02T14:55:19.802684992Z"
+    created: "2025-10-02T15:23:04.81182539Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: bee598b09eec06a301a999d8fde2361d19f56404967f43a245aec831f5fa1929
@@ -822,7 +822,7 @@ entries:
     version: 0.16.2
   - apiVersion: v2
     appVersion: 1.10.1
-    created: "2025-10-02T14:55:19.800803096Z"
+    created: "2025-10-02T15:23:04.810546803Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 76fddac5173a17780f39f489b6474ee89ad275a8273f1b19241b3861696c6b3a
@@ -843,7 +843,7 @@ entries:
     version: 0.16.1
   - apiVersion: v2
     appVersion: 1.10.0
-    created: "2025-10-02T14:55:19.79938969Z"
+    created: "2025-10-02T15:23:04.80926504Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 6d1a8045406a3d5a38243d695d65b4a15820910d1526f421a6ae19f6fd7d5db6
@@ -864,7 +864,7 @@ entries:
     version: 0.16.0
   - apiVersion: v2
     appVersion: 1.9.0
-    created: "2025-10-02T14:55:19.798046482Z"
+    created: "2025-10-02T15:23:04.807974622Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: a8f03ee55dc85377cfed9881b678726fe3cf413189fb069fd7634f78b9031c69
@@ -885,7 +885,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 1.8.8
-    created: "2025-10-02T14:55:19.796740009Z"
+    created: "2025-10-02T15:23:04.806662433Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: b60fc64632201775064d06a746b4536e37073190e4d747d8694c0826a321cb61
@@ -906,7 +906,7 @@ entries:
     version: 0.14.8
   - apiVersion: v2
     appVersion: 1.8.7
-    created: "2025-10-02T14:55:19.795411024Z"
+    created: "2025-10-02T15:23:04.805335125Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 9ac52ba3a4f033f49dedab6fdcfd6919c449dc9281c981575021d33378e32da0
@@ -927,7 +927,7 @@ entries:
     version: 0.14.7
   - apiVersion: v2
     appVersion: 1.8.6
-    created: "2025-10-02T14:55:19.794041021Z"
+    created: "2025-10-02T15:23:04.803233093Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 3d5a6561ed1aaf802069e85365a0a8ffbc04da53b92b3c81aa4ea8ccdea63a49
@@ -948,7 +948,7 @@ entries:
     version: 0.14.6
   - apiVersion: v2
     appVersion: 1.8.5
-    created: "2025-10-02T14:55:19.792329175Z"
+    created: "2025-10-02T15:23:04.801931543Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d39bb6c8372371e6613d1770f5a3e0198527f44e44a87c3754d3212cf815f06f
@@ -969,7 +969,7 @@ entries:
     version: 0.14.5
   - apiVersion: v2
     appVersion: 1.8.4
-    created: "2025-10-02T14:55:19.790631833Z"
+    created: "2025-10-02T15:23:04.800634753Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: f93ea48a0bd68710f1ef1a74bf6ddb088e109d08d7f396f2490a2bc53aa147d6
@@ -990,7 +990,7 @@ entries:
     version: 0.14.4
   - apiVersion: v2
     appVersion: 1.8.3
-    created: "2025-10-02T14:55:19.789318704Z"
+    created: "2025-10-02T15:23:04.799349554Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2191571c7c8a284ca1bfc12f0966e7970dd866bb3a1a06dde2e8f78461a44e9b
@@ -1011,7 +1011,7 @@ entries:
     version: 0.14.3
   - apiVersion: v2
     appVersion: 1.8.2
-    created: "2025-10-02T14:55:19.787990715Z"
+    created: "2025-10-02T15:23:04.798066128Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d58a7c99d5ff940e60026eb4bf50fb30a6af81164df5868a73af29c8d491bf6b
@@ -1032,7 +1032,7 @@ entries:
     version: 0.14.2
   - apiVersion: v2
     appVersion: 1.8.1
-    created: "2025-10-02T14:55:19.7865767Z"
+    created: "2025-10-02T15:23:04.796742898Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 6dc5bf746c1126edd3ce5aebc6f9257e175e454a2bcadfd38bebbd099fd049d8
@@ -1053,7 +1053,7 @@ entries:
     version: 0.14.1
   - apiVersion: v2
     appVersion: 1.8.0
-    created: "2025-10-02T14:55:19.78522044Z"
+    created: "2025-10-02T15:23:04.79483758Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: ae8b7697be7ed1942a4ade360939fa45875fe082b24f6c5a408314ad4ae3ecc7
@@ -1074,7 +1074,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: 1.7.0
-    created: "2025-10-02T14:55:19.78314494Z"
+    created: "2025-10-02T15:23:04.793489774Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: c424bd1144064943802bd15811ac79a6e51eee9485c92444d6d79bfed3a3c337
@@ -1095,7 +1095,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 1.6.9
-    created: "2025-10-02T14:55:19.781821617Z"
+    created: "2025-10-02T15:23:04.792200267Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 3827aa541d4225c5a7b00fb6975aaba47e0675b13a991f96a36f71c200e61779
@@ -1116,7 +1116,7 @@ entries:
     version: 0.12.9
   - apiVersion: v2
     appVersion: 1.6.8
-    created: "2025-10-02T14:55:19.780476249Z"
+    created: "2025-10-02T15:23:04.790891745Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2b4e372f9777c1ee6bcc21dacf936ea65e986efbcb22b7fd7ea3a697b2c3a4a5
@@ -1127,7 +1127,7 @@ entries:
     version: 0.12.8
   - apiVersion: v2
     appVersion: 1.6.7
-    created: "2025-10-02T14:55:19.779199413Z"
+    created: "2025-10-02T15:23:04.789639778Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2f434830424cf70f00f227293dc1e08f8fd26ff2ddd7080fb7e90347ec69d21b
@@ -1138,7 +1138,7 @@ entries:
     version: 0.12.7
   - apiVersion: v2
     appVersion: 1.6.6
-    created: "2025-10-02T14:55:19.777836788Z"
+    created: "2025-10-02T15:23:04.788351894Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 8424eab3b2131f59bc6b60c52e00aaad55a278b1dd915803c1e4e0777343dce5
@@ -1149,7 +1149,7 @@ entries:
     version: 0.12.6
   - apiVersion: v2
     appVersion: 1.6.5
-    created: "2025-10-02T14:55:19.776341068Z"
+    created: "2025-10-02T15:23:04.787055855Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2c3ab67cfe03c8c0e7dc95065f29f7d4789efc73bc47419894353f6a055ee2f9
@@ -1160,7 +1160,7 @@ entries:
     version: 0.12.5
   - apiVersion: v2
     appVersion: 1.6.4
-    created: "2025-10-02T14:55:19.774171521Z"
+    created: "2025-10-02T15:23:04.785056072Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 6417d70386166cc4f8664bb4ffd6bf4a07a3576ceb50e744532741c337a20882
@@ -1171,7 +1171,7 @@ entries:
     version: 0.12.4
   - apiVersion: v2
     appVersion: 1.6.3
-    created: "2025-10-02T14:55:19.772864462Z"
+    created: "2025-10-02T15:23:04.783795649Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1f2043ecad83393511fd097addd4c34b4807cb18dad18e46eaa49564a1a0e3d1
@@ -1182,7 +1182,7 @@ entries:
     version: 0.12.3
   - apiVersion: v2
     appVersion: 1.6.2
-    created: "2025-10-02T14:55:19.771576168Z"
+    created: "2025-10-02T15:23:04.782544374Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1e67107ef18bcc230aaf8bf26def659b635f7def053e35f55f4a6415edd19318
@@ -1193,7 +1193,7 @@ entries:
     version: 0.12.2
   - apiVersion: v2
     appVersion: 1.6.1
-    created: "2025-10-02T14:55:19.770270082Z"
+    created: "2025-10-02T15:23:04.78128346Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: e569adf528a7ad62293a574884a73f3f80b8bdd771941f88a7097e972c49b1f9
@@ -1204,7 +1204,7 @@ entries:
     version: 0.12.1
   - apiVersion: v2
     appVersion: 1.6.0
-    created: "2025-10-02T14:55:19.768957543Z"
+    created: "2025-10-02T15:23:04.77988505Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2d93346d63a7935d7eea0d3931613bdaa9d3a812b753d8c7fb2f6aaf668ec866
@@ -1215,7 +1215,7 @@ entries:
     version: 0.12.0
   - apiVersion: v2
     appVersion: 1.5.16
-    created: "2025-10-02T14:55:19.757486733Z"
+    created: "2025-10-02T15:23:04.768378692Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: bd6273a44f39d506d30883fb555bf511b9b0831edde05cb438b2bea679cb7c27
@@ -1226,7 +1226,7 @@ entries:
     version: 0.11.20
   - apiVersion: v2
     appVersion: 1.5.15
-    created: "2025-10-02T14:55:19.753930432Z"
+    created: "2025-10-02T15:23:04.765828702Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 8561c65498cc0b21daaca6550a1abf1e14b402132320e7a2b6ecd5b5bf71feac
@@ -1237,7 +1237,7 @@ entries:
     version: 0.11.19
   - apiVersion: v2
     appVersion: 1.5.14
-    created: "2025-10-02T14:55:19.752641767Z"
+    created: "2025-10-02T15:23:04.764532873Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 13d82ea2c226f2b845b99e61037836ba833b5e1a593c888b48423887f975e7c8
@@ -1248,7 +1248,7 @@ entries:
     version: 0.11.18
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2025-10-02T14:55:19.751345229Z"
+    created: "2025-10-02T15:23:04.763251281Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: e008820ac6b4eef02977a2e233560fa5dc9efe0fedc0b4b5b6865340d4e938b6
@@ -1259,7 +1259,7 @@ entries:
     version: 0.11.17
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2025-10-02T14:55:19.750049075Z"
+    created: "2025-10-02T15:23:04.761530982Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 481b9e4de978606025b9176fac133c5392a732ad3a17d349d464225bb18d1181
@@ -1270,7 +1270,7 @@ entries:
     version: 0.11.16
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2025-10-02T14:55:19.748702816Z"
+    created: "2025-10-02T15:23:04.759691348Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 7e73e67e4b6d0127e59907cf86a3bfe42d82c054fe8ebb93100a0aff4b4dd287
@@ -1281,7 +1281,7 @@ entries:
     version: 0.11.15
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2025-10-02T14:55:19.746580881Z"
+    created: "2025-10-02T15:23:04.758426116Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 608703c218ce988b117d8ba589e536c9ccee326cd05b699d45de6359153ae957
@@ -1292,7 +1292,7 @@ entries:
     version: 0.11.14
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2025-10-02T14:55:19.745280213Z"
+    created: "2025-10-02T15:23:04.757154493Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1184fd74eff29b53f8db10c00c022b21453e27268d1dcdde1072ba2038ad0eee
@@ -1303,7 +1303,7 @@ entries:
     version: 0.11.13
   - apiVersion: v2
     appVersion: 1.5.12
-    created: "2025-10-02T14:55:19.743743296Z"
+    created: "2025-10-02T15:23:04.755672306Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 104bac2a78359025c28887c50d5a7471a7759e8837515cffe12eca863d896c1e
@@ -1314,7 +1314,7 @@ entries:
     version: 0.11.12
   - apiVersion: v2
     appVersion: 1.5.11
-    created: "2025-10-02T14:55:19.742439741Z"
+    created: "2025-10-02T15:23:04.754392838Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 05c071373bb68083f9b7e82bc3762db9468ec22949ba521de1de4e059ffba4f7
@@ -1325,7 +1325,7 @@ entries:
     version: 0.11.11
   - apiVersion: v2
     appVersion: 1.5.10
-    created: "2025-10-02T14:55:19.741078792Z"
+    created: "2025-10-02T15:23:04.75308702Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d2c6955fd18c88b8916b320852ee666562a41f6a9ef211992319cdaa0cd64ab7
@@ -1336,7 +1336,7 @@ entries:
     version: 0.11.10
   - apiVersion: v2
     appVersion: 1.5.9
-    created: "2025-10-02T14:55:19.767627854Z"
+    created: "2025-10-02T15:23:04.777931936Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 42c4bd2eace4edb0a39cb62e41f1b345b1da3fc94ff7bf7b5f41377d5528d044
@@ -1347,7 +1347,7 @@ entries:
     version: 0.11.9
   - apiVersion: v2
     appVersion: 1.5.8
-    created: "2025-10-02T14:55:19.76617753Z"
+    created: "2025-10-02T15:23:04.776677053Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 784836cadce52a90fea8cbb738fb881621cc72c48704f1d97d7b03e1b8c29ec2
@@ -1358,7 +1358,7 @@ entries:
     version: 0.11.8
   - apiVersion: v2
     appVersion: 1.5.7
-    created: "2025-10-02T14:55:19.764025855Z"
+    created: "2025-10-02T15:23:04.775398917Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 5683a2c36d139ca9307f585356920e8b943c0054e876d66ef32f419f0b07499b
@@ -1369,7 +1369,7 @@ entries:
     version: 0.11.7
   - apiVersion: v2
     appVersion: 1.5.6
-    created: "2025-10-02T14:55:19.762755147Z"
+    created: "2025-10-02T15:23:04.774137693Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 7a82feaca4da90c90b054663d3546dd75fee5fb16cde6c13df8e41f237621949
@@ -1380,7 +1380,7 @@ entries:
     version: 0.11.6
   - apiVersion: v2
     appVersion: 1.5.5
-    created: "2025-10-02T14:55:19.761466334Z"
+    created: "2025-10-02T15:23:04.772865819Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: af08beacea88d65c1587d90ee75230206de0efe01aaf72a3cd01889f70acb7a5
@@ -1391,7 +1391,7 @@ entries:
     version: 0.11.5
   - apiVersion: v2
     appVersion: 1.5.4
-    created: "2025-10-02T14:55:19.760191791Z"
+    created: "2025-10-02T15:23:04.771576172Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: e6ff604fe72905e7d4346306ca70d9c85f86ad548e9807a200c7cb317c4b0a78
@@ -1402,7 +1402,7 @@ entries:
     version: 0.11.4
   - apiVersion: v2
     appVersion: 1.5.3
-    created: "2025-10-02T14:55:19.758905384Z"
+    created: "2025-10-02T15:23:04.769634886Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 53ab85709b71892334e1a84edfdcbf28f9366e36f5f8933f11cd24b3119a5e36
@@ -1413,7 +1413,7 @@ entries:
     version: 0.11.3
   - apiVersion: v2
     appVersion: 1.5.2
-    created: "2025-10-02T14:55:19.755251265Z"
+    created: "2025-10-02T15:23:04.767116456Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: b383037a9d408e90bd5795ab9e0b2a392da66f165ceaafa082fa757f0271087d
@@ -1424,7 +1424,7 @@ entries:
     version: 0.11.2
   - apiVersion: v2
     appVersion: 1.5.1
-    created: "2025-10-02T14:55:19.739688492Z"
+    created: "2025-10-02T15:23:04.750995326Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 00c333c21613fb5ec63cb69d912886fc2d20c0b39f8b8b88cdff6e14f26529d2
@@ -1435,7 +1435,7 @@ entries:
     version: 0.11.1
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-10-02T14:55:19.737424898Z"
+    created: "2025-10-02T15:23:04.749686673Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 58b135b94ad79c3f68420d5db7b06a84ca6e752c00b0cc42431f5efc1367768f
@@ -1446,7 +1446,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 1.4.3
-    created: "2025-10-02T14:55:19.735722132Z"
+    created: "2025-10-02T15:23:04.748390123Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 1c18044e2b33d8ac3ec85d6684334b8371660a0f10accd56b55936d81bfb06c3
@@ -1457,7 +1457,7 @@ entries:
     version: 0.10.3
   - apiVersion: v2
     appVersion: 1.4.2
-    created: "2025-10-02T14:55:19.734382142Z"
+    created: "2025-10-02T15:23:04.747082722Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 958034a95e79198ba07a844bcc4eec5fc370761eb6245f01d3afec749a0e0b32
@@ -1468,7 +1468,7 @@ entries:
     version: 0.10.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2025-10-02T14:55:19.732988395Z"
+    created: "2025-10-02T15:23:04.745746649Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 993d96ed347c0406157a48c0ccd5400d60f15ba0731f88ccea412410b043a67a
@@ -1482,8 +1482,33 @@ entries:
       crd-repo-url: https://api.github.com/repos/konnektr-io/db-query-operator/contents/config/crd/bases?ref=v{{
         .appVersion }}
     apiVersion: v2
+    appVersion: 0.2.6
+    created: "2025-10-02T15:23:04.872512742Z"
+    description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
+      operator
+    digest: 13aa61cde055996d45e14742b1681314751ea88de9f00ce032e1b211a0a3a354
+    home: https://github.com/konnektr-io/db-query-operator
+    keywords:
+    - kubernetes-operator
+    - database
+    - query
+    - CRD
+    - PostgreSQL
+    maintainers:
+    - email: info@konnektr.io
+      name: Konnektr-io
+    name: db-query-operator
+    sources:
+    - https://github.com/konnektr-io/db-query-operator
+    urls:
+    - https://charts.konnektr.io/db-query-operator-0.2.8.tgz
+    version: 0.2.8
+  - annotations:
+      crd-repo-url: https://api.github.com/repos/konnektr-io/db-query-operator/contents/config/crd/bases?ref=v{{
+        .appVersion }}
+    apiVersion: v2
     appVersion: 0.2.5
-    created: "2025-10-02T14:55:19.86456481Z"
+    created: "2025-10-02T15:23:04.872152419Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: c98d5891c012881c31b396a0198a693702686ce53580fac99e66d65e49a3189e
@@ -1508,7 +1533,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.4
-    created: "2025-10-02T14:55:19.864219581Z"
+    created: "2025-10-02T15:23:04.871774353Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 272ffc38e2a39c7eae2d02a8efef059cd961521f557b0dcfd2afc6b5dee6753e
@@ -1533,7 +1558,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.3
-    created: "2025-10-02T14:55:19.863863561Z"
+    created: "2025-10-02T15:23:04.871413149Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 536fd9a0c9afe84ded5f69a999d2314d390c286a73b549ea27fc112670458a13
@@ -1558,7 +1583,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.2
-    created: "2025-10-02T14:55:19.863528308Z"
+    created: "2025-10-02T15:23:04.871050412Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 35e08713593581a30eb76c1c61ccf6d0e1d709bbcff5c8b945f682867ea918d5
@@ -1583,7 +1608,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.2
-    created: "2025-10-02T14:55:19.86317458Z"
+    created: "2025-10-02T15:23:04.870669481Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 50c5dcecdd12ca9a42d4769516a68d05c211930fe513d25c044a952a959c0a8d
@@ -1608,7 +1633,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.2.0
-    created: "2025-10-02T14:55:19.862806563Z"
+    created: "2025-10-02T15:23:04.870305902Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: edd027b6baacd0094527ea259c0557201a41a8a3cb01ec27db4cc791bcd078d6
@@ -1633,7 +1658,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-10-02T14:55:19.862446109Z"
+    created: "2025-10-02T15:23:04.869915534Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: ffcfb2eba0e4f9abbc353a7641be037859957472b2f69e29c05c3bdb8ce0abb2
@@ -1658,7 +1683,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-10-02T14:55:19.862060442Z"
+    created: "2025-10-02T15:23:04.869538891Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 1776efd0c9184692b889cb5b7ec401c195efbf2af21ca1af0da9ef97591f35ce
@@ -1684,9 +1709,9 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.3
-    created: "2025-10-02T14:55:19.867370013Z"
+    created: "2025-10-02T15:23:04.875216248Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
-    digest: 8fb7efdc6f07724156404e087f29298cd054457359bfd1a6321cb89b599a0ddb
+    digest: 6ebfcceb6e536675152f37e3cd8a28d3c9dac957bcd176011c5b0385df055bc9
     home: https://github.com/konnektr-io/http-query-operator
     keywords:
     - kubernetes-operator
@@ -1708,7 +1733,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.2
-    created: "2025-10-02T14:55:19.866974348Z"
+    created: "2025-10-02T15:23:04.874807465Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 377e458b7f24269476efffa773046a09718a5afa5a583c4c19249a2fdc02ca54
     home: https://github.com/konnektr-io/http-query-operator
@@ -1732,7 +1757,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.1
-    created: "2025-10-02T14:55:19.866561942Z"
+    created: "2025-10-02T15:23:04.874418278Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: db2ad81f8b557047f7ec4f5a5c2e87c7fc53c6301a1137005aae031df1c3027f
     home: https://github.com/konnektr-io/http-query-operator
@@ -1756,7 +1781,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-10-02T14:55:19.865612798Z"
+    created: "2025-10-02T15:23:04.873998384Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 396f0f5650c4347041f31e371f9683a838b4bdb45a129ab38a409a36b446d875
     home: https://github.com/konnektr-io/http-query-operator
@@ -1780,7 +1805,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-10-02T14:55:19.864926455Z"
+    created: "2025-10-02T15:23:04.872886209Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 36c3e17369a859c1a923073f11ac3ad4f0de381003d19ad9b0eb6d6927158216
     home: https://github.com/konnektr-io/http-query-operator
@@ -1802,7 +1827,7 @@ entries:
   ktrlplane:
   - apiVersion: v2
     appVersion: 0.0.18
-    created: "2025-10-02T14:55:19.910283405Z"
+    created: "2025-10-02T15:23:04.917290234Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1814,7 +1839,7 @@ entries:
       version: 0.1.4
     description: Helm chart for deploying the ktrlplane solution (backend, frontend,
       PostgreSQL)
-    digest: 8cb7541894443d50d6cd38076d28a7dede3c6d6f94e7623b9613b8f1788b73e3
+    digest: 33d34e8e4ccc2e047216d7491c1c14b3e072e72b52264929a9a91e3db349e54d
     name: ktrlplane
     type: application
     urls:
@@ -1822,7 +1847,7 @@ entries:
     version: 0.2.44
   - apiVersion: v2
     appVersion: 0.0.17
-    created: "2025-10-02T14:55:19.909156677Z"
+    created: "2025-10-02T15:23:04.916117335Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1842,7 +1867,7 @@ entries:
     version: 0.2.43
   - apiVersion: v2
     appVersion: 0.0.16
-    created: "2025-10-02T14:55:19.907077943Z"
+    created: "2025-10-02T15:23:04.91411281Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1862,7 +1887,7 @@ entries:
     version: 0.2.42
   - apiVersion: v2
     appVersion: 0.0.15
-    created: "2025-10-02T14:55:19.905938689Z"
+    created: "2025-10-02T15:23:04.913038315Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1882,7 +1907,7 @@ entries:
     version: 0.2.41
   - apiVersion: v2
     appVersion: 0.0.14
-    created: "2025-10-02T14:55:19.904819477Z"
+    created: "2025-10-02T15:23:04.911961495Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1902,7 +1927,7 @@ entries:
     version: 0.2.40
   - apiVersion: v2
     appVersion: 0.0.14
-    created: "2025-10-02T14:55:19.902454131Z"
+    created: "2025-10-02T15:23:04.909562988Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1922,7 +1947,7 @@ entries:
     version: 0.2.39
   - apiVersion: v2
     appVersion: 0.0.13
-    created: "2025-10-02T14:55:19.90134031Z"
+    created: "2025-10-02T15:23:04.908464517Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1942,7 +1967,7 @@ entries:
     version: 0.2.38
   - apiVersion: v2
     appVersion: 0.0.13
-    created: "2025-10-02T14:55:19.899552905Z"
+    created: "2025-10-02T15:23:04.907331763Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1962,7 +1987,7 @@ entries:
     version: 0.2.37
   - apiVersion: v2
     appVersion: 0.0.12
-    created: "2025-10-02T14:55:19.898281187Z"
+    created: "2025-10-02T15:23:04.905322432Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -1982,7 +2007,7 @@ entries:
     version: 0.2.36
   - apiVersion: v2
     appVersion: 0.0.11
-    created: "2025-10-02T14:55:19.89730982Z"
+    created: "2025-10-02T15:23:04.904334568Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2002,7 +2027,7 @@ entries:
     version: 0.2.34
   - apiVersion: v2
     appVersion: 0.0.11
-    created: "2025-10-02T14:55:19.89621656Z"
+    created: "2025-10-02T15:23:04.903257858Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2022,7 +2047,7 @@ entries:
     version: 0.2.32
   - apiVersion: v2
     appVersion: 0.0.10
-    created: "2025-10-02T14:55:19.895122946Z"
+    created: "2025-10-02T15:23:04.90219288Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2042,7 +2067,7 @@ entries:
     version: 0.2.31
   - apiVersion: v2
     appVersion: 0.0.10
-    created: "2025-10-02T14:55:19.894002115Z"
+    created: "2025-10-02T15:23:04.9011212Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2062,7 +2087,7 @@ entries:
     version: 0.2.30
   - apiVersion: v2
     appVersion: 0.0.9
-    created: "2025-10-02T14:55:19.89067827Z"
+    created: "2025-10-02T15:23:04.898675965Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2082,7 +2107,7 @@ entries:
     version: 0.2.29
   - apiVersion: v2
     appVersion: 0.0.8
-    created: "2025-10-02T14:55:19.889520066Z"
+    created: "2025-10-02T15:23:04.896831693Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2102,7 +2127,7 @@ entries:
     version: 0.2.28
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2025-10-02T14:55:19.888434871Z"
+    created: "2025-10-02T15:23:04.895747039Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2122,7 +2147,7 @@ entries:
     version: 0.2.27
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2025-10-02T14:55:19.887350697Z"
+    created: "2025-10-02T15:23:04.894684836Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2142,7 +2167,7 @@ entries:
     version: 0.2.26
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2025-10-02T14:55:19.886246355Z"
+    created: "2025-10-02T15:23:04.89361543Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2162,7 +2187,7 @@ entries:
     version: 0.2.25
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2025-10-02T14:55:19.885144709Z"
+    created: "2025-10-02T15:23:04.892542367Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2182,7 +2207,7 @@ entries:
     version: 0.2.24
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2025-10-02T14:55:19.884009618Z"
+    created: "2025-10-02T15:23:04.891455318Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2202,7 +2227,7 @@ entries:
     version: 0.2.23
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-10-02T14:55:19.882149349Z"
+    created: "2025-10-02T15:23:04.890198772Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2222,7 +2247,7 @@ entries:
     version: 0.2.22
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2025-10-02T14:55:19.881075727Z"
+    created: "2025-10-02T15:23:04.888553721Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2242,7 +2267,7 @@ entries:
     version: 0.2.21
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2025-10-02T14:55:19.879974962Z"
+    created: "2025-10-02T15:23:04.887473515Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2262,7 +2287,7 @@ entries:
     version: 0.2.20
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2025-10-02T14:55:19.878872044Z"
+    created: "2025-10-02T15:23:04.886361459Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2282,7 +2307,7 @@ entries:
     version: 0.2.19
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2025-10-02T14:55:19.877777685Z"
+    created: "2025-10-02T15:23:04.885267687Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2302,7 +2327,7 @@ entries:
     version: 0.2.18
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2025-10-02T14:55:19.876677646Z"
+    created: "2025-10-02T15:23:04.884151083Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2322,7 +2347,7 @@ entries:
     version: 0.2.17
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2025-10-02T14:55:19.875517977Z"
+    created: "2025-10-02T15:23:04.883021084Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2342,7 +2367,7 @@ entries:
     version: 0.2.16
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2025-10-02T14:55:19.873531711Z"
+    created: "2025-10-02T15:23:04.881241895Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2362,7 +2387,7 @@ entries:
     version: 0.2.15
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.872444149Z"
+    created: "2025-10-02T15:23:04.880157621Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2382,7 +2407,7 @@ entries:
     version: 0.2.10
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.915865706Z"
+    created: "2025-10-02T15:23:04.923326822Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2402,7 +2427,7 @@ entries:
     version: 0.2.9
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.914649416Z"
+    created: "2025-10-02T15:23:04.922225867Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2422,7 +2447,7 @@ entries:
     version: 0.2.8
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.913561999Z"
+    created: "2025-10-02T15:23:04.920735876Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2442,7 +2467,7 @@ entries:
     version: 0.2.7
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.912462564Z"
+    created: "2025-10-02T15:23:04.919515978Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2462,7 +2487,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.911377591Z"
+    created: "2025-10-02T15:23:04.918421756Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2482,7 +2507,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.90373365Z"
+    created: "2025-10-02T15:23:04.910859889Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2502,7 +2527,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.89287712Z"
+    created: "2025-10-02T15:23:04.900036465Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2522,7 +2547,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.871351443Z"
+    created: "2025-10-02T15:23:04.879076403Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2542,7 +2567,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.870053941Z"
+    created: "2025-10-02T15:23:04.877793098Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2562,7 +2587,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: latest
-    created: "2025-10-02T14:55:19.868751823Z"
+    created: "2025-10-02T15:23:04.876509422Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -2583,11 +2608,11 @@ entries:
   porkbun-webhook:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2025-10-02T14:55:19.916291868Z"
+    created: "2025-10-02T15:23:04.923585625Z"
     description: A Porkbun solver for Cert Manager.
-    digest: 87a331004568310568a167420d05a575ce8e9773af7c087dcf1f5838bc1723dc
+    digest: 0d342c7dc24ce1584d01cd37ee97f9f3c8aeb48781a0d419c85c631d651b5f5e
     name: porkbun-webhook
     urls:
     - https://charts.konnektr.io/porkbun-webhook-0.1.5.tgz
     version: 0.1.5
-generated: "2025-10-02T14:55:19.731425563Z"
+generated: "2025-10-02T15:23:04.744189713Z"
