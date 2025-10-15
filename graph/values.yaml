@@ -197,11 +197,6 @@ cluster:
     # -- Apache AGE version to use
     age: "1.6.0"
 
-  ###
-  # -- Cluster mode of operation. Available modes:
-  # * `standalone` - default mode. Creates new or updates an existing CNPG cluster.
-  # * `replica` - Creates a replica cluster from an existing CNPG cluster. # TODO
-  # * `recovery` - Same as standalone but creates a cluster from a backup, object store or via pg_basebackup.
   mode: standalone
 
   cluster:
