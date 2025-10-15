@@ -1,0 +1,16 @@
+{{- if .Values.api.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "graph.fullname" . }}-api
+  labels:
+    {{- include "graph.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.api.service.port }}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{ include "graph.fullname" . }}-api
+{{- end }}

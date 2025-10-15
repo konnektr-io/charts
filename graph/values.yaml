@@ -1,0 +1,266 @@
+# -- Override the name of the chart
+nameOverride: ""
+# -- Override the full name of the chart
+fullnameOverride: ""
+
+api:
+  # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
+  logLevel: "Warning"
+  # OpenTelemetry configuration
+  openTelemetry:
+    enabled: false
+    # custom service name
+    serviceName: ""
+    # export endpoint
+    exporterEndpoint: "http://otel-collector.opentelemetry.svc.cluster.local:4317"
+
+  # This is for setting Kubernetes Annotations to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+  podAnnotations: {}
+  # This is for setting Kubernetes Labels to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+  podLabels: {}
+
+  podSecurityContext:
+    {}
+    # fsGroup: 2000
+
+  securityContext:
+    {}
+    # capabilities:
+    #   drop:
+    #   - ALL
+    # readOnlyRootFilesystem: true
+    # runAsNonRoot: true
+    # runAsUser: 1000
+
+  # Allow to set a different service account for the pod
+  # If not defined, the postgres cluster service account will be used
+  serviceAccountName: ""
+
+  # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+  service:
+    # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+    type: ClusterIP
+    # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
+    port: 8080
+
+  # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+  ingress:
+    enabled: false
+    className: ""
+    annotations:
+      {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+    hosts:
+      - host: chart-example.local
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls: []
+    #  - secretName: chart-example-tls
+    #    hosts:
+    #      - chart-example.local
+
+  config: {}
+
+  extraEnv: []
+
+  resources:
+    {}
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+
+  # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 8080
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 8080
+
+  #This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    # targetMemoryUtilizationPercentage: 80
+
+events:
+  # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
+  logLevel: "Warning"
+  # OpenTelemetry configuration
+  openTelemetry:
+    enabled: false
+    # custom service name
+    serviceName: ""
+    # export endpoint
+    exporterEndpoint: "http://otel-collector.opentelemetry.svc.cluster.local:4317"
+
+  # This is for setting Kubernetes Annotations to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+  podAnnotations: {}
+  # This is for setting Kubernetes Labels to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+  podLabels: {}
+
+  podSecurityContext:
+    {}
+    # fsGroup: 2000
+
+  securityContext:
+    {}
+    # capabilities:
+    #   drop:
+    #   - ALL
+    # readOnlyRootFilesystem: true
+    # runAsNonRoot: true
+    # runAsUser: 1000
+
+  # Allow to set a different service account for the pod
+  # If not defined, the postgres cluster service account will be used
+  serviceAccountName: ""
+
+  resources:
+    {}
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+
+  # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+  livenessProbe:
+    httpGet:
+      path: /alive
+      port: 8080
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 8080
+
+  config:
+    # Event sinks configuration
+    eventSinks:
+      kafka:
+        []
+        # - name: KafkaSink1
+        #   brokerList: ""
+        #   topic: ""
+        #   saslMechanism: PLAIN
+        #   saslUsername: ""
+        #   saslPasswordSecretRef: ""
+        #   saslPasswordSecretKey: ""
+      kusto:
+        []
+        # - name: AdxSink1
+        #   ingestionUri: ""
+        #   database: ""
+      mqtt: []
+    # Event routes configuration
+    eventRoutes:
+      []
+      # - sinkName: KafkaSink1
+      #   eventFormat: EventNotification
+      # - sinkName: KafkaSink1
+      #   eventFormat: DataHistory
+      # - sinkName: AdxSink1
+      #   eventFormat: DataHistory
+      # - sinkName: FabricEventHouseSink
+      #   eventFormat: DataHistory
+
+cluster:
+  enabled: true
+
+  type: "postgresql"
+
+  version:
+    # -- PostgreSQL major version to use
+    major: 16
+    # -- Apache AGE version to use
+    age: "1.6.0"
+
+  ###
+  # -- Cluster mode of operation. Available modes:
+  # * `standalone` - default mode. Creates new or updates an existing CNPG cluster.
+  # * `replica` - Creates a replica cluster from an existing CNPG cluster. # TODO
+  # * `recovery` - Same as standalone but creates a cluster from a backup, object store or via pg_basebackup.
+  mode: standalone
+
+  cluster:
+    # -- Number of instances
+    instances: 1
+
+    # -- Name of the container image, supporting both tags (<image>:<tag>) and digests for deterministic and repeatable deployments:
+    # <image>:<tag>@sha256:<digestValue>
+    # imageName: ""  # Default value depends on type (postgresql/postgis/timescaledb)
+
+    # -- Reference to `ImageCatalog` of `ClusterImageCatalog`, if specified takes precedence over `cluster.imageName`
+    imageCatalogRef:
+      kind: ImageCatalog
+      name: graph-age
+
+    postgresql:
+      # -- PostgreSQL configuration options (postgresql.conf)
+      parameters:
+        max_slot_wal_keep_size: 2GB
+        wal_level: logical
+        max_replication_slots: "10"
+        wal_sender_timeout: 60s
+        wal_buffers: 16MB
+        checkpoint_completion_target: "0.9"
+        checkpoint_timeout: 5min
+      # -- Quorum-based Synchronous Replication
+      synchronous: {}
+      # method: any
+      # number: 1
+      # -- PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)
+      pg_hba:
+        []
+        # - host all all 10.244.0.0/16 md5
+      # -- PostgreSQL User Name Maps rules (lines to be appended to the pg_ident.conf file)
+      pg_ident:
+        []
+        # - mymap   /^(.*)@mydomain\.com$      \1
+      # -- Lists of shared preload libraries to add to the default ones
+      shared_preload_libraries:
+        []
+        # - pgaudit
+
+    # -- BootstrapInitDB is the configuration of the bootstrap process when initdb is used.
+    # See: https://cloudnative-pg.io/documentation/current/bootstrap/
+    # See: https://cloudnative-pg.io/documentation/current/cloudnative-pg.v1/#postgresql-cnpg-io-v1-bootstrapinitdb
+    initdb:
+      # database: app
+      # owner: "" # Defaults to the database name
+      # secret:
+      #   name: "" # Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch
+      # options: []
+      # encoding: UTF8
+      # postInitSQL:
+      #   - CREATE EXTENSION IF NOT EXISTS vector;
+      postInitApplicationSQL:
+        - CREATE EXTENSION age;
+        - GRANT SELECT ON ag_catalog.ag_graph TO app;
+        - GRANT USAGE ON SCHEMA ag_catalog TO app;
+        - ALTER USER app REPLICATION;
+        - CREATE PUBLICATION age_pub FOR ALL TABLES;
+        - SELECT * FROM pg_create_logical_replication_slot('age_slot', 'pgoutput');
+      # postInitTemplateSQL: []

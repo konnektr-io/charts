@@ -1,0 +1,107 @@
+{{- if .Values.events.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "graph.fullname" . }}-events
+  labels:
+    {{- include "graph.labels" . | nindent 4 }}
+    app: {{ include "graph.fullname" . }}-events
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      {{- include "graph.selectorLabels" . | nindent 6 }}
+      app: {{ include "graph.fullname" . }}-events
+  template:
+    metadata:
+      {{- with .Values.events.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "graph.labels" . | nindent 8 }}
+        {{- with .Values.events.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        app: {{ include "graph.fullname" . }}-events
+    spec:
+      {{- with .Values.events.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        {{- toYaml .Values.events.podSecurityContext | nindent 8 }}
+      serviceAccountName: {{ include "graph.events.serviceAccountName" . }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.events.securityContext | nindent 12 }}
+          image: "{{- include "graph.events.imageName" . }}"
+          ports:
+            - containerPort: 8080
+          env:
+            - name: AGEDB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "graph.fullname" . }}-app
+                  key: port
+            - name: AGEDB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "graph.fullname" . }}-app
+                  key: dbname
+            - name: AGEDB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "graph.fullname" . }}-app
+                  key: username
+            - name: AGEDB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "graph.fullname" . }}-app
+                  key: password
+            - name: ConnectionStrings__agedb
+              value: "Server={{ include "graph.fullname" . }}-rw;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
+            - name: Logging__LogLevel__Default
+              value: {{ .Values.events.logLevel | quote }}
+            {{- if .Values.events.openTelemetry.enabled }}
+            - name: OTEL_SERVICE_NAME
+              value: {{ .Values.events.openTelemetry.serviceName | default (printf "%s-events" (include "graph.fullname" .)) | quote }}
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: {{ .Values.events.openTelemetry.exporterEndpoint | quote }}
+            {{- end }}
+            {{- list .Values.events.config "" | include "recurseFlattenMap" | nindent 12 }}
+            {{- if not .Values.events.config.customEventSource }}
+            - name: CustomEventSource
+              value: {{ include "graph.fullname" . }}
+            {{- end }}
+            {{- range $index, $sink := .Values.events.config.eventSinks.kafka }}
+            {{- if and $sink.saslPasswordSecretRef $sink.saslPasswordSecretKey }}
+            - name: "EventSinks__Kafka__{{ $index }}__SaslPassword"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $sink.saslPasswordSecretRef }}
+                  key: {{ $sink.saslPasswordSecretKey }}
+            {{- end }}
+            {{- end }}
+          livenessProbe:
+            {{- toYaml .Values.events.livenessProbe | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.events.readinessProbe | nindent 12 }}
+          resources:
+            {{- toYaml .Values.events.resources | nindent 12 }}
+      {{- with .Values.events.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.events.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.events.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}

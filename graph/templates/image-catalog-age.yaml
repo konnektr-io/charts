@@ -1,0 +1,10 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: ImageCatalog
+metadata:
+  name: {{ include "graph.fullname" . }}-age
+spec:
+  images:
+    - major: 15
+      image: apache/age:release_PG15_{{ .Values.cluster.version.age }}
+    - major: 16
+      image: apache/age:release_PG16_{{ .Values.cluster.version.age }}

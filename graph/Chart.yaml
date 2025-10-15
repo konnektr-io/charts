@@ -1,0 +1,21 @@
+apiVersion: v2
+name: graph
+description: Deploys and manages the Konnektr Graph API, Events and Apache AGE database with CloudnativePG
+type: application
+home: https://docs.konnektr.io/docs/graph
+maintainers:
+  - name: Konnektr.io
+    email: info@konnektr.io
+keywords:
+  - graph
+  - database
+  - postgresql
+  - digital-twins
+  - cloudnativepg
+version: 0.1.0
+appVersion: "1.17.0"
+dependencies:
+  - name: cluster
+    version: "0.3.1"
+    repository: "https://cloudnative-pg.github.io/charts"
+    condition: cluster.enabled
