@@ -244,7 +244,7 @@ cluster:
     # See: https://cloudnative-pg.io/documentation/current/cloudnative-pg.v1/#postgresql-cnpg-io-v1-bootstrapinitdb
     initdb:
       # database: app
-      # owner: "" # Defaults to the database name
+      # owner: "" # Defaults to the database name. NOTE: Should be app to make the postInitApplicationSQL work
       # secret:
       #   name: "" # Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch
       # options: []
