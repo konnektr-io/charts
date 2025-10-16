@@ -193,8 +193,8 @@ cluster:
 
   version:
     # -- PostgreSQL major version to use
-    major: 16
-    # -- Apache AGE version to use
+    major: 17
+    # -- Apache AGE version to use (only necessary when using external imageCatalogRef)
     age: "1.6.0"
 
   mode: standalone
@@ -205,12 +205,12 @@ cluster:
 
     # -- Name of the container image, supporting both tags (<image>:<tag>) and digests for deterministic and repeatable deployments:
     # <image>:<tag>@sha256:<digestValue>
-    # imageName: ""  # Default value depends on type (postgresql/postgis/timescaledb)
+    imageName: "ghcr.io/konnektr-io/age:17-1.6.0-standard-trixie"
 
     # -- Reference to `ImageCatalog` of `ClusterImageCatalog`, if specified takes precedence over `cluster.imageName`
-    imageCatalogRef:
-      kind: ImageCatalog
-      name: graph-age
+    # imageCatalogRef:
+    #   kind: ClusterImageCatalog
+    #   name: age
 
     postgresql:
       # -- PostgreSQL configuration options (postgresql.conf)
