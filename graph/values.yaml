@@ -207,11 +207,6 @@ cluster:
     # <image>:<tag>@sha256:<digestValue>
     imageName: "ghcr.io/konnektr-io/age:17-1.6.0-standard-trixie"
 
-    # -- Reference to `ImageCatalog` of `ClusterImageCatalog`, if specified takes precedence over `cluster.imageName`
-    # imageCatalogRef:
-    #   kind: ClusterImageCatalog
-    #   name: age
-
     postgresql:
       # -- PostgreSQL configuration options (postgresql.conf)
       parameters:
@@ -222,35 +217,8 @@ cluster:
         wal_buffers: 16MB
         checkpoint_completion_target: "0.9"
         checkpoint_timeout: 5min
-      # -- Quorum-based Synchronous Replication
-      synchronous: {}
-      # method: any
-      # number: 1
-      # -- PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)
-      pg_hba:
-        []
-        # - host all all 10.244.0.0/16 md5
-      # -- PostgreSQL User Name Maps rules (lines to be appended to the pg_ident.conf file)
-      pg_ident:
-        []
-        # - mymap   /^(.*)@mydomain\.com$      \1
-      # -- Lists of shared preload libraries to add to the default ones
-      shared_preload_libraries:
-        []
-        # - pgaudit
 
-    # -- BootstrapInitDB is the configuration of the bootstrap process when initdb is used.
-    # See: https://cloudnative-pg.io/documentation/current/bootstrap/
-    # See: https://cloudnative-pg.io/documentation/current/cloudnative-pg.v1/#postgresql-cnpg-io-v1-bootstrapinitdb
     initdb:
-      # database: app
-      # owner: "" # Defaults to the database name. NOTE: Should be app to make the postInitApplicationSQL work
-      # secret:
-      #   name: "" # Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch
-      # options: []
-      # encoding: UTF8
-      # postInitSQL:
-      #   - CREATE EXTENSION IF NOT EXISTS vector;
       postInitApplicationSQL:
         - CREATE EXTENSION age;
         - GRANT SELECT ON ag_catalog.ag_graph TO app;
@@ -258,4 +226,3 @@ cluster:
         - ALTER USER app REPLICATION;
         - CREATE PUBLICATION age_pub FOR ALL TABLES;
         - SELECT * FROM pg_create_logical_replication_slot('age_slot', 'pgoutput');
-      # postInitTemplateSQL: []
