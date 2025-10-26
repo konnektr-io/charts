@@ -82,11 +82,16 @@ jobs:
               if [ "$crd_url" != "null" ] && [ -n "$crd_url" ]; then
                 # Make sure crds directory exists
                 mkdir -p "$crds_dir"
-                # Download all CRDs in the folder (assume GitHub API for konnektr-io charts)
-                crd_list_url="$crd_url"
-                for crd_file in $(curl -s "$crd_list_url" | jq -r '.[] | select(.name | endswith(".yaml")) | .download_url'); do
-                  curl -sSL "$crd_file" -o "$crds_dir/_$(basename $crd_file)"
-                done
+                # Download CRDs: handle both direct file and folder listing
+                if [[ "$crd_url" == *.yaml || "$crd_url" == *.yml ]]; then
+                  # Direct link to a single CRD file
+                  curl -sSL "$crd_url" -o "$crds_dir/_$(basename $crd_url)"
+                else
+                  # Assume it's a GitHub API folder listing
+                  for crd_file in $(curl -s "$crd_url" | jq -r '.[] | select(.name | endswith(".yaml") or endswith(".yml")) | .download_url'); do
+                    curl -sSL "$crd_file" -o "$crds_dir/_$(basename $crd_file)"
+                  done
+                fi
               fi
             fi
           done
