@@ -24,43 +24,43 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_HOST
+                key: {{ .Values.database.secretKeys.host | quote }}
           - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_PORT
+                key: {{ .Values.database.secretKeys.port | quote }}
           - name: KTRLPLANE_DATABASE_DBNAME
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_NAME
+                key: {{ .Values.database.secretKeys.db | quote }}
           - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_USER
+                key: {{ .Values.database.secretKeys.user | quote }}
           - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_PASSWORD
+                key: {{ .Values.database.secretKeys.password | quote }}
           {{- if .Values.stripe.enabled }}
           - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_SECRET_KEY
+                key: {{ .Values.stripe.secretKeys.secretKey | quote }}
           - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_PUBLISHABLE_KEY
+                key: {{ .Values.stripe.secretKeys.publishableKey | quote }}
           - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_WEBHOOK_SECRET
+                key: {{ .Values.stripe.secretKeys.webhookSecret | quote }}
           {{- end }}
         {{- if .Values.stripe.enabled }}
         volumeMounts:
@@ -87,43 +87,43 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_HOST
+                key: {{ .Values.database.secretKeys.host | quote }}
           - name: KTRLPLANE_DATABASE_PORT
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_PORT
+                key: {{ .Values.database.secretKeys.port | quote }}
           - name: KTRLPLANE_DATABASE_DBNAME
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_NAME
+                key: {{ .Values.database.secretKeys.db | quote }}
           - name: KTRLPLANE_DATABASE_USER
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_USER
+                key: {{ .Values.database.secretKeys.user | quote }}
           - name: KTRLPLANE_DATABASE_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.dbSecretName" . }}
-                key: DB_PASSWORD
+                key: {{ .Values.database.secretKeys.password | quote }}
           {{- if .Values.stripe.enabled }}
           - name: KTRLPLANE_STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_SECRET_KEY
+                key: {{ .Values.stripe.secretKeys.secretKey | quote }}
           - name: KTRLPLANE_STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_PUBLISHABLE_KEY
+                key: {{ .Values.stripe.secretKeys.publishableKey | quote }}
           - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
             valueFrom:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: STRIPE_WEBHOOK_SECRET
+                key: {{ .Values.stripe.secretKeys.webhookSecret | quote }}
           {{- end }}
         resources:
           requests:

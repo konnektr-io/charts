@@ -1,0 +1,79 @@
+{{ template "chart.header" . }}
+
+{{ template "chart.badgesSection" . }}
+
+{{ template "chart.description" . }}
+
+## Documentation
+
+For comprehensive documentation, visit [docs.konnektr.io/docs/db-query-operator](https://docs.konnektr.io/docs/db-query-operator)
+
+## Quick Start
+
+Install the operator:
+
+```bash
+helm install db-query-operator \
+  oci://ghcr.io/konnektr-io/charts/{{ template "chart.name" . }} \
+  --version {{ template "chart.version" . }} \
+  --namespace dbqo-system \
+  --create-namespace \
+  --set gvkPattern="v1/ConfigMap;apps/v1/Deployment"
+```
+
+## Prerequisites
+
+- Kubernetes 1.24+
+- Helm 3.8+
+- PostgreSQL database accessible from the cluster
+
+## Configuration
+
+The `gvkPattern` parameter is required and specifies which Kubernetes resource types the operator can manage.
+
+### Format
+
+`<group>/<version>/<Kind>` or `<version>/<Kind>` for core resources
+
+### Examples
+
+```bash
+# Core resources
+--set gvkPattern="v1/ConfigMap;v1/Secret;v1/Service"
+
+# Applications
+--set gvkPattern="apps/v1/Deployment;apps/v1/StatefulSet"
+
+# ArgoCD Applications
+--set gvkPattern="argoproj.io/v1alpha1/Application"
+
+# Multiple types
+--set gvkPattern="v1/ConfigMap;apps/v1/Deployment;argoproj.io/v1alpha1/Application"
+```
+
+{{ template "chart.valuesSection" . }}
+
+## Upgrading
+
+```bash
+helm upgrade db-query-operator \
+  oci://ghcr.io/konnektr-io/charts/{{ template "chart.name" . }} \
+  --namespace dbqo-system \
+  --reuse-values
+```
+
+## Uninstalling
+
+```bash
+helm uninstall db-query-operator -n dbqo-system
+```
+
+**Note**: This does not delete the CRDs or managed resources.
+
+## Support
+
+- **Documentation**: [docs.konnektr.io/docs/db-query-operator](https://docs.konnektr.io/docs/db-query-operator)
+- **Issues**: [github.com/konnektr-io/db-query-operator/issues](https://github.com/konnektr-io/db-query-operator/issues)
+- **License**: Apache 2.0
+
+{{ template "helm-docs.versionFooter" . }}

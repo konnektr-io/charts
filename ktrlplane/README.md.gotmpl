@@ -1,0 +1,51 @@
+## Database Secret Key Customization
+
+If you are using an external secret for your database credentials (e.g., with CNPG), you may need to customize the key names used to reference credentials in the secret. By default, the chart expects the following keys:
+
+- `DB_HOST`
+- `DB_PORT`
+- `DB_NAME`
+- `DB_USER`
+- `DB_PASSWORD`
+
+If your external secret uses different key names (for example, CNPG uses `host`, `port`, `dbname`, `user`, `password`), you can override them in your `values.yaml`:
+
+```yaml
+database:
+  useExternalSecret: true
+  externalSecretName: my-cnpg-secret
+  secretKeys:
+    host: host
+    port: port
+    db: dbname
+    user: user
+    password: password
+```
+
+This will ensure the deployment references the correct keys from your external secret.
+
+> **Note:** If you do not override `secretKeys`, the default key names will be used.
+
+## Stripe Secret Key Customization
+
+If you are using an external secret for your Stripe credentials, you may need to customize the key names used to reference credentials in the secret. By default, the chart expects the following keys:
+
+- `STRIPE_SECRET_KEY`
+- `STRIPE_PUBLISHABLE_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+
+If your external secret uses different key names, you can override them in your `values.yaml`:
+
+```yaml
+stripe:
+  useExternalSecret: true
+  externalSecretName: my-stripe-secret
+  secretKeys:
+    secretKey: mySecretKey
+    publishableKey: myPublishableKey
+    webhookSecret: myWebhookSecret
+```
+
+This will ensure the deployment references the correct keys from your external secret.
+
+> **Note:** If you do not override `secretKeys`, the default key names will be used.

@@ -33,6 +33,13 @@ database:
   enabled: true # Set to false to use external database (e.g., cnpg)
   useExternalSecret: false # If true, reference an existing secret for DB credentials
   externalSecretName: "" # Name of the external secret (required if useExternalSecret is true)
+  # Allows overriding the key names used in the referenced secret (useful for CNPG, etc.)
+  secretKeys:
+    host: DB_HOST
+    port: DB_PORT
+    db: DB_NAME
+    user: DB_USER
+    password: DB_PASSWORD
   credentials:
     db: ktrlplane
     user: ktrlplane
@@ -62,6 +69,12 @@ stripe:
   enabled: false # Enable Stripe integration
   useExternalSecret: true # If true, reference an existing secret for Stripe credentials
   externalSecretName: "ktrlplane-stripe-secret" # Name of the external secret (required if useExternalSecret is true)
+  # Allows overriding the key names used in the referenced Stripe secret
+  secretKeys:
+    secretKey: STRIPE_SECRET_KEY
+    publishableKey: STRIPE_PUBLISHABLE_KEY
+    webhookSecret: STRIPE_WEBHOOK_SECRET
+
   # Only set these if useExternalSecret is false (NOT RECOMMENDED for production)
   secretKey: ""
   publishableKey: ""
