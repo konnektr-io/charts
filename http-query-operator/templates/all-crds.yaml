@@ -1,0 +1,8 @@
+{{- if .Values.includeCRDs }}
+{{- /* All CRDs below are included only if includeCRDs is true */}}
+{{- $files := .Files.Glob "crds/*.yaml" }}
+{{- range $path, $file := $files }}
+---
+{{ $file | toString }}
+{{- end }}
+{{- end }}

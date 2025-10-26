@@ -72,7 +72,7 @@ jobs:
           set -e
           for chart_yaml in $(find . -name Chart.yaml); do
             chart_dir=$(dirname "$chart_yaml")
-            crds_dir="$chart_dir/templates/crds"
+            crds_dir="$chart_dir/crds"
             # Check for 'CRD' keyword in Chart.yaml
             if grep -q 'CRD' "$chart_yaml"; then
               # Extract appVersion
@@ -85,11 +85,11 @@ jobs:
                 # Download CRDs: handle both direct file and folder listing
                 if [[ "$crd_url" == *.yaml || "$crd_url" == *.yml ]]; then
                   # Direct link to a single CRD file
-                  curl -sSL "$crd_url" -o "$crds_dir/_$(basename $crd_url)"
+                  curl -sSL "$crd_url" -o "$crds_dir/$(basename $crd_url)"
                 else
                   # Assume it's a GitHub API folder listing
                   for crd_file in $(curl -s "$crd_url" | jq -r '.[] | select(.name | endswith(".yaml") or endswith(".yml")) | .download_url'); do
-                    curl -sSL "$crd_file" -o "$crds_dir/_$(basename $crd_file)"
+                    curl -sSL "$crd_file" -o "$crds_dir/$(basename $crd_file)"
                   done
                 fi
               fi

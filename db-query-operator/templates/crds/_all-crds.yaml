@@ -1,8 +1,0 @@
-{{- if .Values.installCRDs }}
-{{- /* All CRDs below are included only if installCRDs is true */}}
-{{- $files := .Files.Glob "templates/crds/*.yaml" }}
-{{- range $path, $file := $files }}
----
-{{ $file | indent 0 }}
-{{- end }}
-{{- end }}
