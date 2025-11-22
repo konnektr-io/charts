@@ -16,6 +16,10 @@ backend:
   auth:
     issuer: https://auth.konnektr.io/
     audience: https://api.ktrlplane.konnektr.io
+  # Optional Kubernetes scheduling fields
+  tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
+  affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
+  nodeSelector: {} # Example: { disktype: "ssd" }
 frontend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-frontend
@@ -29,6 +33,10 @@ frontend:
     limits:
       memory: "128Mi"
       cpu: "100m"
+  # Optional Kubernetes scheduling fields
+  tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
+  affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
+  nodeSelector: {} # Example: { disktype: "ssd" }
 database:
   enabled: true # Set to false to use external database (e.g., cnpg)
   useExternalSecret: false # If true, reference an existing secret for DB credentials

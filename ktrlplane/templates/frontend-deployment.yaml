@@ -38,3 +38,15 @@ spec:
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
+        {{- if .Values.frontend.tolerations }}
+        tolerations:
+          {{- toYaml .Values.frontend.tolerations | nindent 6 }}
+        {{- end }}
+        {{- if .Values.frontend.affinity }}
+        affinity:
+          {{- toYaml .Values.frontend.affinity | nindent 6 }}
+        {{- end }}
+        {{- if .Values.frontend.nodeSelector }}
+        nodeSelector:
+          {{- toYaml .Values.frontend.nodeSelector | nindent 6 }}
+        {{- end }}

@@ -151,6 +151,18 @@ spec:
           subPath: config.yaml
           readOnly: true
         {{- end }}
+        {{- if .Values.backend.tolerations }}
+        tolerations:
+          {{- toYaml .Values.backend.tolerations | nindent 6 }}
+        {{- end }}
+        {{- if .Values.backend.affinity }}
+        affinity:
+          {{- toYaml .Values.backend.affinity | nindent 6 }}
+        {{- end }}
+        {{- if .Values.backend.nodeSelector }}
+        nodeSelector:
+          {{- toYaml .Values.backend.nodeSelector | nindent 6 }}
+        {{- end }}
       {{- if .Values.stripe.enabled }}
       volumes:
       - name: config
