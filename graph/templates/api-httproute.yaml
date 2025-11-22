@@ -1,0 +1,26 @@
+{{- if and .Values.api.enabled .Values.api.httproute.enabled }}
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: {{ include "graph.fullname" . }}-api
+  labels:
+    {{- include "graph.labels" . | nindent 4 }}
+spec:
+  parentRefs:
+      - name: {{ .Values.api.httproute.gatewayName }}
+        {{- if .Values.api.httproute.gatewayNamespace }}
+        namespace: {{ .Values.api.httproute.gatewayNamespace }}
+        {{- end }}
+  hostnames:
+    - {{ .Values.api.httproute.host | quote }}
+  rules:
+    {{- range .Values.api.httproute.paths }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: {{ .path | quote }}
+      backendRefs:
+        - name: {{ include "graph.fullname" $ }}-api
+          port: {{ $.Values.api.service.port }}
+    {{- end }}
+{{- end }}
