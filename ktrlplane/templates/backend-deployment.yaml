@@ -56,11 +56,6 @@ spec:
               secretKeyRef:
                 name: {{ include "ktrlplane.stripeSecretName" . }}
                 key: {{ .Values.stripe.secretKeys.publishableKey | quote }}
-          - name: KTRLPLANE_STRIPE_WEBHOOK_SECRET
-            valueFrom:
-              secretKeyRef:
-                name: {{ include "ktrlplane.stripeSecretName" . }}
-                key: {{ .Values.stripe.secretKeys.webhookSecret | quote }}
           {{- end }}
         {{- if .Values.stripe.enabled }}
         volumeMounts:
