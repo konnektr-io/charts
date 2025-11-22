@@ -65,18 +65,6 @@ spec:
           readOnly: true
         {{- end }}
       {{- end }}
-        {{- if .Values.backend.tolerations }}
-        tolerations:
-          {{- toYaml .Values.backend.tolerations | nindent 6 }}
-        {{- end }}
-        {{- if .Values.backend.affinity }}
-        affinity:
-          {{- toYaml .Values.backend.affinity | nindent 6 }}
-        {{- end }}
-        {{- if .Values.backend.nodeSelector }}
-        nodeSelector:
-          {{- toYaml .Values.backend.nodeSelector | nindent 6 }}
-        {{- end }}
       containers:
       - name: backend
         image: {{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag | default .Chart.AppVersion }}
@@ -164,3 +152,15 @@ spec:
         configMap:
           name: {{ include "ktrlplane.configName" . }}
       {{- end }}
+    {{- with .Values.frontend.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.frontend.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.frontend.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
