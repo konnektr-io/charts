@@ -20,6 +20,10 @@ backend:
   tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
   affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
   nodeSelector: {} # Example: { disktype: "ssd" }
+  initContainer:
+    tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
+    affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
+    nodeSelector: {} # Example: { disktype: "ssd" }
 frontend:
   image:
     repository: ghcr.io/konnektr-io/ktrlplane-frontend
