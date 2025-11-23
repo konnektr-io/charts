@@ -2,11 +2,11 @@ apiVersion: v2
 name: ktrlplane
 description: Helm chart for deploying the ktrlplane solution (backend, frontend, PostgreSQL)
 type: application
-version: 0.3.12
-appVersion: "0.0.31"
+version: 0.3.13
+appVersion: "0.0.32"
 dependencies:
   - name: db-query-operator
-    version: "0.6.1"
+    version: "0.6.3"
     repository: "https://charts.konnektr.io"
     condition: db-query-operator.enabled
   - name: http-query-operator
