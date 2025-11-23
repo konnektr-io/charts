@@ -103,5 +103,3 @@ stripe:
       product_id: "prod_T01up7wLDULGB1"
 db-query-operator:
   enabled: false
-http-query-operator:
-  enabled: false
