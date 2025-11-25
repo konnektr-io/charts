@@ -33,6 +33,13 @@ frontend:
     limits:
       memory: "128Mi"
       cpu: "100m"
+  probe:
+    liveness:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+    readiness:
+      initialDelaySeconds: 5
+      periodSeconds: 5
   # Optional Kubernetes scheduling fields
   tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
   affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
