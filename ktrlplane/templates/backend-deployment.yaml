@@ -131,14 +131,14 @@ spec:
           httpGet:
             path: /health
             port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 10
+          initialDelaySeconds: {{ .Values.backend.probe.liveness.initialDelaySeconds | default 30 }}
+          periodSeconds: {{ .Values.backend.probe.liveness.periodSeconds | default 10 }}
         readinessProbe:
           httpGet:
             path: /health
             port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 5
+          initialDelaySeconds: {{ .Values.backend.probe.readiness.initialDelaySeconds | default 5 }}
+          periodSeconds: {{ .Values.backend.probe.readiness.periodSeconds | default 5 }}
         {{- if .Values.stripe.enabled }}
         volumeMounts:
         - name: config

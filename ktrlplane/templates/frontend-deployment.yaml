@@ -30,14 +30,14 @@ spec:
           httpGet:
             path: /
             port: 80
-            initialDelaySeconds: {{ .Values.frontend.probe.liveness.initialDelaySeconds | default 30 }}
-            periodSeconds: {{ .Values.frontend.probe.liveness.periodSeconds | default 10 }}
+          initialDelaySeconds: {{ .Values.frontend.probe.liveness.initialDelaySeconds | default 30 }}
+          periodSeconds: {{ .Values.frontend.probe.liveness.periodSeconds | default 10 }}
         readinessProbe:
           httpGet:
             path: /
             port: 80
-            initialDelaySeconds: {{ .Values.frontend.probe.readiness.initialDelaySeconds | default 5 }}
-            periodSeconds: {{ .Values.frontend.probe.readiness.periodSeconds | default 5 }}
+          initialDelaySeconds: {{ .Values.frontend.probe.readiness.initialDelaySeconds | default 5 }}
+          periodSeconds: {{ .Values.frontend.probe.readiness.periodSeconds | default 5 }}
     {{- with .Values.frontend.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}

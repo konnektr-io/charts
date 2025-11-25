@@ -16,6 +16,13 @@ backend:
   auth:
     issuer: https://auth.konnektr.io/
     audience: https://api.ktrlplane.konnektr.io
+  probe:
+    liveness:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+    readiness:
+      initialDelaySeconds: 5
+      periodSeconds: 5
   # Optional Kubernetes scheduling fields
   tolerations: [] # Example: [{ key: "key1", operator: "Equal", value: "value1", effect: "NoSchedule" }]
   affinity: {}    # Example: { nodeAffinity: { requiredDuringSchedulingIgnoredDuringExecution: { nodeSelectorTerms: [...] } } }
