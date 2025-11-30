@@ -1,0 +1,38 @@
+{{- if and .Values.httproute.enabled }}
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: {{ include "ktrlplane.fullname" . }}-httproute
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "ktrlplane.labels" . | nindent 4 }}
+  {{- with .Values.httproute.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  parentRefs:
+    - name: {{ .Values.httproute.gatewayName }}
+      {{- if .Values.httproute.gatewayNamespace }}
+      namespace: {{ .Values.httproute.gatewayNamespace }}
+      {{- end }}
+  hostnames:
+    {{- range .Values.httproute.hosts }}
+    - {{ . | quote }}
+    {{- end }}
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /api/
+      backendRefs:
+        - name: ktrlplane-backend-service
+          port: 8080
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ktrlplane-frontend-service
+          port: 80
+{{- end }}

@@ -87,6 +87,17 @@ ingress:
   #  - secretName: ktrlplane-tls
   #    hosts:
   #      - ktrlplane.local
+httproute:
+  enabled: false
+  gatewayName: external
+  gatewayNamespace: platform
+  hosts:
+    - ktrlplane.konnektr.io
+  annotations: {}
+  # Example: add custom annotations for Gateway API
+  # annotations:
+  #   cert-manager.io/cluster-issuer: letsencrypt-prod
+
 stripe:
   enabled: false # Enable Stripe integration
   useExternalSecret: true # If true, reference an existing secret for Stripe credentials
@@ -103,10 +114,10 @@ stripe:
   webhookSecret: ""
   # Product configuration (safe to store in values)
   products:
-    - resource_type: "Konnektr.DigitalTwins"
+    - resource_type: "Konnektr.Graph"
       sku: "free"
       product_id: "prod_T01txFyd6dfzao"
-    - resource_type: "Konnektr.DigitalTwins"
+    - resource_type: "Konnektr.Graph"
       sku: "standard"
       product_id: "prod_SzztLZsKSYqiVz"
     - resource_type: "Konnektr.Flows"
