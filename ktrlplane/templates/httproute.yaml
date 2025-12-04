@@ -13,6 +13,7 @@ metadata:
 spec:
   parentRefs:
     - name: {{ .Values.httproute.gatewayName }}
+      kind: Gateway
       {{- if .Values.httproute.gatewayNamespace }}
       namespace: {{ .Values.httproute.gatewayNamespace }}
       {{- end }}

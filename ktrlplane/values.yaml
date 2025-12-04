@@ -15,7 +15,7 @@ backend:
       cpu: "200m"
   auth:
     issuer: https://auth.konnektr.io/
-    audience: https://api.ktrlplane.konnektr.io
+    audience: https://ktrlplane.konnektr.io
   probe:
     liveness:
       initialDelaySeconds: 30
@@ -88,7 +88,7 @@ ingress:
   #    hosts:
   #      - ktrlplane.local
 httproute:
-  enabled: false
+  enabled: true
   gatewayName: external
   gatewayNamespace: platform
   hosts:
