@@ -54,5 +54,8 @@ terminationGracePeriodSeconds: 10
 
 gvkPattern: "v1/ConfigMap"
 
+# set to debug for more verbose logging
+logLevel: "info"
+
 # Optionally set the namespace for deployment
 namespaceOverride: ""
