@@ -82,6 +82,13 @@ api:
       # metadataAddress: https://login.microsoftonline.com/{tenantId}/v2.0/.well-known/openid-configuration
       # audience: https://digitaltwins.azure.net/
       # issuer: https://sts.windows.net/{tenantId}/
+    authorization:
+      enabled: false
+      provider: Api
+      apiProvider:
+        baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080/api/v1
+        checkEndpoint: /api/v1/permissions/check
+        # resourceName: {thisresource}
     # parameters:
       # rateLimitingEnabled: false
       # maxQueryComplexityPerWindow: '5000'
