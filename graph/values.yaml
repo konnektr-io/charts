@@ -71,7 +71,28 @@ api:
       paths:
         - path: "/"
         
-  config: {}
+  config: 
+    authentication:
+      enabled: false
+      # Konnektr Identity configuration
+      metadataAddress: https://auth.konnektr.io/.well-known/openid-configuration
+      audience: https://graph.konnektr.io
+      issuer: https://auth.konnektr.io/
+      # Microsoft Entra configuration
+      # metadataAddress: https://login.microsoftonline.com/{tenantId}/v2.0/.well-known/openid-configuration
+      # audience: https://digitaltwins.azure.net/
+      # issuer: https://sts.windows.net/{tenantId}/
+    # parameters:
+      # rateLimitingEnabled: false
+      # maxQueryComplexityPerWindow: '5000'
+      # maxPoolSize: '200'
+      # connectionTimeout: '20'
+  
+  # logging:
+  #   logLevel:
+  #     default: "Information"
+  #     Microsoft: "Warning"
+  #     System: "Warning"
 
   extraEnv: []
 
