@@ -86,7 +86,7 @@ api:
       enabled: false
       provider: Api
       apiProvider:
-        baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080/api/v1
+        baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080
         checkEndpoint: /api/v1/permissions/check
         # resourceName: {thisresource}
     # parameters:
