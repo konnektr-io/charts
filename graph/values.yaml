@@ -88,6 +88,8 @@ api:
       apiProvider:
         tokenEndpoint: https://auth.konnektr.io/oauth/token
         audience: https://ktrlplane.konnektr.io
+        # clientId: {clientid}
+        # clientSecret: {clientsecret}
         baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080
         checkEndpoint: /api/v1/permissions/check
         # resourceName: {thisresource}
