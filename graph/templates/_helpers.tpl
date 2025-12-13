@@ -75,6 +75,18 @@ If a custom imageName is available, use it, otherwise use the defaults based on 
 {{- end -}}
 
 {{/*
+MCP Image Name
+If a custom imageName is available, use it, otherwise use the defaults based on the .Values.type
+*/}}
+{{- define "graph.api.imageName" -}}
+    {{- if .Values.api.imageName -}}
+        {{- .Values.api.imageName -}}
+    {{- else -}}
+        {{- printf "ghcr.io/konnektr-io/pg-age-digitaltwins/agedigitaltwins-mcp:%s" .Chart.AppVersion -}}
+    {{- end }}
+{{- end -}}
+
+{{/*
 API service account name
 */}}
 {{- define "graph.api.serviceAccountName" -}}
@@ -93,6 +105,19 @@ Events service account name
 {{- define "graph.events.serviceAccountName" -}}
 {{- if .Values.events.serviceAccountName -}}
 {{- .Values.events.serviceAccountName -}}
+{{- else if and .Values.cluster.cluster.serviceAccountTemplate (hasKey .Values.cluster.cluster.serviceAccountTemplate "metadata") .Values.cluster.cluster.serviceAccountTemplate.metadata.name -}}
+{{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
+{{- else -}}
+{{- include "graph.fullname" . -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+MCP service account name
+*/}}
+{{- define "graph.mcp.serviceAccountName" -}}
+{{- if .Values.mcp.serviceAccountName -}}
+{{- .Values.mcp.serviceAccountName -}}
 {{- else if and .Values.cluster.cluster.serviceAccountTemplate (hasKey .Values.cluster.cluster.serviceAccountTemplate "metadata") .Values.cluster.cluster.serviceAccountTemplate.metadata.name -}}
 {{- .Values.cluster.serviceAccountTemplate.metadata.name -}}
 {{- else -}}

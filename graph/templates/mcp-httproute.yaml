@@ -1,0 +1,26 @@
+{{- if and .Values.mcp.enabled .Values.mcp.httproute.enabled }}
+mcpVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: {{ include "graph.fullname" . }}-mcp
+  labels:
+    {{- include "graph.labels" . | nindent 4 }}
+spec:
+  parentRefs:
+      - name: {{ .Values.mcp.httproute.gatewayName }}
+        {{- if .Values.mcp.httproute.gatewayNamespace }}
+        namespace: {{ .Values.mcp.httproute.gatewayNamespace }}
+        {{- end }}
+  hostnames:
+    - {{ .Values.mcp.httproute.host | quote }}
+  rules:
+    {{- range .Values.mcp.httproute.paths }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: {{ .path | quote }}
+      backendRefs:
+        - name: {{ include "graph.fullname" $ }}-mcp
+          port: {{ $.Values.mcp.service.port }}
+    {{- end }}
+{{- end }}

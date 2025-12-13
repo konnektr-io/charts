@@ -4,6 +4,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 api:
+  enabled: false
   # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
   logLevel: "Warning"
   # OpenTelemetry configuration
@@ -139,6 +140,7 @@ api:
     # targetMemoryUtilizationPercentage: 80
 
 events:
+  enabled: false
   # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
   logLevel: "Warning"
   # OpenTelemetry configuration
@@ -225,6 +227,134 @@ events:
       #   eventFormat: DataHistory
       # - sinkName: FabricEventHouseSink
       #   eventFormat: DataHistory
+
+mcp:
+  enabled: false
+  # The default log level, one of the following values: Error, Warning, Information, Debug, Trace
+  logLevel: "Warning"
+  # OpenTelemetry configuration
+  openTelemetry:
+    enabled: false
+    # custom service name
+    serviceName: ""
+    # export endpoint
+    exporterEndpoint: "http://otel-collector.opentelemetry.svc.cluster.local:4317"
+
+  # This is for setting Kubernetes Annotations to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+  podAnnotations: {}
+  # This is for setting Kubernetes Labels to a Pod.
+  # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+  podLabels: {}
+
+  podSecurityContext:
+    {}
+    # fsGroup: 2000
+
+  securityContext:
+    {}
+    # capabilities:
+    #   drop:
+    #   - ALL
+    # readOnlyRootFilesystem: true
+    # runAsNonRoot: true
+    # runAsUser: 1000
+
+  # Allow to set a different service account for the pod
+  # If not defined, the postgres cluster service account will be used
+  serviceAccountName: ""
+
+  # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+  service:
+    # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+    type: ClusterIP
+    # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
+    port: 8080
+
+  # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+  ingress:
+    enabled: false
+    className: ""
+    annotations:
+      {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+    hosts:
+      - host: chart-example.local
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls: []
+    #  - secretName: chart-example-tls
+    #    hosts:
+    #      - chart-example.local
+
+  httproute:
+      enabled: false
+      gatewayName: ""
+      gatewayNamespace: ""
+      host: "graph.local"
+      paths:
+        - path: "/"
+        
+  config: 
+    authentication:
+      enabled: false
+      # Konnektr Identity configuration
+      metadataAddress: https://auth.konnektr.io/.well-known/openid-configuration
+      audience: https://graph.konnektr.io
+      issuer: https://auth.konnektr.io/
+      # Microsoft Entra configuration
+      # metadataAddress: https://login.microsoftonline.com/{tenantId}/v2.0/.well-known/openid-configuration
+      # audience: https://digitaltwins.azure.net/
+      # issuer: https://sts.windows.net/{tenantId}/
+    authorization:
+      enabled: false
+      provider: Api
+      apiProvider:
+        tokenEndpoint: https://auth.konnektr.io/oauth/token
+        audience: https://ktrlplane.konnektr.io
+        # clientId: {clientid}
+        # clientSecret: {clientsecret}
+        baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080
+        checkEndpoint: /api/v1/permissions/check
+        # resourceName: {thisresource}
+    # parameters:
+      # rateLimitingEnabled: false
+      # maxQueryComplexityPerWindow: '5000'
+      # maxPoolSize: '200'
+      # connectionTimeout: '20'
+  
+  # logging:
+  #   logLevel:
+  #     default: "Information"
+  #     Microsoft: "Warning"
+  #     System: "Warning"
+
+  extraEnv: []
+
+  resources:
+     # Uncomment and configure as needed
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+
+  # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 8080
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 8080
 
 cluster:
   enabled: false

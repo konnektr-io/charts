@@ -1,42 +1,44 @@
-{{- if .Values.api.enabled }}
-apiVersion: apps/v1
+{{- if .Values.mcp.enabled }}
+mcpVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "graph.fullname" . }}-api
+  name: {{ include "graph.fullname" . }}-mcp
   labels:
     {{- include "graph.labels" . | nindent 4 }}
-    app: {{ include "graph.fullname" . }}-api
+    app: {{ include "graph.fullname" . }}-mcp
 spec:
-  replicas: {{ .Values.api.replicaCount | default 1 }}
+  {{- if not .Values.mcp.autoscaling.enabled }}
+  replicas: {{ .Values.mcp.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "graph.selectorLabels" . | nindent 6 }}
-      app: {{ include "graph.fullname" . }}-api
+      app: {{ include "graph.fullname" . }}-mcp
   template:
     metadata:
-      {{- with .Values.api.podAnnotations }}
+      {{- with .Values.mcp.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
         {{- include "graph.labels" . | nindent 8 }}
-        {{- with .Values.api.podLabels }}
+        {{- with .Values.mcp.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
-        app: {{ include "graph.fullname" . }}-api
+        app: {{ include "graph.fullname" . }}-mcp
     spec:
-      {{- with .Values.api.imagePullSecrets }}
+      {{- with .Values.mcp.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       securityContext:
-        {{- toYaml .Values.api.podSecurityContext | nindent 8 }}
-      serviceAccountName: {{ include "graph.api.serviceAccountName" . }}
+        {{- toYaml .Values.mcp.podSecurityContext | nindent 8 }}
+      serviceAccountName: {{ include "graph.mcp.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            {{- toYaml .Values.api.securityContext | nindent 12 }}
-          image: "{{- include "graph.api.imageName" . }}"
+            {{- toYaml .Values.mcp.securityContext | nindent 12 }}
+          image: "{{- include "graph.mcp.imageName" . }}"
           ports:
             - containerPort: 8080
           env:
@@ -63,40 +65,40 @@ spec:
             - name: ConnectionStrings__agedb
               value: "Server={{ include "graph.fullname" . }}-rw,{{ include "graph.fullname" . }}-ro;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
             - name: Logging__LogLevel__Default
-              value: {{ .Values.api.logLevel | quote }}
-            {{- if .Values.api.openTelemetry.enabled }}
+              value: {{ .Values.mcp.logLevel | quote }}
+            {{- if .Values.mcp.openTelemetry.enabled }}
             - name: OTEL_SERVICE_NAME
-              value: {{ .Values.api.openTelemetry.serviceName | default (printf "%s-api" (include "graph.fullname" .)) | quote }}
+              value: {{ .Values.mcp.openTelemetry.serviceName | default (printf "%s-mcp" (include "graph.fullname" .)) | quote }}
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: {{ .Values.api.openTelemetry.exporterEndpoint | quote }}
+              value: {{ .Values.mcp.openTelemetry.exporterEndpoint | quote }}
             {{- end }}
-            {{- list .Values.api.config "" | include "recurseFlattenMap" | nindent 12 }}
-            {{- with .Values.api.extraEnv }}
+            {{- list .Values.mcp.config "" | include "recurseFlattenMap" | nindent 12 }}
+            {{- with .Values.mcp.extraEnv }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
           livenessProbe:
-            {{- toYaml .Values.api.livenessProbe | nindent 12 }}
+            {{- toYaml .Values.mcp.livenessProbe | nindent 12 }}
           readinessProbe:
-            {{- toYaml .Values.api.readinessProbe | nindent 12 }}
+            {{- toYaml .Values.mcp.readinessProbe | nindent 12 }}
           resources:
-            {{- toYaml .Values.api.resources | nindent 12 }}
-          {{- with .Values.api.volumeMounts }}
+            {{- toYaml .Values.mcp.resources | nindent 12 }}
+          {{- with .Values.mcp.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-      {{- with .Values.api.volumes }}
+      {{- with .Values.mcp.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.api.nodeSelector }}
+      {{- with .Values.mcp.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.api.affinity }}
+      {{- with .Values.mcp.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.api.tolerations }}
+      {{- with .Values.mcp.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}

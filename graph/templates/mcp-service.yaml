@@ -1,0 +1,16 @@
+{{- if .Values.mcp.enabled }}
+mcpVersion: v1
+kind: Service
+metadata:
+  name: {{ include "graph.fullname" . }}-mcp
+  labels:
+    {{- include "graph.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.mcp.service.port }}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{ include "graph.fullname" . }}-mcp
+{{- end }}
