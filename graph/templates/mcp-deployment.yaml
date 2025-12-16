@@ -7,9 +7,7 @@ metadata:
     {{- include "graph.labels" . | nindent 4 }}
     app: {{ include "graph.fullname" . }}-mcp
 spec:
-  {{- if not .Values.mcp.autoscaling.enabled }}
-  replicas: {{ .Values.mcp.replicaCount }}
-  {{- end }}
+  replicas: 1
   selector:
     matchLabels:
       {{- include "graph.selectorLabels" . | nindent 6 }}
