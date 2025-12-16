@@ -78,9 +78,9 @@ If a custom imageName is available, use it, otherwise use the defaults based on 
 MCP Image Name
 If a custom imageName is available, use it, otherwise use the defaults based on the .Values.type
 */}}
-{{- define "graph.api.imageName" -}}
-    {{- if .Values.api.imageName -}}
-        {{- .Values.api.imageName -}}
+{{- define "graph.mcp.imageName" -}}
+    {{- if .Values.mcp.imageName -}}
+        {{- .Values.mcp.imageName -}}
     {{- else -}}
         {{- printf "ghcr.io/konnektr-io/pg-age-digitaltwins/agedigitaltwins-mcp:%s" .Chart.AppVersion -}}
     {{- end }}
