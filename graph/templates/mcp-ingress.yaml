@@ -1,5 +1,5 @@
 {{- if and .Values.mcp.enabled .Values.mcp.ingress.enabled -}}
-mcpVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "graph.fullname" . }}-mcp
