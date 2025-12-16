@@ -12,10 +12,10 @@ keywords:
   - postgresql
   - digital-twins
   - cloudnativepg
-version: 0.4.15
+version: 0.4.16
 appVersion: "1.18.0-preview.6"
 dependencies:
   - name: cluster
-    version: "0.3.1"
+    version: "0.4.0"
     repository: "https://cloudnative-pg.github.io/charts"
     condition: cluster.enabled
