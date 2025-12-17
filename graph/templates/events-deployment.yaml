@@ -77,14 +77,8 @@ spec:
             - name: CustomEventSource
               value: {{ include "graph.fullname" . }}
             {{- end }}
-            {{- range $index, $sink := .Values.events.config.eventSinks.kafka }}
-            {{- if and $sink.saslPasswordSecretRef $sink.saslPasswordSecretKey }}
-            - name: "EventSinks__Kafka__{{ $index }}__SaslPassword"
-              valueFrom:
-                secretKeyRef:
-                  name: {{ $sink.saslPasswordSecretRef }}
-                  key: {{ $sink.saslPasswordSecretKey }}
-            {{- end }}
+            {{- with .Values.events.extraEnv }}
+            {{- toYaml . | nindent 12 }}
             {{- end }}
           livenessProbe:
             {{- toYaml .Values.events.livenessProbe | nindent 12 }}

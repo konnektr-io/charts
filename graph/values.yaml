@@ -208,8 +208,6 @@ events:
         #   topic: ""
         #   saslMechanism: PLAIN
         #   saslUsername: ""
-        #   saslPasswordSecretRef: ""
-        #   saslPasswordSecretKey: ""
       kusto:
         []
         # - name: AdxSink1
@@ -227,6 +225,11 @@ events:
       #   eventFormat: DataHistory
       # - sinkName: FabricEventHouseSink
       #   eventFormat: DataHistory
+  extraEnv: []
+      # - name: EventSinks__Kafka__0__SaslPassword
+      #   valueFrom:
+      #     secretKeyRef:
+      #       name: kafka-sasl-password-secret
 
 mcp:
   enabled: false
