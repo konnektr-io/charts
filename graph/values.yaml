@@ -68,7 +68,8 @@ api:
       enabled: false
       gatewayName: ""
       gatewayNamespace: ""
-      host: "graph.local"
+      hosts: 
+        - "graph.local"
       paths:
         - path: "/"
         

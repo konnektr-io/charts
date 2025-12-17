@@ -12,7 +12,13 @@ spec:
         namespace: {{ .Values.api.httproute.gatewayNamespace }}
         {{- end }}
   hostnames:
+    {{- if .Values.api.httproute.hosts }}
+      {{- range .Values.api.httproute.hosts }}
+    - {{ . | quote }}
+      {{- end }}
+    {{- else if .Values.api.httproute.host }}
     - {{ .Values.api.httproute.host | quote }}
+    {{- end }}
   rules:
     {{- range .Values.api.httproute.paths }}
     - matches:

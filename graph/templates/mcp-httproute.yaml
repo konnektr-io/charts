@@ -12,7 +12,13 @@ spec:
         namespace: {{ .Values.mcp.httproute.gatewayNamespace }}
         {{- end }}
   hostnames:
+    {{- if .Values.mcp.httproute.hosts }}
+      {{- range .Values.mcp.httproute.hosts }}
+    - {{ . | quote }}
+      {{- end }}
+    {{- else if .Values.mcp.httproute.host }}
     - {{ .Values.mcp.httproute.host | quote }}
+    {{- end }}
   rules:
     {{- range .Values.mcp.httproute.paths }}
     - matches:
