@@ -3,3 +3,9 @@ appVersion: "1.0"
 description: A Porkbun solver for Cert Manager.
 name: porkbun-webhook
 version: 0.1.5
+maintainers:
+  - name: Konnektr.io
+    url: https://github.com/konnektr-io
+    email: info@konnektr.io
+  - name: nikoraes
+    url: https://github.com/nikoraes

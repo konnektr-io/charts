@@ -1,6 +1,0 @@
-{{- if .Values.rbac.create }}
-{{- if not .Values.serviceAccount.create }}
----
-# If you want to use an existing ServiceAccount, set serviceAccount.create=false and serviceAccount.name=<your-sa>
-{{- end }}
-{{- end }}

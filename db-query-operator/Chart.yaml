@@ -5,8 +5,11 @@ home: https://github.com/konnektr-io/db-query-operator
 sources:
   - https://github.com/konnektr-io/db-query-operator
 maintainers:
-  - name: Konnektr-io
+  - name: Konnektr.io
+    url: https://github.com/konnektr-io
     email: info@konnektr.io
+  - name: nikoraes
+    url: https://github.com/nikoraes
 keywords:
   - kubernetes-operator
   - database

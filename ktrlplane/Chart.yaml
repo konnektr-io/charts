@@ -4,6 +4,15 @@ description: Helm chart for deploying the ktrlplane solution (backend, frontend,
 type: application
 version: 0.3.62
 appVersion: "0.1.5"
+home: https://docs.konnektr.io/docs/ktrlplane
+sources:
+  - https://github.com/konnektr-io/ktrlplane
+maintainers:
+  - name: Konnektr.io
+    url: https://github.com/konnektr-io
+    email: info@konnektr.io
+  - name: nikoraes
+    url: https://github.com/nikoraes
 dependencies:
   - name: db-query-operator
     version: "0.8.6"
