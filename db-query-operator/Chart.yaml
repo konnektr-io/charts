@@ -16,7 +16,7 @@ keywords:
   - query
   - CRD
   - PostgreSQL
-version: 0.8.6
-appVersion: "0.8.6"
+version: 0.8.7
+appVersion: "0.8.7"
 annotations:
   crd-repo-url: "https://api.github.com/repos/konnektr-io/db-query-operator/contents/config/crd/bases?ref=v{{ .appVersion }}"
