@@ -13,6 +13,12 @@
 {{- $label := last . -}}
 {{- range $key, $val := $map -}}
   {{- $sublabel := list $label ($key | include "toPascalCase") | compact | join "__" -}}
+  {{- if and (kindOf $val | eq "map") (hasKey $val "valueFrom") (hasKey ($val.valueFrom) "secretKeyRef") -}}
+- name: {{ $sublabel | quote }}
+  valueFrom:
+    secretKeyRef:
+      name: {{ $val.valueFrom.secretKeyRef.name | quote }}
+      key: {{ $val.valueFrom.secretKeyRef.key | quote }}
   {{- if kindOf $val | eq "map" -}}
     {{- list $val $sublabel | include "recurseFlattenMap" -}}
   {{- else if kindOf $val | eq "slice" -}}
