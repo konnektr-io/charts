@@ -318,7 +318,11 @@ mcp:
       apiProvider:
         tokenEndpoint: https://auth.konnektr.io/oauth/token
         audience: https://ktrlplane.konnektr.io
-        # clientId: {clientid}
+        # clientId: 
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: auth0-secret
+          #     key: clientId
         # clientSecret: {clientsecret}
         baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080
         checkEndpoint: /api/v1/permissions/check
