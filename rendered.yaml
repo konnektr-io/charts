@@ -1,0 +1,28 @@
+---
+# Source: graph/templates/test.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-test
+data:
+  env: |-
+        - name: "Authorization__ApiProvider__ClientId"
+          valueFrom:
+            secretKeyRef:
+              name: "auth0-secret"
+              key: "clientId"
+        - name: "Authorization__ApiProvider__ClientSecret"
+          valueFrom:
+            secretKeyRef:
+              name: "auth0-secret"
+              key: "clientSecret"
+        - name: "Authorization__ApiProvider__Test__0__Test__Test"
+          value: "abc"
+        - name: "Authorization__ApiProvider__Test__0__Test__Test1"
+          value: "123"
+        - name: "Authorization__ApiProvider__TokenEndpoint"
+          value: "https://auth.konnektr.io/oauth/token"
+        - name: "Authorization__Enabled"
+          value: "true"
+        - name: "Test"
+          value: "test"

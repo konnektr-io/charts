@@ -19,6 +19,7 @@
     secretKeyRef:
       name: {{ $val.valueFrom.secretKeyRef.name | quote }}
       key: {{ $val.valueFrom.secretKeyRef.key | quote }}
+{{ "" }}
   {{- else if kindOf $val | eq "map" -}}
     {{- list $val $sublabel | include "recurseFlattenMap" -}}
   {{- else if kindOf $val | eq "slice" -}}
