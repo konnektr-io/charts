@@ -3,7 +3,7 @@ entries:
   agedigitaltwins:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2026-01-03T20:36:07.801362205Z"
+    created: "2026-01-04T07:53:26.262075997Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 51710eb6233462ef5faa34f98617ef163faea4dd0f3f5b7f6adaee32577ab829
@@ -24,7 +24,7 @@ entries:
     version: 0.29.1
   - apiVersion: v2
     appVersion: 1.14.6
-    created: "2026-01-03T20:36:07.799634609Z"
+    created: "2026-01-04T07:53:26.260583703Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 74ff272b34ef858ae700dcabb024188e92eba62c86c8da691132178cded2c420
@@ -45,7 +45,7 @@ entries:
     version: 0.28.6
   - apiVersion: v2
     appVersion: 1.14.5
-    created: "2026-01-03T20:36:07.798077771Z"
+    created: "2026-01-04T07:53:26.259045302Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 48acf88010b26c30bf5ae94f3a4167319f722fc2b40292d76342931f7abd9abc
@@ -66,7 +66,7 @@ entries:
     version: 0.28.5
   - apiVersion: v2
     appVersion: 1.14.5
-    created: "2026-01-03T20:36:07.796364852Z"
+    created: "2026-01-04T07:53:26.257519545Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 7e3bfc97318276d4ae2f6c408621ebdc84de90739e04e6138a566c30fad5524e
@@ -87,7 +87,7 @@ entries:
     version: 0.27.5
   - apiVersion: v2
     appVersion: 1.14.4
-    created: "2026-01-03T20:36:07.794099325Z"
+    created: "2026-01-04T07:53:26.255990681Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: a5ee9adf210606f213422736dec3f690455862979fba1925c6e0dc50dd90b4be
@@ -108,7 +108,7 @@ entries:
     version: 0.27.4
   - apiVersion: v2
     appVersion: 1.14.3
-    created: "2026-01-03T20:36:07.792549109Z"
+    created: "2026-01-04T07:53:26.253695493Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 858adf1c47850052f6608f53b4cb27edc2a5445b40f2df74b8ca7d8632e5da4c
@@ -129,7 +129,7 @@ entries:
     version: 0.27.3
   - apiVersion: v2
     appVersion: 1.14.2
-    created: "2026-01-03T20:36:07.790180733Z"
+    created: "2026-01-04T07:53:26.252174865Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08b8acd9f73046c01151412e2b581d00227c8eeac69dfd8616e7d88a1306400c
@@ -150,7 +150,7 @@ entries:
     version: 0.27.2
   - apiVersion: v2
     appVersion: 1.14.1
-    created: "2026-01-03T20:36:07.788625347Z"
+    created: "2026-01-04T07:53:26.250659688Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: d6407ed817ed9cd560d1cd4cee5855f9af85f0d50cd69e97a871946d7f813d32
@@ -171,7 +171,7 @@ entries:
     version: 0.27.1
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2026-01-03T20:36:07.787067026Z"
+    created: "2026-01-04T07:53:26.249146073Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: ef2a581f0812d60f8663ae020d7c542dd46253c76c5182abb3a33c98c7cd399a
@@ -192,7 +192,7 @@ entries:
     version: 0.27.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2026-01-03T20:36:07.785547718Z"
+    created: "2026-01-04T07:53:26.247614435Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 0ee9d47aea6e9a40dd3ef1ae2097e27e155a17d2b1983feafed7855a9bd2fd78
@@ -213,7 +213,7 @@ entries:
     version: 0.26.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2026-01-03T20:36:07.784194629Z"
+    created: "2026-01-04T07:53:26.246235522Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 656facd972348e7f1eae368628c85fbf97a8bbff8e813a12db8ece0062aee9c6
@@ -234,7 +234,7 @@ entries:
     version: 0.25.0
   - apiVersion: v2
     appVersion: 1.14.0
-    created: "2026-01-03T20:36:07.782824839Z"
+    created: "2026-01-04T07:53:26.244143293Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: fd2fdcdf0dcac0e9ca9c2b382aabb82d0357a82bc93fbd1874fd2a2c77e06ed9
@@ -255,7 +255,7 @@ entries:
     version: 0.24.0
   - apiVersion: v2
     appVersion: 1.13.9
-    created: "2026-01-03T20:36:07.770669741Z"
+    created: "2026-01-04T07:53:26.232861664Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 60661c7dd2abd2ea4fc6607fb4ec0ae51d32333d02fda47bbf881d6841a94371
@@ -276,7 +276,7 @@ entries:
     version: 0.23.10
   - apiVersion: v2
     appVersion: 1.13.9
-    created: "2026-01-03T20:36:07.780790702Z"
+    created: "2026-01-04T07:53:26.242827788Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 1cea49bda73f78ee357012d099f6377617fa4099dfe8e1ab9608b08c17235136
@@ -297,7 +297,7 @@ entries:
     version: 0.23.9
   - apiVersion: v2
     appVersion: 1.13.8
-    created: "2026-01-03T20:36:07.77946286Z"
+    created: "2026-01-04T07:53:26.241485904Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 9ed47bc0d503338e28e30d28e143d054151750688df567987d55b5a07197c99f
@@ -318,7 +318,7 @@ entries:
     version: 0.23.8
   - apiVersion: v2
     appVersion: 1.13.7
-    created: "2026-01-03T20:36:07.77814625Z"
+    created: "2026-01-04T07:53:26.24012309Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 11fb6241b04ff38fc9c846f4c855e7d55e109fee6ccdd214269e0e33d900ac53
@@ -339,7 +339,7 @@ entries:
     version: 0.23.7
   - apiVersion: v2
     appVersion: 1.13.6
-    created: "2026-01-03T20:36:07.776818157Z"
+    created: "2026-01-04T07:53:26.238797276Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 921a7f6b5288946cc598c893199f1f05b832ad733827f009fe7857c2306e3dab
@@ -360,7 +360,7 @@ entries:
     version: 0.23.6
   - apiVersion: v2
     appVersion: 1.13.5
-    created: "2026-01-03T20:36:07.775456452Z"
+    created: "2026-01-04T07:53:26.237436787Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 5fe07cd955a6dfc651b0049eecf4c652116cc0b4639068ddeb770d6aa171662f
@@ -381,7 +381,7 @@ entries:
     version: 0.23.5
   - apiVersion: v2
     appVersion: 1.13.4
-    created: "2026-01-03T20:36:07.774082605Z"
+    created: "2026-01-04T07:53:26.235490921Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 0242478a73f4e67600af3a47d4c120046b41465e331318cbcef300d91f416365
@@ -402,7 +402,7 @@ entries:
     version: 0.23.4
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2026-01-03T20:36:07.772005488Z"
+    created: "2026-01-04T07:53:26.234186176Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c937d4c07a3b303817bf532c81ae7e5fc9632b768e5d665b97c2ef14e3c4c73e
@@ -423,7 +423,7 @@ entries:
     version: 0.23.3
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2026-01-03T20:36:07.769348562Z"
+    created: "2026-01-04T07:53:26.231516875Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: fdd93b4e221a537738e5b0f3aa6727f941c8c825d9390b92a24b21f77c2304c2
@@ -444,7 +444,7 @@ entries:
     version: 0.22.3
   - apiVersion: v2
     appVersion: 1.13.2
-    created: "2026-01-03T20:36:07.768037942Z"
+    created: "2026-01-04T07:53:26.230167817Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 640ffcbc379e3b1d93d89385edda87ffcf86e23ac7df3b0a1a4e61f31f479e5a
@@ -465,7 +465,7 @@ entries:
     version: 0.22.2
   - apiVersion: v2
     appVersion: 1.13.2
-    created: "2026-01-03T20:36:07.766728434Z"
+    created: "2026-01-04T07:53:26.228780438Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 1b05356dc3401f2b4a1781bdac9b2cc13349a9caa1ed33b04b35139d85accf94
@@ -486,7 +486,7 @@ entries:
     version: 0.21.2
   - apiVersion: v2
     appVersion: 1.13.1
-    created: "2026-01-03T20:36:07.765389762Z"
+    created: "2026-01-04T07:53:26.226706504Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 09c0d436f1ee626e34c9d207a8cf4e82bd53e31afeae263b77d4090a2753210e
@@ -507,7 +507,7 @@ entries:
     version: 0.21.1
   - apiVersion: v2
     appVersion: 1.13.0
-    created: "2026-01-03T20:36:07.76372855Z"
+    created: "2026-01-04T07:53:26.225414634Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 3d99d0a9f8e77f5475e5c012d695e122aa20cc30ffccececa1693f9955b33277
@@ -528,7 +528,7 @@ entries:
     version: 0.21.0
   - apiVersion: v2
     appVersion: 1.13.0
-    created: "2026-01-03T20:36:07.762158006Z"
+    created: "2026-01-04T07:53:26.224135066Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 93793df7ebcd3cd7da37755cda0578ae313bb8d921fd8fe1f1142169fb6d6b26
@@ -549,7 +549,7 @@ entries:
     version: 0.20.0
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2026-01-03T20:36:07.760810668Z"
+    created: "2026-01-04T07:53:26.222850278Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: dec7d3bbc150da6f3aa0e471f8eccd16395baede83c1cb35a2dcc1a1bb1ff12f
@@ -570,7 +570,7 @@ entries:
     version: 0.19.1
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2026-01-03T20:36:07.759537067Z"
+    created: "2026-01-04T07:53:26.221537689Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c112625f7f4fdb134f5e36342c91e3cd672fc396d3ae471cc2b4245a36ebd9ab
@@ -591,7 +591,7 @@ entries:
     version: 0.18.1
   - apiVersion: v2
     appVersion: 1.12.0
-    created: "2026-01-03T20:36:07.758238851Z"
+    created: "2026-01-04T07:53:26.22007028Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 3b64c32a8a83b9a107c12091631a888097f6402ad08df8af391b8a7128754ecd
@@ -612,7 +612,7 @@ entries:
     version: 0.18.0
   - apiVersion: v2
     appVersion: 1.11.8
-    created: "2026-01-03T20:36:07.756953488Z"
+    created: "2026-01-04T07:53:26.218169665Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 6f54e337801da86894ffb01f98dc0776e39d8475ed92c39191ed5c2bd735fb31
@@ -633,7 +633,7 @@ entries:
     version: 0.17.8
   - apiVersion: v2
     appVersion: 1.11.7
-    created: "2026-01-03T20:36:07.75563325Z"
+    created: "2026-01-04T07:53:26.216894826Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 806e0742bb3da7750388d919d05fac4e58fbd292048e9c0f978763f4b25b6036
@@ -654,7 +654,7 @@ entries:
     version: 0.17.7
   - apiVersion: v2
     appVersion: 1.11.6
-    created: "2026-01-03T20:36:07.753625713Z"
+    created: "2026-01-04T07:53:26.215599498Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: dc573ec8528a2200f3444e7a68edf2bc31a470f9ea4dd2c461456501a39f6ed2
@@ -675,7 +675,7 @@ entries:
     version: 0.17.6
   - apiVersion: v2
     appVersion: 1.11.5
-    created: "2026-01-03T20:36:07.752323308Z"
+    created: "2026-01-04T07:53:26.214298972Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08a418755dfef64e1e56ae97849755b515fafa558950782079e8f81581f23e9f
@@ -696,7 +696,7 @@ entries:
     version: 0.17.5
   - apiVersion: v2
     appVersion: 1.11.4
-    created: "2026-01-03T20:36:07.751038747Z"
+    created: "2026-01-04T07:53:26.212978067Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 08e0c13689426288aa6dd9af9c89defbbfa74645ebb0ac8ee6b0c9331536f939
@@ -717,7 +717,7 @@ entries:
     version: 0.17.4
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2026-01-03T20:36:07.749719912Z"
+    created: "2026-01-04T07:53:26.211010733Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 27292284870f11ee3c0a93236efd598c17e2f8607b0f3a3f197285947aface94
@@ -738,7 +738,7 @@ entries:
     version: 0.17.3
   - apiVersion: v2
     appVersion: 1.11.2
-    created: "2026-01-03T20:36:07.748417758Z"
+    created: "2026-01-04T07:53:26.209687023Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 780fbaf8a81b45ad24a0269b6908ace6f9aee9f3786a58ba2f6e152e03f92173
@@ -759,7 +759,7 @@ entries:
     version: 0.17.2
   - apiVersion: v2
     appVersion: 1.11.1
-    created: "2026-01-03T20:36:07.747093863Z"
+    created: "2026-01-04T07:53:26.208382398Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: c9d2cdba4c382d8fd481bcde6bd7e6cecab00b9c59beecc9e1d31e27915ff41a
@@ -780,7 +780,7 @@ entries:
     version: 0.17.1
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2026-01-03T20:36:07.744987492Z"
+    created: "2026-01-04T07:53:26.207111386Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: e71f9646ca6f5be4f9641a6066fbb432c24d4679feaa764994be10f9d3037e00
@@ -801,7 +801,7 @@ entries:
     version: 0.17.0
   - apiVersion: v2
     appVersion: 1.10.2
-    created: "2026-01-03T20:36:07.743703181Z"
+    created: "2026-01-04T07:53:26.205825085Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: bee598b09eec06a301a999d8fde2361d19f56404967f43a245aec831f5fa1929
@@ -822,7 +822,7 @@ entries:
     version: 0.16.2
   - apiVersion: v2
     appVersion: 1.10.1
-    created: "2026-01-03T20:36:07.742415374Z"
+    created: "2026-01-04T07:53:26.204505453Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 76fddac5173a17780f39f489b6474ee89ad275a8273f1b19241b3861696c6b3a
@@ -843,7 +843,7 @@ entries:
     version: 0.16.1
   - apiVersion: v2
     appVersion: 1.10.0
-    created: "2026-01-03T20:36:07.741128619Z"
+    created: "2026-01-04T07:53:26.203151977Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: 6d1a8045406a3d5a38243d695d65b4a15820910d1526f421a6ae19f6fd7d5db6
@@ -864,7 +864,7 @@ entries:
     version: 0.16.0
   - apiVersion: v2
     appVersion: 1.9.0
-    created: "2026-01-03T20:36:07.73984012Z"
+    created: "2026-01-04T07:53:26.200892806Z"
     description: Deploys and manages the Digital Twins for Apache AGE API, events
       and Apache AGE database with CloudnativePG
     digest: a8f03ee55dc85377cfed9881b678726fe3cf413189fb069fd7634f78b9031c69
@@ -885,7 +885,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 1.8.8
-    created: "2026-01-03T20:36:07.738535692Z"
+    created: "2026-01-04T07:53:26.199196471Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: b60fc64632201775064d06a746b4536e37073190e4d747d8694c0826a321cb61
@@ -906,7 +906,7 @@ entries:
     version: 0.14.8
   - apiVersion: v2
     appVersion: 1.8.7
-    created: "2026-01-03T20:36:07.736599116Z"
+    created: "2026-01-04T07:53:26.197906393Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 9ac52ba3a4f033f49dedab6fdcfd6919c449dc9281c981575021d33378e32da0
@@ -927,7 +927,7 @@ entries:
     version: 0.14.7
   - apiVersion: v2
     appVersion: 1.8.6
-    created: "2026-01-03T20:36:07.735296672Z"
+    created: "2026-01-04T07:53:26.196600065Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 3d5a6561ed1aaf802069e85365a0a8ffbc04da53b92b3c81aa4ea8ccdea63a49
@@ -948,7 +948,7 @@ entries:
     version: 0.14.6
   - apiVersion: v2
     appVersion: 1.8.5
-    created: "2026-01-03T20:36:07.7340118Z"
+    created: "2026-01-04T07:53:26.195307754Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d39bb6c8372371e6613d1770f5a3e0198527f44e44a87c3754d3212cf815f06f
@@ -969,7 +969,7 @@ entries:
     version: 0.14.5
   - apiVersion: v2
     appVersion: 1.8.4
-    created: "2026-01-03T20:36:07.732719805Z"
+    created: "2026-01-04T07:53:26.193974746Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: f93ea48a0bd68710f1ef1a74bf6ddb088e109d08d7f396f2490a2bc53aa147d6
@@ -990,7 +990,7 @@ entries:
     version: 0.14.4
   - apiVersion: v2
     appVersion: 1.8.3
-    created: "2026-01-03T20:36:07.731397544Z"
+    created: "2026-01-04T07:53:26.191825252Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2191571c7c8a284ca1bfc12f0966e7970dd866bb3a1a06dde2e8f78461a44e9b
@@ -1011,7 +1011,7 @@ entries:
     version: 0.14.3
   - apiVersion: v2
     appVersion: 1.8.2
-    created: "2026-01-03T20:36:07.730084439Z"
+    created: "2026-01-04T07:53:26.19049508Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d58a7c99d5ff940e60026eb4bf50fb30a6af81164df5868a73af29c8d491bf6b
@@ -1032,7 +1032,7 @@ entries:
     version: 0.14.2
   - apiVersion: v2
     appVersion: 1.8.1
-    created: "2026-01-03T20:36:07.728587155Z"
+    created: "2026-01-04T07:53:26.189188271Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 6dc5bf746c1126edd3ce5aebc6f9257e175e454a2bcadfd38bebbd099fd049d8
@@ -1053,7 +1053,7 @@ entries:
     version: 0.14.1
   - apiVersion: v2
     appVersion: 1.8.0
-    created: "2026-01-03T20:36:07.726692412Z"
+    created: "2026-01-04T07:53:26.187882074Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: ae8b7697be7ed1942a4ade360939fa45875fe082b24f6c5a408314ad4ae3ecc7
@@ -1074,7 +1074,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: 1.7.0
-    created: "2026-01-03T20:36:07.72540187Z"
+    created: "2026-01-04T07:53:26.186532896Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: c424bd1144064943802bd15811ac79a6e51eee9485c92444d6d79bfed3a3c337
@@ -1095,7 +1095,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 1.6.9
-    created: "2026-01-03T20:36:07.724119613Z"
+    created: "2026-01-04T07:53:26.185199097Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 3827aa541d4225c5a7b00fb6975aaba47e0675b13a991f96a36f71c200e61779
@@ -1116,7 +1116,7 @@ entries:
     version: 0.12.9
   - apiVersion: v2
     appVersion: 1.6.8
-    created: "2026-01-03T20:36:07.722799525Z"
+    created: "2026-01-04T07:53:26.183259831Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2b4e372f9777c1ee6bcc21dacf936ea65e986efbcb22b7fd7ea3a697b2c3a4a5
@@ -1127,7 +1127,7 @@ entries:
     version: 0.12.8
   - apiVersion: v2
     appVersion: 1.6.7
-    created: "2026-01-03T20:36:07.721539139Z"
+    created: "2026-01-04T07:53:26.182001623Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2f434830424cf70f00f227293dc1e08f8fd26ff2ddd7080fb7e90347ec69d21b
@@ -1138,7 +1138,7 @@ entries:
     version: 0.12.7
   - apiVersion: v2
     appVersion: 1.6.6
-    created: "2026-01-03T20:36:07.720138201Z"
+    created: "2026-01-04T07:53:26.180747542Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 8424eab3b2131f59bc6b60c52e00aaad55a278b1dd915803c1e4e0777343dce5
@@ -1149,7 +1149,7 @@ entries:
     version: 0.12.6
   - apiVersion: v2
     appVersion: 1.6.5
-    created: "2026-01-03T20:36:07.717907183Z"
+    created: "2026-01-04T07:53:26.179466001Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2c3ab67cfe03c8c0e7dc95065f29f7d4789efc73bc47419894353f6a055ee2f9
@@ -1160,7 +1160,7 @@ entries:
     version: 0.12.5
   - apiVersion: v2
     appVersion: 1.6.4
-    created: "2026-01-03T20:36:07.716650424Z"
+    created: "2026-01-04T07:53:26.178207202Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 6417d70386166cc4f8664bb4ffd6bf4a07a3576ceb50e744532741c337a20882
@@ -1171,7 +1171,7 @@ entries:
     version: 0.12.4
   - apiVersion: v2
     appVersion: 1.6.3
-    created: "2026-01-03T20:36:07.715390529Z"
+    created: "2026-01-04T07:53:26.176892698Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1f2043ecad83393511fd097addd4c34b4807cb18dad18e46eaa49564a1a0e3d1
@@ -1182,7 +1182,7 @@ entries:
     version: 0.12.3
   - apiVersion: v2
     appVersion: 1.6.2
-    created: "2026-01-03T20:36:07.714141593Z"
+    created: "2026-01-04T07:53:26.17484934Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1e67107ef18bcc230aaf8bf26def659b635f7def053e35f55f4a6415edd19318
@@ -1193,7 +1193,7 @@ entries:
     version: 0.12.2
   - apiVersion: v2
     appVersion: 1.6.1
-    created: "2026-01-03T20:36:07.712878052Z"
+    created: "2026-01-04T07:53:26.173580773Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: e569adf528a7ad62293a574884a73f3f80b8bdd771941f88a7097e972c49b1f9
@@ -1204,7 +1204,7 @@ entries:
     version: 0.12.1
   - apiVersion: v2
     appVersion: 1.6.0
-    created: "2026-01-03T20:36:07.711595534Z"
+    created: "2026-01-04T07:53:26.172336691Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 2d93346d63a7935d7eea0d3931613bdaa9d3a812b753d8c7fb2f6aaf668ec866
@@ -1215,7 +1215,7 @@ entries:
     version: 0.12.0
   - apiVersion: v2
     appVersion: 1.5.16
-    created: "2026-01-03T20:36:07.699898804Z"
+    created: "2026-01-04T07:53:26.161508235Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: bd6273a44f39d506d30883fb555bf511b9b0831edde05cb438b2bea679cb7c27
@@ -1226,7 +1226,7 @@ entries:
     version: 0.11.20
   - apiVersion: v2
     appVersion: 1.5.15
-    created: "2026-01-03T20:36:07.697324111Z"
+    created: "2026-01-04T07:53:26.158772651Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 8561c65498cc0b21daaca6550a1abf1e14b402132320e7a2b6ecd5b5bf71feac
@@ -1237,7 +1237,7 @@ entries:
     version: 0.11.19
   - apiVersion: v2
     appVersion: 1.5.14
-    created: "2026-01-03T20:36:07.696053115Z"
+    created: "2026-01-04T07:53:26.156539231Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 13d82ea2c226f2b845b99e61037836ba833b5e1a593c888b48423887f975e7c8
@@ -1248,7 +1248,7 @@ entries:
     version: 0.11.18
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2026-01-03T20:36:07.694781518Z"
+    created: "2026-01-04T07:53:26.15526856Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: e008820ac6b4eef02977a2e233560fa5dc9efe0fedc0b4b5b6865340d4e938b6
@@ -1259,7 +1259,7 @@ entries:
     version: 0.11.17
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2026-01-03T20:36:07.693118805Z"
+    created: "2026-01-04T07:53:26.153994072Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 481b9e4de978606025b9176fac133c5392a732ad3a17d349d464225bb18d1181
@@ -1270,7 +1270,7 @@ entries:
     version: 0.11.16
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2026-01-03T20:36:07.69159602Z"
+    created: "2026-01-04T07:53:26.152741023Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 7e73e67e4b6d0127e59907cf86a3bfe42d82c054fe8ebb93100a0aff4b4dd287
@@ -1281,7 +1281,7 @@ entries:
     version: 0.11.15
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2026-01-03T20:36:07.690318422Z"
+    created: "2026-01-04T07:53:26.151459512Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 608703c218ce988b117d8ba589e536c9ccee326cd05b699d45de6359153ae957
@@ -1292,7 +1292,7 @@ entries:
     version: 0.11.14
   - apiVersion: v2
     appVersion: 1.5.13
-    created: "2026-01-03T20:36:07.688896064Z"
+    created: "2026-01-04T07:53:26.150158464Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 1184fd74eff29b53f8db10c00c022b21453e27268d1dcdde1072ba2038ad0eee
@@ -1303,7 +1303,7 @@ entries:
     version: 0.11.13
   - apiVersion: v2
     appVersion: 1.5.12
-    created: "2026-01-03T20:36:07.687633995Z"
+    created: "2026-01-04T07:53:26.147913285Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 104bac2a78359025c28887c50d5a7471a7759e8837515cffe12eca863d896c1e
@@ -1314,7 +1314,7 @@ entries:
     version: 0.11.12
   - apiVersion: v2
     appVersion: 1.5.11
-    created: "2026-01-03T20:36:07.686334064Z"
+    created: "2026-01-04T07:53:26.146634248Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: 05c071373bb68083f9b7e82bc3762db9468ec22949ba521de1de4e059ffba4f7
@@ -1325,7 +1325,7 @@ entries:
     version: 0.11.11
   - apiVersion: v2
     appVersion: 1.5.10
-    created: "2026-01-03T20:36:07.684260414Z"
+    created: "2026-01-04T07:53:26.145378445Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database with CloudnativePG
     digest: d2c6955fd18c88b8916b320852ee666562a41f6a9ef211992319cdaa0cd64ab7
@@ -1336,7 +1336,7 @@ entries:
     version: 0.11.10
   - apiVersion: v2
     appVersion: 1.5.9
-    created: "2026-01-03T20:36:07.709438595Z"
+    created: "2026-01-04T07:53:26.171086308Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 42c4bd2eace4edb0a39cb62e41f1b345b1da3fc94ff7bf7b5f41377d5528d044
@@ -1347,7 +1347,7 @@ entries:
     version: 0.11.9
   - apiVersion: v2
     appVersion: 1.5.8
-    created: "2026-01-03T20:36:07.708194319Z"
+    created: "2026-01-04T07:53:26.169824654Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 784836cadce52a90fea8cbb738fb881621cc72c48704f1d97d7b03e1b8c29ec2
@@ -1358,7 +1358,7 @@ entries:
     version: 0.11.8
   - apiVersion: v2
     appVersion: 1.5.7
-    created: "2026-01-03T20:36:07.706951165Z"
+    created: "2026-01-04T07:53:26.168524457Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 5683a2c36d139ca9307f585356920e8b943c0054e876d66ef32f419f0b07499b
@@ -1369,7 +1369,7 @@ entries:
     version: 0.11.7
   - apiVersion: v2
     appVersion: 1.5.6
-    created: "2026-01-03T20:36:07.705687803Z"
+    created: "2026-01-04T07:53:26.166759715Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 7a82feaca4da90c90b054663d3546dd75fee5fb16cde6c13df8e41f237621949
@@ -1380,7 +1380,7 @@ entries:
     version: 0.11.6
   - apiVersion: v2
     appVersion: 1.5.5
-    created: "2026-01-03T20:36:07.704412799Z"
+    created: "2026-01-04T07:53:26.165265878Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: af08beacea88d65c1587d90ee75230206de0efe01aaf72a3cd01889f70acb7a5
@@ -1391,7 +1391,7 @@ entries:
     version: 0.11.5
   - apiVersion: v2
     appVersion: 1.5.4
-    created: "2026-01-03T20:36:07.703081692Z"
+    created: "2026-01-04T07:53:26.164017909Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: e6ff604fe72905e7d4346306ca70d9c85f86ad548e9807a200c7cb317c4b0a78
@@ -1402,7 +1402,7 @@ entries:
     version: 0.11.4
   - apiVersion: v2
     appVersion: 1.5.3
-    created: "2026-01-03T20:36:07.70116432Z"
+    created: "2026-01-04T07:53:26.162775941Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 53ab85709b71892334e1a84edfdcbf28f9366e36f5f8933f11cd24b3119a5e36
@@ -1413,7 +1413,7 @@ entries:
     version: 0.11.3
   - apiVersion: v2
     appVersion: 1.5.2
-    created: "2026-01-03T20:36:07.698603152Z"
+    created: "2026-01-04T07:53:26.160229449Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: b383037a9d408e90bd5795ab9e0b2a392da66f165ceaafa082fa757f0271087d
@@ -1424,7 +1424,7 @@ entries:
     version: 0.11.2
   - apiVersion: v2
     appVersion: 1.5.1
-    created: "2026-01-03T20:36:07.682997493Z"
+    created: "2026-01-04T07:53:26.144100099Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 00c333c21613fb5ec63cb69d912886fc2d20c0b39f8b8b88cdff6e14f26529d2
@@ -1435,7 +1435,7 @@ entries:
     version: 0.11.1
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2026-01-03T20:36:07.681724614Z"
+    created: "2026-01-04T07:53:26.142732147Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 58b135b94ad79c3f68420d5db7b06a84ca6e752c00b0cc42431f5efc1367768f
@@ -1446,7 +1446,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 1.4.3
-    created: "2026-01-03T20:36:07.680441786Z"
+    created: "2026-01-04T07:53:26.140841159Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 1c18044e2b33d8ac3ec85d6684334b8371660a0f10accd56b55936d81bfb06c3
@@ -1457,7 +1457,7 @@ entries:
     version: 0.10.3
   - apiVersion: v2
     appVersion: 1.4.2
-    created: "2026-01-03T20:36:07.679145773Z"
+    created: "2026-01-04T07:53:26.139547745Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 958034a95e79198ba07a844bcc4eec5fc370761eb6245f01d3afec749a0e0b32
@@ -1468,7 +1468,7 @@ entries:
     version: 0.10.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2026-01-03T20:36:07.677866772Z"
+    created: "2026-01-04T07:53:26.138245465Z"
     description: Deploys and manages the AGE Digital Twins API, events and Apache
       AGE database
     digest: 993d96ed347c0406157a48c0ccd5400d60f15ba0731f88ccea412410b043a67a
@@ -1483,10 +1483,10 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.9.1
-    created: "2026-01-03T20:36:07.817003926Z"
+    created: "2026-01-04T07:53:26.277025871Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
-    digest: 73331bf944e82dd79acc4a003ce8bc8ea5d860836c83925314ef71bb6520efed
+    digest: 46f7e8097be89e762e6be1c0afa201bcf3a91cbadae943b00458d70f864ee842
     home: https://github.com/konnektr-io/db-query-operator
     keywords:
     - kubernetes-operator
@@ -1511,7 +1511,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.9.0
-    created: "2026-01-03T20:36:07.816401274Z"
+    created: "2026-01-04T07:53:26.276618982Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 12732f85148c735d6f369a20b61408b4153a1f9a8cd7ba10b37930b6c02f2b44
@@ -1539,7 +1539,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.8
-    created: "2026-01-03T20:36:07.815474308Z"
+    created: "2026-01-04T07:53:26.276231048Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 3e8b0769cee0099777a797e8fa82e4b338bb219c7c205417c66435603368484d
@@ -1567,7 +1567,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.7
-    created: "2026-01-03T20:36:07.81507234Z"
+    created: "2026-01-04T07:53:26.275839357Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: f91d37985ca5878b9760db3f531b46627fc75421726e6a32552130479f5f1d76
@@ -1595,7 +1595,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.6
-    created: "2026-01-03T20:36:07.814681993Z"
+    created: "2026-01-04T07:53:26.275434631Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 750820fd8fc583da06b3930e134eeeb7a320cc421af79502d3a48b71c8cf8957
@@ -1623,7 +1623,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.5
-    created: "2026-01-03T20:36:07.814273493Z"
+    created: "2026-01-04T07:53:26.275045445Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 5783aeec04ced2a8a7b9aaa9ea094c5babd4a56a8db0f4e7f1d8d2cbbd61ef37
@@ -1648,7 +1648,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.4
-    created: "2026-01-03T20:36:07.813894828Z"
+    created: "2026-01-04T07:53:26.27464627Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 5d334d646ab92e2257fb39d1a761814c7772cd0d424d36957ef1a8191ba66957
@@ -1673,7 +1673,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.3
-    created: "2026-01-03T20:36:07.813507667Z"
+    created: "2026-01-04T07:53:26.274265369Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 9fe4d9c10914cbe60b330f13c661925dc253bf8bfcdd9eac6419ba408e9f44ae
@@ -1698,7 +1698,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.2
-    created: "2026-01-03T20:36:07.813113754Z"
+    created: "2026-01-04T07:53:26.273881143Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 298e7dd2e66336132de105408e7109895db165ea9c0e03d566edd065e3769f66
@@ -1723,7 +1723,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.8.0
-    created: "2026-01-03T20:36:07.812729839Z"
+    created: "2026-01-04T07:53:26.273479363Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 7ab446e69d2254c365134e34983462c0a6665bfc40a45a584b8a38ff162f6ad5
@@ -1748,7 +1748,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.7.0
-    created: "2026-01-03T20:36:07.81233256Z"
+    created: "2026-01-04T07:53:26.273101929Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 401938788d6f068140f7e8c4435350650606b004752fcec137d5a37f926c74ff
@@ -1773,7 +1773,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.5
-    created: "2026-01-03T20:36:07.811909893Z"
+    created: "2026-01-04T07:53:26.272712341Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: c51ef6735dbf733020431274d652bad5c40166f400cd5bf6a0f3d4e7507f1ed2
@@ -1798,7 +1798,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.4
-    created: "2026-01-03T20:36:07.811513314Z"
+    created: "2026-01-04T07:53:26.272306043Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 03000382ef14da3d6d8dd696f17956e770e7c9020a92686cab65743f105ba2da
@@ -1823,7 +1823,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.3
-    created: "2026-01-03T20:36:07.811115644Z"
+    created: "2026-01-04T07:53:26.271898623Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 8f1edf93a42b366a5dae88297b792acf85e8f3b46299b20ca05c7bbfbc3e2a4f
@@ -1848,7 +1848,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.2
-    created: "2026-01-03T20:36:07.810719837Z"
+    created: "2026-01-04T07:53:26.271291225Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: c0edafad0ffafd91822dd499d5c8c94f92f5ec367bdfa540951dd95d426fc037
@@ -1873,7 +1873,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.1
-    created: "2026-01-03T20:36:07.810296569Z"
+    created: "2026-01-04T07:53:26.270349216Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 4ae32373b424f8da073f887c639818481f5570d4e1f49ffcd696396e05e740c9
@@ -1898,7 +1898,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.1
-    created: "2026-01-03T20:36:07.809876848Z"
+    created: "2026-01-04T07:53:26.269976752Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: d88ee148fdb9fd1bb40202e96324dbbc67861748e753d881619b1cd656113ee6
@@ -1923,7 +1923,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.6.0
-    created: "2026-01-03T20:36:07.809277059Z"
+    created: "2026-01-04T07:53:26.269582666Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 6b1506515910c8995becbf8436d720cb497fcf196ea5a6e8d1b365087ee1d8c8
@@ -1948,7 +1948,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.5.0
-    created: "2026-01-03T20:36:07.808352178Z"
+    created: "2026-01-04T07:53:26.269205272Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 1592e9e024cced5f421d67368c31f614194bb88e4877a758eed8ce0531b7cd6d
@@ -1973,7 +1973,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.4.0
-    created: "2026-01-03T20:36:07.807988621Z"
+    created: "2026-01-04T07:53:26.268846122Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 0078a088630443812011bbb1f06ff36c37968f2a67c9dee6f34d04a529e9bb61
@@ -1998,7 +1998,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.4.0
-    created: "2026-01-03T20:36:07.807628019Z"
+    created: "2026-01-04T07:53:26.268474718Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 6cdbeb49305d33c44fbd26cc5553ac24197d19874b2a7c97b9432dd8d9bee4f2
@@ -2023,7 +2023,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.4.0
-    created: "2026-01-03T20:36:07.80723066Z"
+    created: "2026-01-04T07:53:26.268109828Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 9c07090eeaa49e8c3c5dd859b584d79ce77cca77e38f7598c16a2be4cb48ee8f
@@ -2048,7 +2048,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.4.0
-    created: "2026-01-03T20:36:07.806864398Z"
+    created: "2026-01-04T07:53:26.267739025Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 21973be040e3a18412e2b04fd22521ca5ce524664b3aeb0bd4e400c9db6822e7
@@ -2073,7 +2073,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.3.0
-    created: "2026-01-03T20:36:07.806459234Z"
+    created: "2026-01-04T07:53:26.267356492Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: e9f28ef3ae27890464dedeab2f53548ead762356029eb728a0c6cddabb4ac1c5
@@ -2098,7 +2098,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.8
-    created: "2026-01-03T20:36:07.803458157Z"
+    created: "2026-01-04T07:53:26.264374246Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: a7dbf4409fa59a00c818f64076f0e0faa9385da261c61ecf46124f3bb105ca33
@@ -2123,7 +2123,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.7
-    created: "2026-01-03T20:36:07.806100716Z"
+    created: "2026-01-04T07:53:26.266999235Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 01c6f8ee4dcf2e02adcf8de51109975f8a26bf506cce70f7bf951be9792c0afd
@@ -2148,7 +2148,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.6
-    created: "2026-01-03T20:36:07.805740385Z"
+    created: "2026-01-04T07:53:26.266622823Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: ab1aa2b2b8fa6428bb3177590594515a078ce435958be6ee29eebde53aea26a2
@@ -2173,7 +2173,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.5
-    created: "2026-01-03T20:36:07.805351672Z"
+    created: "2026-01-04T07:53:26.26626259Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: c98d5891c012881c31b396a0198a693702686ce53580fac99e66d65e49a3189e
@@ -2198,7 +2198,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.4
-    created: "2026-01-03T20:36:07.804986181Z"
+    created: "2026-01-04T07:53:26.265902057Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 272ffc38e2a39c7eae2d02a8efef059cd961521f557b0dcfd2afc6b5dee6753e
@@ -2223,7 +2223,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.3
-    created: "2026-01-03T20:36:07.804622905Z"
+    created: "2026-01-04T07:53:26.265517891Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 536fd9a0c9afe84ded5f69a999d2314d390c286a73b549ea27fc112670458a13
@@ -2248,7 +2248,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.2
-    created: "2026-01-03T20:36:07.804228571Z"
+    created: "2026-01-04T07:53:26.265149303Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 35e08713593581a30eb76c1c61ccf6d0e1d709bbcff5c8b945f682867ea918d5
@@ -2273,7 +2273,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.2.2
-    created: "2026-01-03T20:36:07.803857901Z"
+    created: "2026-01-04T07:53:26.26477832Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 50c5dcecdd12ca9a42d4769516a68d05c211930fe513d25c044a952a959c0a8d
@@ -2298,7 +2298,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.2.0
-    created: "2026-01-03T20:36:07.803084972Z"
+    created: "2026-01-04T07:53:26.263785808Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: edd027b6baacd0094527ea259c0557201a41a8a3cb01ec27db4cc791bcd078d6
@@ -2323,7 +2323,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-01-03T20:36:07.802695988Z"
+    created: "2026-01-04T07:53:26.262855652Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: ffcfb2eba0e4f9abbc353a7641be037859957472b2f69e29c05c3bdb8ce0abb2
@@ -2348,7 +2348,7 @@ entries:
         }}/config/crd/bases
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-01-03T20:36:07.802250278Z"
+    created: "2026-01-04T07:53:26.26245768Z"
     description: A Helm chart for deploying the KtrlPlane Database Query Kubernetes
       operator
     digest: 1776efd0c9184692b889cb5b7ec401c195efbf2af21ca1af0da9ef97591f35ce
@@ -2370,8 +2370,39 @@ entries:
     version: 0.1.0
   graph:
   - apiVersion: v2
+    appVersion: 1.18.0-preview.29
+    created: "2026-01-04T07:53:26.480619125Z"
+    dependencies:
+    - condition: cluster.enabled
+      name: cluster
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.5.0
+    description: Deploys and manages the Konnektr Graph API, Events and Apache AGE
+      database with CloudnativePG
+    digest: 4c550c8de9155123d8c425e0bf9830553f7eeed4ddefaa6e0a2ce07b45e8a9e9
+    home: https://docs.konnektr.io/docs/graph
+    keywords:
+    - graph
+    - database
+    - postgresql
+    - digital-twins
+    - cloudnativepg
+    maintainers:
+    - email: info@konnektr.io
+      name: Konnektr.io
+      url: https://github.com/konnektr-io
+    - name: nikoraes
+      url: https://github.com/nikoraes
+    name: graph
+    sources:
+    - https://github.com/konnektr-io/pg-age-digitaltwins
+    type: application
+    urls:
+    - https://charts.konnektr.io/graph-0.4.49.tgz
+    version: 0.4.49
+  - apiVersion: v2
     appVersion: 1.18.0-preview.28
-    created: "2026-01-03T20:36:08.013900947Z"
+    created: "2026-01-04T07:53:26.476518066Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2402,7 +2433,7 @@ entries:
     version: 0.4.48
   - apiVersion: v2
     appVersion: 1.18.0-preview.27
-    created: "2026-01-03T20:36:08.010328626Z"
+    created: "2026-01-04T07:53:26.473124173Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2433,7 +2464,7 @@ entries:
     version: 0.4.47
   - apiVersion: v2
     appVersion: 1.18.0-preview.26
-    created: "2026-01-03T20:36:08.005958899Z"
+    created: "2026-01-04T07:53:26.468915885Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2464,7 +2495,7 @@ entries:
     version: 0.4.46
   - apiVersion: v2
     appVersion: 1.18.0-preview.25
-    created: "2026-01-03T20:36:08.002519656Z"
+    created: "2026-01-04T07:53:26.465517032Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2495,7 +2526,7 @@ entries:
     version: 0.4.45
   - apiVersion: v2
     appVersion: 1.18.0-preview.24
-    created: "2026-01-03T20:36:07.999009702Z"
+    created: "2026-01-04T07:53:26.462103021Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2526,7 +2557,7 @@ entries:
     version: 0.4.44
   - apiVersion: v2
     appVersion: 1.18.0-preview.23
-    created: "2026-01-03T20:36:07.994755817Z"
+    created: "2026-01-04T07:53:26.457804645Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2557,7 +2588,7 @@ entries:
     version: 0.4.43
   - apiVersion: v2
     appVersion: 1.18.0-preview.21
-    created: "2026-01-03T20:36:07.991334167Z"
+    created: "2026-01-04T07:53:26.45438904Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2588,7 +2619,7 @@ entries:
     version: 0.4.42
   - apiVersion: v2
     appVersion: 1.18.0-preview.20
-    created: "2026-01-03T20:36:07.987243619Z"
+    created: "2026-01-04T07:53:26.450962566Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2619,7 +2650,7 @@ entries:
     version: 0.4.41
   - apiVersion: v2
     appVersion: 1.18.0-preview.19
-    created: "2026-01-03T20:36:07.983841065Z"
+    created: "2026-01-04T07:53:26.446756708Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2650,7 +2681,7 @@ entries:
     version: 0.4.40
   - apiVersion: v2
     appVersion: 1.18.0-preview.18
-    created: "2026-01-03T20:36:07.976879739Z"
+    created: "2026-01-04T07:53:26.440652797Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2681,7 +2712,7 @@ entries:
     version: 0.4.39
   - apiVersion: v2
     appVersion: 1.18.0-preview.17
-    created: "2026-01-03T20:36:07.973467717Z"
+    created: "2026-01-04T07:53:26.436443967Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2712,7 +2743,7 @@ entries:
     version: 0.4.38
   - apiVersion: v2
     appVersion: 1.18.0-preview.17
-    created: "2026-01-03T20:36:07.96934519Z"
+    created: "2026-01-04T07:53:26.43302641Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2743,7 +2774,7 @@ entries:
     version: 0.4.37
   - apiVersion: v2
     appVersion: 1.18.0-preview.17
-    created: "2026-01-03T20:36:07.965939861Z"
+    created: "2026-01-04T07:53:26.429269704Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2774,7 +2805,7 @@ entries:
     version: 0.4.36
   - apiVersion: v2
     appVersion: 1.18.0-preview.176
-    created: "2026-01-03T20:36:07.962534141Z"
+    created: "2026-01-04T07:53:26.425349228Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2805,7 +2836,7 @@ entries:
     version: 0.4.35
   - apiVersion: v2
     appVersion: 1.18.0-preview.16
-    created: "2026-01-03T20:36:07.95841333Z"
+    created: "2026-01-04T07:53:26.419631368Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2836,7 +2867,7 @@ entries:
     version: 0.4.34
   - apiVersion: v2
     appVersion: 1.18.0-preview.16
-    created: "2026-01-03T20:36:07.955026334Z"
+    created: "2026-01-04T07:53:26.413786375Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2867,7 +2898,7 @@ entries:
     version: 0.4.33
   - apiVersion: v2
     appVersion: 1.18.0-preview.15
-    created: "2026-01-03T20:36:07.951551145Z"
+    created: "2026-01-04T07:53:26.410396249Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2898,7 +2929,7 @@ entries:
     version: 0.4.32
   - apiVersion: v2
     appVersion: 1.18.0-preview.14
-    created: "2026-01-03T20:36:07.945275911Z"
+    created: "2026-01-04T07:53:26.406992487Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2929,7 +2960,7 @@ entries:
     version: 0.4.31
   - apiVersion: v2
     appVersion: 1.18.0-preview.13
-    created: "2026-01-03T20:36:07.938623928Z"
+    created: "2026-01-04T07:53:26.402885228Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2960,7 +2991,7 @@ entries:
     version: 0.4.30
   - apiVersion: v2
     appVersion: 1.18.0-preview.12
-    created: "2026-01-03T20:36:07.928448237Z"
+    created: "2026-01-04T07:53:26.396780466Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -2991,7 +3022,7 @@ entries:
     version: 0.4.29
   - apiVersion: v2
     appVersion: 1.18.0-preview.11
-    created: "2026-01-03T20:36:07.925066862Z"
+    created: "2026-01-04T07:53:26.392573557Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3022,7 +3053,7 @@ entries:
     version: 0.4.28
   - apiVersion: v2
     appVersion: 1.18.0-preview.11
-    created: "2026-01-03T20:36:07.920877707Z"
+    created: "2026-01-04T07:53:26.389165797Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3053,7 +3084,7 @@ entries:
     version: 0.4.27
   - apiVersion: v2
     appVersion: 1.18.0-preview.10
-    created: "2026-01-03T20:36:07.917497415Z"
+    created: "2026-01-04T07:53:26.385125155Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3079,7 +3110,7 @@ entries:
     version: 0.4.26
   - apiVersion: v2
     appVersion: 1.18.0-preview.10
-    created: "2026-01-03T20:36:07.914106332Z"
+    created: "2026-01-04T07:53:26.381755426Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3105,7 +3136,7 @@ entries:
     version: 0.4.25
   - apiVersion: v2
     appVersion: 1.18.0-preview.9
-    created: "2026-01-03T20:36:07.909969498Z"
+    created: "2026-01-04T07:53:26.378345192Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3131,7 +3162,7 @@ entries:
     version: 0.4.24
   - apiVersion: v2
     appVersion: 1.18.0-preview.8
-    created: "2026-01-03T20:36:07.906611426Z"
+    created: "2026-01-04T07:53:26.374102185Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3157,7 +3188,7 @@ entries:
     version: 0.4.23
   - apiVersion: v2
     appVersion: 1.18.0-preview.7
-    created: "2026-01-03T20:36:07.902471423Z"
+    created: "2026-01-04T07:53:26.370640054Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3183,7 +3214,7 @@ entries:
     version: 0.4.22
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.89911786Z"
+    created: "2026-01-04T07:53:26.366489913Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3209,7 +3240,7 @@ entries:
     version: 0.4.21
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.895681563Z"
+    created: "2026-01-04T07:53:26.363119323Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3235,7 +3266,7 @@ entries:
     version: 0.4.20
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.889190216Z"
+    created: "2026-01-04T07:53:26.357205758Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3261,7 +3292,7 @@ entries:
     version: 0.4.19
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.885108621Z"
+    created: "2026-01-04T07:53:26.353424782Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3287,7 +3318,7 @@ entries:
     version: 0.4.18
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.881724591Z"
+    created: "2026-01-04T07:53:26.350043141Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3313,7 +3344,7 @@ entries:
     version: 0.4.17
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.878703798Z"
+    created: "2026-01-04T07:53:26.346200216Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3339,7 +3370,7 @@ entries:
     version: 0.4.16
   - apiVersion: v2
     appVersion: 1.18.0-preview.6
-    created: "2026-01-03T20:36:07.875089426Z"
+    created: "2026-01-04T07:53:26.343176253Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3365,7 +3396,7 @@ entries:
     version: 0.4.15
   - apiVersion: v2
     appVersion: 1.18.0-preview.4
-    created: "2026-01-03T20:36:07.871880776Z"
+    created: "2026-01-04T07:53:26.340237569Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3391,7 +3422,7 @@ entries:
     version: 0.4.13
   - apiVersion: v2
     appVersion: 1.18.0-preview.3
-    created: "2026-01-03T20:36:07.869184587Z"
+    created: "2026-01-04T07:53:26.337464474Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3417,7 +3448,7 @@ entries:
     version: 0.4.12
   - apiVersion: v2
     appVersion: 1.18.0-preview.3
-    created: "2026-01-03T20:36:07.86644134Z"
+    created: "2026-01-04T07:53:26.333710132Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3443,7 +3474,7 @@ entries:
     version: 0.4.11
   - apiVersion: v2
     appVersion: 1.18.0-preview.3
-    created: "2026-01-03T20:36:07.862931774Z"
+    created: "2026-01-04T07:53:26.33095472Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3469,7 +3500,7 @@ entries:
     version: 0.4.10
   - apiVersion: v2
     appVersion: 1.18.0-preview.3
-    created: "2026-01-03T20:36:08.029102071Z"
+    created: "2026-01-04T07:53:26.495222301Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3495,7 +3526,7 @@ entries:
     version: 0.4.9
   - apiVersion: v2
     appVersion: 1.18.0-preview.3
-    created: "2026-01-03T20:36:08.025407163Z"
+    created: "2026-01-04T07:53:26.492533784Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3521,7 +3552,7 @@ entries:
     version: 0.4.8
   - apiVersion: v2
     appVersion: v1.18.0-preview.3
-    created: "2026-01-03T20:36:08.022717787Z"
+    created: "2026-01-04T07:53:26.489802867Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3547,7 +3578,7 @@ entries:
     version: 0.4.7
   - apiVersion: v2
     appVersion: 1.17.9
-    created: "2026-01-03T20:36:08.020013282Z"
+    created: "2026-01-04T07:53:26.486231287Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3573,7 +3604,7 @@ entries:
     version: 0.4.6
   - apiVersion: v2
     appVersion: 1.17.9
-    created: "2026-01-03T20:36:08.016605712Z"
+    created: "2026-01-04T07:53:26.483416084Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3599,7 +3630,7 @@ entries:
     version: 0.4.5
   - apiVersion: v2
     appVersion: 1.17.9
-    created: "2026-01-03T20:36:07.980311094Z"
+    created: "2026-01-04T07:53:26.443336555Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3625,7 +3656,7 @@ entries:
     version: 0.4.4
   - apiVersion: v2
     appVersion: 1.17.8
-    created: "2026-01-03T20:36:07.931115062Z"
+    created: "2026-01-04T07:53:26.399466038Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3651,7 +3682,7 @@ entries:
     version: 0.4.3
   - apiVersion: v2
     appVersion: 1.17.7
-    created: "2026-01-03T20:36:07.891853985Z"
+    created: "2026-01-04T07:53:26.360227647Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3677,7 +3708,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.17.6
-    created: "2026-01-03T20:36:07.860239332Z"
+    created: "2026-01-04T07:53:26.328231889Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3703,7 +3734,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.17.5
-    created: "2026-01-03T20:36:07.857568389Z"
+    created: "2026-01-04T07:53:26.324640122Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3729,7 +3760,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.17.5
-    created: "2026-01-03T20:36:07.854211834Z"
+    created: "2026-01-04T07:53:26.320315743Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3755,7 +3786,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 1.17.3
-    created: "2026-01-03T20:36:07.851593781Z"
+    created: "2026-01-04T07:53:26.315391785Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3781,7 +3812,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 1.17.2
-    created: "2026-01-03T20:36:07.848966479Z"
+    created: "2026-01-04T07:53:26.309780241Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3807,7 +3838,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.17.1
-    created: "2026-01-03T20:36:07.846288334Z"
+    created: "2026-01-04T07:53:26.307120869Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3833,7 +3864,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2026-01-03T20:36:07.842825524Z"
+    created: "2026-01-04T07:53:26.3044099Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3859,7 +3890,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.17.0-preview.6
-    created: "2026-01-03T20:36:07.840181603Z"
+    created: "2026-01-04T07:53:26.301743043Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3885,7 +3916,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: 1.17.0-preview.5
-    created: "2026-01-03T20:36:07.837481536Z"
+    created: "2026-01-04T07:53:26.297957162Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3911,7 +3942,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: 1.17.0-preview.5
-    created: "2026-01-03T20:36:07.83394329Z"
+    created: "2026-01-04T07:53:26.295251633Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3937,7 +3968,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 1.17.0-preview.4
-    created: "2026-01-03T20:36:07.831254454Z"
+    created: "2026-01-04T07:53:26.292554129Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3963,7 +3994,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.17.0-preview.2
-    created: "2026-01-03T20:36:07.828608248Z"
+    created: "2026-01-04T07:53:26.289377387Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -3989,7 +4020,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2026-01-03T20:36:07.825894176Z"
+    created: "2026-01-04T07:53:26.286010013Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -4015,7 +4046,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2026-01-03T20:36:07.82247995Z"
+    created: "2026-01-04T07:53:26.283353937Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -4041,7 +4072,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2026-01-03T20:36:07.819791184Z"
+    created: "2026-01-04T07:53:26.280628009Z"
     dependencies:
     - condition: cluster.enabled
       name: cluster
@@ -4071,7 +4102,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.3
-    created: "2026-01-03T20:36:08.031789585Z"
+    created: "2026-01-04T07:53:26.49871505Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: d4ea25c4f14a62d5e791f41743e3d1d55fdd67389467fdee17a541da111374b2
     home: https://github.com/konnektr-io/http-query-operator
@@ -4095,7 +4126,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.3
-    created: "2026-01-03T20:36:08.031469188Z"
+    created: "2026-01-04T07:53:26.497940584Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 3f919f3c2ade7d55a8f9d48858e9b561beb569018c42984d32588ecf1046f710
     home: https://github.com/konnektr-io/http-query-operator
@@ -4119,7 +4150,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.3
-    created: "2026-01-03T20:36:08.031083039Z"
+    created: "2026-01-04T07:53:26.497165026Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: c50f6fcf90db765cf536fbaed52813884ddcd28c01bfe460b4c5713889ca9c3e
     home: https://github.com/konnektr-io/http-query-operator
@@ -4143,7 +4174,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-01-03T20:36:08.030710876Z"
+    created: "2026-01-04T07:53:26.496784336Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 377e458b7f24269476efffa773046a09718a5afa5a583c4c19249a2fdc02ca54
     home: https://github.com/konnektr-io/http-query-operator
@@ -4167,7 +4198,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.1
-    created: "2026-01-03T20:36:08.030305382Z"
+    created: "2026-01-04T07:53:26.496392956Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: db2ad81f8b557047f7ec4f5a5c2e87c7fc53c6301a1137005aae031df1c3027f
     home: https://github.com/konnektr-io/http-query-operator
@@ -4191,7 +4222,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-01-03T20:36:08.029922489Z"
+    created: "2026-01-04T07:53:26.496016112Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 396f0f5650c4347041f31e371f9683a838b4bdb45a129ab38a409a36b446d875
     home: https://github.com/konnektr-io/http-query-operator
@@ -4215,7 +4246,7 @@ entries:
         .appVersion }}
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-01-03T20:36:08.029527844Z"
+    created: "2026-01-04T07:53:26.495615154Z"
     description: A Helm chart for deploying the KtrlPlane HTTP Query Kubernetes operator
     digest: 36c3e17369a859c1a923073f11ac3ad4f0de381003d19ad9b0eb6d6927158216
     home: https://github.com/konnektr-io/http-query-operator
@@ -4237,7 +4268,7 @@ entries:
   ktrlplane:
   - apiVersion: v2
     appVersion: 0.3.6
-    created: "2026-01-03T20:36:08.173812397Z"
+    created: "2026-01-04T07:53:26.639601117Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4245,7 +4276,7 @@ entries:
       version: 0.9.1
     description: Helm chart for deploying the ktrlplane solution (backend, frontend,
       PostgreSQL)
-    digest: f165222322dcac42dbc4a01b854fb557341fcecadf2c3aea9606f4440c33d386
+    digest: ea0011d7e4a4f74189283caf4db6398ba6b090b06a760cfc6cecb999c1a4d273
     home: https://docs.konnektr.io/docs/ktrlplane
     maintainers:
     - email: info@konnektr.io
@@ -4262,7 +4293,7 @@ entries:
     version: 0.3.79
   - apiVersion: v2
     appVersion: 0.3.5
-    created: "2026-01-03T20:36:08.172795434Z"
+    created: "2026-01-04T07:53:26.638617912Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4287,7 +4318,7 @@ entries:
     version: 0.3.78
   - apiVersion: v2
     appVersion: 0.3.4
-    created: "2026-01-03T20:36:08.171385632Z"
+    created: "2026-01-04T07:53:26.637634226Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4312,7 +4343,7 @@ entries:
     version: 0.3.77
   - apiVersion: v2
     appVersion: 0.3.3
-    created: "2026-01-03T20:36:08.169923531Z"
+    created: "2026-01-04T07:53:26.636651703Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4337,7 +4368,7 @@ entries:
     version: 0.3.76
   - apiVersion: v2
     appVersion: 0.3.2
-    created: "2026-01-03T20:36:08.168948385Z"
+    created: "2026-01-04T07:53:26.635684909Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4362,7 +4393,7 @@ entries:
     version: 0.3.75
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2026-01-03T20:36:08.167969663Z"
+    created: "2026-01-04T07:53:26.634692477Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4387,7 +4418,7 @@ entries:
     version: 0.3.74
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2026-01-03T20:36:08.166988607Z"
+    created: "2026-01-04T07:53:26.633661262Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4412,7 +4443,7 @@ entries:
     version: 0.3.73
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2026-01-03T20:36:08.166004325Z"
+    created: "2026-01-04T07:53:26.632578682Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4437,7 +4468,7 @@ entries:
     version: 0.3.72
   - apiVersion: v2
     appVersion: 0.2.8
-    created: "2026-01-03T20:36:08.165015714Z"
+    created: "2026-01-04T07:53:26.6307679Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4462,7 +4493,7 @@ entries:
     version: 0.3.71
   - apiVersion: v2
     appVersion: 0.2.7
-    created: "2026-01-03T20:36:08.16400364Z"
+    created: "2026-01-04T07:53:26.629617423Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4487,7 +4518,7 @@ entries:
     version: 0.3.70
   - apiVersion: v2
     appVersion: 0.2.6
-    created: "2026-01-03T20:36:08.160956561Z"
+    created: "2026-01-04T07:53:26.627427587Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4512,7 +4543,7 @@ entries:
     version: 0.3.69
   - apiVersion: v2
     appVersion: 0.2.5
-    created: "2026-01-03T20:36:08.159976146Z"
+    created: "2026-01-04T07:53:26.626412022Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4537,7 +4568,7 @@ entries:
     version: 0.3.68
   - apiVersion: v2
     appVersion: 0.2.4
-    created: "2026-01-03T20:36:08.15899491Z"
+    created: "2026-01-04T07:53:26.625390946Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4562,7 +4593,7 @@ entries:
     version: 0.3.67
   - apiVersion: v2
     appVersion: 0.2.3
-    created: "2026-01-03T20:36:08.158011408Z"
+    created: "2026-01-04T07:53:26.623983229Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4587,7 +4618,7 @@ entries:
     version: 0.3.66
   - apiVersion: v2
     appVersion: 0.2.2
-    created: "2026-01-03T20:36:08.157024381Z"
+    created: "2026-01-04T07:53:26.622753324Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4612,7 +4643,7 @@ entries:
     version: 0.3.65
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2026-01-03T20:36:08.156031453Z"
+    created: "2026-01-04T07:53:26.621738921Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4637,7 +4668,7 @@ entries:
     version: 0.3.64
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2026-01-03T20:36:08.155023516Z"
+    created: "2026-01-04T07:53:26.619988282Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4662,7 +4693,7 @@ entries:
     version: 0.3.63
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2026-01-03T20:36:08.153964826Z"
+    created: "2026-01-04T07:53:26.618861619Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4687,7 +4718,7 @@ entries:
     version: 0.3.62
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2026-01-03T20:36:08.152515124Z"
+    created: "2026-01-04T07:53:26.617866813Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4703,7 +4734,7 @@ entries:
     version: 0.3.61
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2026-01-03T20:36:08.151336259Z"
+    created: "2026-01-04T07:53:26.616927019Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4719,7 +4750,7 @@ entries:
     version: 0.3.60
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-01-03T20:36:08.149222674Z"
+    created: "2026-01-04T07:53:26.614812784Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4735,7 +4766,7 @@ entries:
     version: 0.3.59
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2026-01-03T20:36:08.148274519Z"
+    created: "2026-01-04T07:53:26.613863542Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4751,7 +4782,7 @@ entries:
     version: 0.3.58
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-01-03T20:36:08.147329961Z"
+    created: "2026-01-04T07:53:26.612878343Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4767,7 +4798,7 @@ entries:
     version: 0.3.57
   - apiVersion: v2
     appVersion: 0.1.0-preview.3
-    created: "2026-01-03T20:36:08.146450985Z"
+    created: "2026-01-04T07:53:26.611974968Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4783,7 +4814,7 @@ entries:
     version: 0.3.56
   - apiVersion: v2
     appVersion: v0.1.0-preview.3
-    created: "2026-01-03T20:36:08.145505695Z"
+    created: "2026-01-04T07:53:26.610203144Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4799,7 +4830,7 @@ entries:
     version: 0.3.55
   - apiVersion: v2
     appVersion: v0.1.0-preview.2
-    created: "2026-01-03T20:36:08.144476279Z"
+    created: "2026-01-04T07:53:26.609176337Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4815,7 +4846,7 @@ entries:
     version: 0.3.54
   - apiVersion: v2
     appVersion: v1.18.0-preview.3
-    created: "2026-01-03T20:36:08.143451401Z"
+    created: "2026-01-04T07:53:26.60822918Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4831,7 +4862,7 @@ entries:
     version: 0.3.53
   - apiVersion: v2
     appVersion: 0.1.0.preview.1
-    created: "2026-01-03T20:36:08.141613793Z"
+    created: "2026-01-04T07:53:26.607277474Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4847,7 +4878,7 @@ entries:
     version: 0.3.52
   - apiVersion: v2
     appVersion: 0.0.70
-    created: "2026-01-03T20:36:08.140662953Z"
+    created: "2026-01-04T07:53:26.606309197Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4863,7 +4894,7 @@ entries:
     version: 0.3.51
   - apiVersion: v2
     appVersion: 0.0.69
-    created: "2026-01-03T20:36:08.139712464Z"
+    created: "2026-01-04T07:53:26.605336051Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4879,7 +4910,7 @@ entries:
     version: 0.3.50
   - apiVersion: v2
     appVersion: 0.0.68
-    created: "2026-01-03T20:36:08.137569915Z"
+    created: "2026-01-04T07:53:26.603162385Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4895,7 +4926,7 @@ entries:
     version: 0.3.49
   - apiVersion: v2
     appVersion: 0.0.67
-    created: "2026-01-03T20:36:08.136609768Z"
+    created: "2026-01-04T07:53:26.602169352Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4911,7 +4942,7 @@ entries:
     version: 0.3.48
   - apiVersion: v2
     appVersion: 0.0.66
-    created: "2026-01-03T20:36:08.135633991Z"
+    created: "2026-01-04T07:53:26.60043348Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4927,7 +4958,7 @@ entries:
     version: 0.3.47
   - apiVersion: v2
     appVersion: 0.0.65
-    created: "2026-01-03T20:36:08.13467172Z"
+    created: "2026-01-04T07:53:26.59947992Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4943,7 +4974,7 @@ entries:
     version: 0.3.46
   - apiVersion: v2
     appVersion: 0.0.64
-    created: "2026-01-03T20:36:08.13368834Z"
+    created: "2026-01-04T07:53:26.598540637Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4959,7 +4990,7 @@ entries:
     version: 0.3.45
   - apiVersion: v2
     appVersion: 0.0.63
-    created: "2026-01-03T20:36:08.131833717Z"
+    created: "2026-01-04T07:53:26.597590594Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4975,7 +5006,7 @@ entries:
     version: 0.3.44
   - apiVersion: v2
     appVersion: 0.0.62
-    created: "2026-01-03T20:36:08.130882777Z"
+    created: "2026-01-04T07:53:26.596635202Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -4991,7 +5022,7 @@ entries:
     version: 0.3.43
   - apiVersion: v2
     appVersion: 0.0.60
-    created: "2026-01-03T20:36:08.129925254Z"
+    created: "2026-01-04T07:53:26.595657357Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5007,7 +5038,7 @@ entries:
     version: 0.3.41
   - apiVersion: v2
     appVersion: 0.0.59
-    created: "2026-01-03T20:36:08.12896156Z"
+    created: "2026-01-04T07:53:26.594729005Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5023,7 +5054,7 @@ entries:
     version: 0.3.40
   - apiVersion: v2
     appVersion: 0.0.58
-    created: "2026-01-03T20:36:08.126825233Z"
+    created: "2026-01-04T07:53:26.59252949Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5039,7 +5070,7 @@ entries:
     version: 0.3.39
   - apiVersion: v2
     appVersion: 0.0.57
-    created: "2026-01-03T20:36:08.125861118Z"
+    created: "2026-01-04T07:53:26.590750883Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5055,7 +5086,7 @@ entries:
     version: 0.3.38
   - apiVersion: v2
     appVersion: 0.0.56
-    created: "2026-01-03T20:36:08.124861518Z"
+    created: "2026-01-04T07:53:26.589810398Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5071,7 +5102,7 @@ entries:
     version: 0.3.37
   - apiVersion: v2
     appVersion: 0.0.55
-    created: "2026-01-03T20:36:08.123790524Z"
+    created: "2026-01-04T07:53:26.588869843Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5087,7 +5118,7 @@ entries:
     version: 0.3.36
   - apiVersion: v2
     appVersion: 0.0.55
-    created: "2026-01-03T20:36:08.121880335Z"
+    created: "2026-01-04T07:53:26.587936732Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5103,7 +5134,7 @@ entries:
     version: 0.3.35
   - apiVersion: v2
     appVersion: 0.0.54
-    created: "2026-01-03T20:36:08.120902475Z"
+    created: "2026-01-04T07:53:26.587005434Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5119,7 +5150,7 @@ entries:
     version: 0.3.34
   - apiVersion: v2
     appVersion: 0.0.53
-    created: "2026-01-03T20:36:08.119926578Z"
+    created: "2026-01-04T07:53:26.586066642Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5135,7 +5166,7 @@ entries:
     version: 0.3.33
   - apiVersion: v2
     appVersion: 0.0.52
-    created: "2026-01-03T20:36:08.118969676Z"
+    created: "2026-01-04T07:53:26.58512777Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5151,7 +5182,7 @@ entries:
     version: 0.3.32
   - apiVersion: v2
     appVersion: 0.0.48
-    created: "2026-01-03T20:36:08.118007395Z"
+    created: "2026-01-04T07:53:26.584178498Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5167,7 +5198,7 @@ entries:
     version: 0.3.30
   - apiVersion: v2
     appVersion: 0.0.47
-    created: "2026-01-03T20:36:08.115444514Z"
+    created: "2026-01-04T07:53:26.580914189Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5183,7 +5214,7 @@ entries:
     version: 0.3.29
   - apiVersion: v2
     appVersion: 0.0.46
-    created: "2026-01-03T20:36:08.114460723Z"
+    created: "2026-01-04T07:53:26.579963645Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5199,7 +5230,7 @@ entries:
     version: 0.3.28
   - apiVersion: v2
     appVersion: 0.0.44
-    created: "2026-01-03T20:36:08.113502909Z"
+    created: "2026-01-04T07:53:26.579026186Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5215,7 +5246,7 @@ entries:
     version: 0.3.27
   - apiVersion: v2
     appVersion: 0.0.44
-    created: "2026-01-03T20:36:08.112139221Z"
+    created: "2026-01-04T07:53:26.578091922Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5231,7 +5262,7 @@ entries:
     version: 0.3.26
   - apiVersion: v2
     appVersion: 0.0.43
-    created: "2026-01-03T20:36:08.11078488Z"
+    created: "2026-01-04T07:53:26.577181223Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5247,7 +5278,7 @@ entries:
     version: 0.3.25
   - apiVersion: v2
     appVersion: 0.0.42
-    created: "2026-01-03T20:36:08.109875206Z"
+    created: "2026-01-04T07:53:26.576273398Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5263,7 +5294,7 @@ entries:
     version: 0.3.24
   - apiVersion: v2
     appVersion: 0.0.41
-    created: "2026-01-03T20:36:08.108966465Z"
+    created: "2026-01-04T07:53:26.575360685Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5279,7 +5310,7 @@ entries:
     version: 0.3.23
   - apiVersion: v2
     appVersion: 0.0.40
-    created: "2026-01-03T20:36:08.10805094Z"
+    created: "2026-01-04T07:53:26.574430499Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5295,7 +5326,7 @@ entries:
     version: 0.3.22
   - apiVersion: v2
     appVersion: 0.0.39
-    created: "2026-01-03T20:36:08.107135837Z"
+    created: "2026-01-04T07:53:26.573443287Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5311,7 +5342,7 @@ entries:
     version: 0.3.21
   - apiVersion: v2
     appVersion: 0.0.38
-    created: "2026-01-03T20:36:08.106221465Z"
+    created: "2026-01-04T07:53:26.571601326Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5327,7 +5358,7 @@ entries:
     version: 0.3.20
   - apiVersion: v2
     appVersion: 0.0.38
-    created: "2026-01-03T20:36:08.104049882Z"
+    created: "2026-01-04T07:53:26.569526584Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5343,7 +5374,7 @@ entries:
     version: 0.3.19
   - apiVersion: v2
     appVersion: 0.0.37
-    created: "2026-01-03T20:36:08.103097489Z"
+    created: "2026-01-04T07:53:26.568631544Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5359,7 +5390,7 @@ entries:
     version: 0.3.18
   - apiVersion: v2
     appVersion: 0.0.37
-    created: "2026-01-03T20:36:08.101353015Z"
+    created: "2026-01-04T07:53:26.567748076Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5375,7 +5406,7 @@ entries:
     version: 0.3.17
   - apiVersion: v2
     appVersion: 0.0.36
-    created: "2026-01-03T20:36:08.100477625Z"
+    created: "2026-01-04T07:53:26.566865929Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5391,7 +5422,7 @@ entries:
     version: 0.3.16
   - apiVersion: v2
     appVersion: 0.0.35
-    created: "2026-01-03T20:36:08.099627373Z"
+    created: "2026-01-04T07:53:26.565981419Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5407,7 +5438,7 @@ entries:
     version: 0.3.15
   - apiVersion: v2
     appVersion: 0.0.33
-    created: "2026-01-03T20:36:08.098754197Z"
+    created: "2026-01-04T07:53:26.565090326Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5427,7 +5458,7 @@ entries:
     version: 0.3.14
   - apiVersion: v2
     appVersion: 0.0.32
-    created: "2026-01-03T20:36:08.097601381Z"
+    created: "2026-01-04T07:53:26.563886189Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5447,7 +5478,7 @@ entries:
     version: 0.3.13
   - apiVersion: v2
     appVersion: 0.0.31
-    created: "2026-01-03T20:36:08.096430802Z"
+    created: "2026-01-04T07:53:26.561746477Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5467,7 +5498,7 @@ entries:
     version: 0.3.12
   - apiVersion: v2
     appVersion: 0.0.29
-    created: "2026-01-03T20:36:08.095276523Z"
+    created: "2026-01-04T07:53:26.560564962Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5487,7 +5518,7 @@ entries:
     version: 0.3.11
   - apiVersion: v2
     appVersion: 0.0.28
-    created: "2026-01-03T20:36:08.094055991Z"
+    created: "2026-01-04T07:53:26.55940114Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5507,7 +5538,7 @@ entries:
     version: 0.3.10
   - apiVersion: v2
     appVersion: 0.0.28
-    created: "2026-01-03T20:36:08.176176498Z"
+    created: "2026-01-04T07:53:26.642955261Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5527,7 +5558,7 @@ entries:
     version: 0.3.9
   - apiVersion: v2
     appVersion: 0.0.28
-    created: "2026-01-03T20:36:08.175004326Z"
+    created: "2026-01-04T07:53:26.641747698Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5547,7 +5578,7 @@ entries:
     version: 0.3.8
   - apiVersion: v2
     appVersion: 0.0.27
-    created: "2026-01-03T20:36:08.162970026Z"
+    created: "2026-01-04T07:53:26.628615524Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5567,7 +5598,7 @@ entries:
     version: 0.3.7
   - apiVersion: v2
     appVersion: 0.0.27
-    created: "2026-01-03T20:36:08.150384437Z"
+    created: "2026-01-04T07:53:26.615983077Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5587,7 +5618,7 @@ entries:
     version: 0.3.6
   - apiVersion: v2
     appVersion: 0.0.26
-    created: "2026-01-03T20:36:08.138760341Z"
+    created: "2026-01-04T07:53:26.604375038Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5607,7 +5638,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 0.0.26
-    created: "2026-01-03T20:36:08.12799996Z"
+    created: "2026-01-04T07:53:26.59377817Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5627,7 +5658,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 0.0.26
-    created: "2026-01-03T20:36:08.117028182Z"
+    created: "2026-01-04T07:53:26.583146953Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5647,7 +5678,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 0.0.25
-    created: "2026-01-03T20:36:08.105259604Z"
+    created: "2026-01-04T07:53:26.570693261Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5667,7 +5698,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 0.0.24
-    created: "2026-01-03T20:36:08.091902116Z"
+    created: "2026-01-04T07:53:26.55824928Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5687,7 +5718,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 0.0.24
-    created: "2026-01-03T20:36:08.090749951Z"
+    created: "2026-01-04T07:53:26.557087362Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5707,7 +5738,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.0.24
-    created: "2026-01-03T20:36:08.085217562Z"
+    created: "2026-01-04T07:53:26.550601798Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5727,7 +5758,7 @@ entries:
     version: 0.2.51
   - apiVersion: v2
     appVersion: 0.0.23
-    created: "2026-01-03T20:36:08.083386656Z"
+    created: "2026-01-04T07:53:26.549517384Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5747,7 +5778,7 @@ entries:
     version: 0.2.50
   - apiVersion: v2
     appVersion: 0.0.22
-    created: "2026-01-03T20:36:08.081188925Z"
+    created: "2026-01-04T07:53:26.547038478Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5767,7 +5798,7 @@ entries:
     version: 0.2.49
   - apiVersion: v2
     appVersion: 0.0.21
-    created: "2026-01-03T20:36:08.080115647Z"
+    created: "2026-01-04T07:53:26.545784148Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5787,7 +5818,7 @@ entries:
     version: 0.2.48
   - apiVersion: v2
     appVersion: 0.0.20
-    created: "2026-01-03T20:36:08.079025287Z"
+    created: "2026-01-04T07:53:26.543992385Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5807,7 +5838,7 @@ entries:
     version: 0.2.47
   - apiVersion: v2
     appVersion: 0.0.19
-    created: "2026-01-03T20:36:08.077942802Z"
+    created: "2026-01-04T07:53:26.542919593Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5827,7 +5858,7 @@ entries:
     version: 0.2.46
   - apiVersion: v2
     appVersion: 0.0.18
-    created: "2026-01-03T20:36:08.076827005Z"
+    created: "2026-01-04T07:53:26.541825632Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5847,7 +5878,7 @@ entries:
     version: 0.2.45
   - apiVersion: v2
     appVersion: 0.0.18
-    created: "2026-01-03T20:36:08.075683085Z"
+    created: "2026-01-04T07:53:26.540751698Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5867,7 +5898,7 @@ entries:
     version: 0.2.44
   - apiVersion: v2
     appVersion: 0.0.17
-    created: "2026-01-03T20:36:08.07352465Z"
+    created: "2026-01-04T07:53:26.539663136Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5887,7 +5918,7 @@ entries:
     version: 0.2.43
   - apiVersion: v2
     appVersion: 0.0.16
-    created: "2026-01-03T20:36:08.072419463Z"
+    created: "2026-01-04T07:53:26.538581157Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5907,7 +5938,7 @@ entries:
     version: 0.2.42
   - apiVersion: v2
     appVersion: 0.0.15
-    created: "2026-01-03T20:36:08.071328382Z"
+    created: "2026-01-04T07:53:26.537481435Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5927,7 +5958,7 @@ entries:
     version: 0.2.41
   - apiVersion: v2
     appVersion: 0.0.14
-    created: "2026-01-03T20:36:08.070234586Z"
+    created: "2026-01-04T07:53:26.536328664Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5947,7 +5978,7 @@ entries:
     version: 0.2.40
   - apiVersion: v2
     appVersion: 0.0.14
-    created: "2026-01-03T20:36:08.067810724Z"
+    created: "2026-01-04T07:53:26.533108393Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5967,7 +5998,7 @@ entries:
     version: 0.2.39
   - apiVersion: v2
     appVersion: 0.0.13
-    created: "2026-01-03T20:36:08.066653018Z"
+    created: "2026-01-04T07:53:26.532020282Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -5987,7 +6018,7 @@ entries:
     version: 0.2.38
   - apiVersion: v2
     appVersion: 0.0.13
-    created: "2026-01-03T20:36:08.064316445Z"
+    created: "2026-01-04T07:53:26.530940417Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6007,7 +6038,7 @@ entries:
     version: 0.2.37
   - apiVersion: v2
     appVersion: 0.0.12
-    created: "2026-01-03T20:36:08.0631639Z"
+    created: "2026-01-04T07:53:26.529846115Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6027,7 +6058,7 @@ entries:
     version: 0.2.36
   - apiVersion: v2
     appVersion: 0.0.11
-    created: "2026-01-03T20:36:08.062136106Z"
+    created: "2026-01-04T07:53:26.528843123Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6047,7 +6078,7 @@ entries:
     version: 0.2.34
   - apiVersion: v2
     appVersion: 0.0.11
-    created: "2026-01-03T20:36:08.060535186Z"
+    created: "2026-01-04T07:53:26.52770535Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6067,7 +6098,7 @@ entries:
     version: 0.2.32
   - apiVersion: v2
     appVersion: 0.0.10
-    created: "2026-01-03T20:36:08.059455657Z"
+    created: "2026-01-04T07:53:26.526250769Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6087,7 +6118,7 @@ entries:
     version: 0.2.31
   - apiVersion: v2
     appVersion: 0.0.10
-    created: "2026-01-03T20:36:08.05838334Z"
+    created: "2026-01-04T07:53:26.524774404Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6107,7 +6138,7 @@ entries:
     version: 0.2.30
   - apiVersion: v2
     appVersion: 0.0.9
-    created: "2026-01-03T20:36:08.055927389Z"
+    created: "2026-01-04T07:53:26.522279549Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6127,7 +6158,7 @@ entries:
     version: 0.2.29
   - apiVersion: v2
     appVersion: 0.0.8
-    created: "2026-01-03T20:36:08.054031229Z"
+    created: "2026-01-04T07:53:26.521193512Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6147,7 +6178,7 @@ entries:
     version: 0.2.28
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2026-01-03T20:36:08.052931762Z"
+    created: "2026-01-04T07:53:26.520111563Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6167,7 +6198,7 @@ entries:
     version: 0.2.27
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2026-01-03T20:36:08.05186719Z"
+    created: "2026-01-04T07:53:26.519020206Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6187,7 +6218,7 @@ entries:
     version: 0.2.26
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2026-01-03T20:36:08.050800735Z"
+    created: "2026-01-04T07:53:26.517900346Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6207,7 +6238,7 @@ entries:
     version: 0.2.25
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2026-01-03T20:36:08.049732096Z"
+    created: "2026-01-04T07:53:26.515828406Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6227,7 +6258,7 @@ entries:
     version: 0.2.24
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2026-01-03T20:36:08.048653928Z"
+    created: "2026-01-04T07:53:26.514712834Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6247,7 +6278,7 @@ entries:
     version: 0.2.23
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2026-01-03T20:36:08.047539193Z"
+    created: "2026-01-04T07:53:26.513610087Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6267,7 +6298,7 @@ entries:
     version: 0.2.22
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2026-01-03T20:36:08.045541959Z"
+    created: "2026-01-04T07:53:26.512516566Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6287,7 +6318,7 @@ entries:
     version: 0.2.21
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2026-01-03T20:36:08.044338789Z"
+    created: "2026-01-04T07:53:26.511398499Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6307,7 +6338,7 @@ entries:
     version: 0.2.20
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2026-01-03T20:36:08.043089323Z"
+    created: "2026-01-04T07:53:26.510285703Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6327,7 +6358,7 @@ entries:
     version: 0.2.19
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2026-01-03T20:36:08.042019962Z"
+    created: "2026-01-04T07:53:26.50892864Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6347,7 +6378,7 @@ entries:
     version: 0.2.18
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2026-01-03T20:36:08.040946624Z"
+    created: "2026-01-04T07:53:26.507556089Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6367,7 +6398,7 @@ entries:
     version: 0.2.17
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2026-01-03T20:36:08.039857016Z"
+    created: "2026-01-04T07:53:26.505907753Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6387,7 +6418,7 @@ entries:
     version: 0.2.16
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2026-01-03T20:36:08.038766225Z"
+    created: "2026-01-04T07:53:26.504819943Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6407,7 +6438,7 @@ entries:
     version: 0.2.15
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.037542507Z"
+    created: "2026-01-04T07:53:26.50372538Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6427,7 +6458,7 @@ entries:
     version: 0.2.10
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.089620038Z"
+    created: "2026-01-04T07:53:26.555925374Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6447,7 +6478,7 @@ entries:
     version: 0.2.9
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.088534426Z"
+    created: "2026-01-04T07:53:26.554792409Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6467,7 +6498,7 @@ entries:
     version: 0.2.8
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.087439438Z"
+    created: "2026-01-04T07:53:26.552799349Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6487,7 +6518,7 @@ entries:
     version: 0.2.7
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.086352665Z"
+    created: "2026-01-04T07:53:26.551697383Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6507,7 +6538,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.082277471Z"
+    created: "2026-01-04T07:53:26.548406201Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6527,7 +6558,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.069133776Z"
+    created: "2026-01-04T07:53:26.534394283Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6547,7 +6578,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.057289604Z"
+    created: "2026-01-04T07:53:26.523658412Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6567,7 +6598,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.035629302Z"
+    created: "2026-01-04T07:53:26.502619066Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6587,7 +6618,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.034339802Z"
+    created: "2026-01-04T07:53:26.501263226Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6607,7 +6638,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-03T20:36:08.033024544Z"
+    created: "2026-01-04T07:53:26.499980472Z"
     dependencies:
     - condition: db-query-operator.enabled
       name: db-query-operator
@@ -6628,9 +6659,9 @@ entries:
   porkbun-webhook:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2026-01-03T20:36:08.176443706Z"
+    created: "2026-01-04T07:53:26.643232659Z"
     description: A Porkbun solver for Cert Manager.
-    digest: f649f865ea890bd3cd83af768c5b0bafaa95f117f33b8dabf9e4215b76e28bae
+    digest: 7499de5d02837d85205be0c324c754e15031618e5f37ec32bc66b7084fda33ae
     maintainers:
     - email: info@konnektr.io
       name: Konnektr.io
@@ -6641,4 +6672,4 @@ entries:
     urls:
     - https://charts.konnektr.io/porkbun-webhook-0.1.5.tgz
     version: 0.1.5
-generated: "2026-01-03T20:36:07.676334409Z"
+generated: "2026-01-04T07:53:26.13677418Z"
