@@ -11,8 +11,8 @@ maintainers:
     email: info@konnektr.io
   - name: nikoraes
     url: https://github.com/nikoraes
-version: 0.3.83
-appVersion: "0.3.9"
+version: 0.3.84
+appVersion: "0.3.10"
 dependencies:
   - name: db-query-operator
     version: "0.9.1"
