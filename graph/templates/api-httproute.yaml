@@ -7,10 +7,10 @@ metadata:
     {{- include "graph.labels" . | nindent 4 }}
 spec:
   parentRefs:
-      - name: {{ .Values.api.httproute.gatewayName }}
-        {{- if .Values.api.httproute.gatewayNamespace }}
-        namespace: {{ .Values.api.httproute.gatewayNamespace }}
-        {{- end }}
+    - name: {{ .Values.api.httproute.gatewayName }}
+      {{- if .Values.api.httproute.gatewayNamespace }}
+      namespace: {{ .Values.api.httproute.gatewayNamespace }}
+      {{- end }}
   hostnames:
     {{- if .Values.api.httproute.hosts }}
       {{- range .Values.api.httproute.hosts }}
