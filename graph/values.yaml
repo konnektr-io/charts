@@ -22,12 +22,10 @@ api:
   # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
   podLabels: {}
 
-  podSecurityContext:
-    {}
+  podSecurityContext: {}
     # fsGroup: 2000
 
-  securityContext:
-    {}
+  securityContext: {}
     # capabilities:
     #   drop:
     #   - ALL
@@ -50,8 +48,7 @@ api:
   ingress:
     enabled: false
     className: ""
-    annotations:
-      {}
+    annotations: {}
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     hosts:
@@ -65,15 +62,15 @@ api:
     #      - chart-example.local
 
   httproute:
-      enabled: false
-      gatewayName: ""
-      gatewayNamespace: ""
-      hosts: 
-        - "graph.local"
-      paths:
-        - path: "/"
-        
-  config: 
+    enabled: false
+    gatewayName: ""
+    gatewayNamespace: ""
+    hosts:
+      - "graph.local"
+    paths:
+      - path: "/"
+
+  config:
     authentication:
       enabled: false
       # Konnektr Identity configuration
@@ -96,11 +93,11 @@ api:
         checkEndpoint: /api/v1/permissions/check
         # resourceName: {thisresource}
     # parameters:
-      # rateLimitingEnabled: false
-      # maxQueryComplexityPerWindow: '5000'
-      # maxPoolSize: '200'
-      # connectionTimeout: '20'
-  
+    # rateLimitingEnabled: false
+    # maxQueryComplexityPerWindow: '5000'
+    # maxPoolSize: '200'
+    # connectionTimeout: '20'
+
   # logging:
   #   logLevel:
   #     default: "Information"
@@ -110,7 +107,7 @@ api:
   extraEnv: []
 
   resources:
-     # Uncomment and configure as needed
+    # Uncomment and configure as needed
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
     # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -159,12 +156,10 @@ events:
   # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
   podLabels: {}
 
-  podSecurityContext:
-    {}
+  podSecurityContext: {}
     # fsGroup: 2000
 
-  securityContext:
-    {}
+  securityContext: {}
     # capabilities:
     #   drop:
     #   - ALL
@@ -176,8 +171,7 @@ events:
   # If not defined, the postgres cluster service account will be used
   serviceAccountName: ""
 
-  resources:
-    {}
+  resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
     # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -202,22 +196,19 @@ events:
   config:
     # Event sinks configuration
     eventSinks:
-      kafka:
-        []
+      kafka: []
         # - name: KafkaSink1
         #   brokerList: ""
         #   topic: ""
         #   saslMechanism: PLAIN
         #   saslUsername: ""
-      kusto:
-        []
+      kusto: []
         # - name: AdxSink1
         #   ingestionUri: ""
         #   database: ""
       mqtt: []
     # Event routes configuration
-    eventRoutes:
-      []
+    eventRoutes: []
       # - sinkName: KafkaSink1
       #   eventFormat: EventNotification
       # - sinkName: KafkaSink1
@@ -227,10 +218,10 @@ events:
       # - sinkName: FabricEventHouseSink
       #   eventFormat: DataHistory
   extraEnv: []
-      # - name: EventSinks__Kafka__0__SaslPassword
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: kafka-sasl-password-secret
+    # - name: EventSinks__Kafka__0__SaslPassword
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: kafka-sasl-password-secret
 
 cluster:
   enabled: false
@@ -263,6 +254,8 @@ cluster:
         wal_buffers: 16MB
         checkpoint_completion_target: "0.9"
         checkpoint_timeout: 5min
+      shared_preload_libraries:
+        - age
 
     initdb:
       postInitApplicationSQL:
