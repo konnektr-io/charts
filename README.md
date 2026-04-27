@@ -5,6 +5,7 @@ Welcome to the Konnektr Helm Charts repository. This repository hosts Helm chart
 ## Repository URLs
 
 ### Traditional HTTP Repository
+
 The public address for this Helm repository is:
 
 ```
@@ -12,6 +13,7 @@ https://charts.konnektr.io
 ```
 
 ### OCI Registry
+
 Charts are also available as OCI artifacts in the GitHub Container Registry:
 
 ```
@@ -41,13 +43,12 @@ Install directly from the OCI registry without adding a repository:
 
 ```bash
 # Install AgeDigitalTwins chart
-helm install my-agedigitaltwins oci://ghcr.io/konnektr-io/agedigitaltwins --version 0.29.1
+helm install my-agedigitaltwins oci://ghcr.io/konnektr-io/agedigitaltwins
 
 # Install other charts
-helm install my-ktrlplane oci://ghcr.io/konnektr-io/ktrlplane --version 0.2.19
-helm install my-db-operator oci://ghcr.io/konnektr-io/db-query-operator --version 0.2.6
-helm install my-http-operator oci://ghcr.io/konnektr-io/http-query-operator --version 0.1.3
-helm install my-webhook oci://ghcr.io/konnektr-io/cert-manager-porkbun-webhook --version 0.1.5
+helm install my-ktrlplane oci://ghcr.io/konnektr-io/ktrlplane
+helm install my-db-operator oci://ghcr.io/konnektr-io/db-query-operator
+helm install my-webhook oci://ghcr.io/konnektr-io/cert-manager-porkbun-webhook
 ```
 
 ### Benefits of OCI Method
@@ -59,13 +60,12 @@ helm install my-webhook oci://ghcr.io/konnektr-io/cert-manager-porkbun-webhook -
 
 ## Available Charts
 
-| Chart Name | Version | Description |
-|------------|---------|-------------|
-| `agedigitaltwins` | 0.29.1 | Digital Twins for Apache AGE API and database |
-| `ktrlplane` | 0.2.19 | Control plane solution (backend, frontend, PostgreSQL) |
-| `db-query-operator` | 0.2.6 | Database Query Kubernetes operator |
-| `http-query-operator` | 0.1.3 | HTTP Query Kubernetes operator |
-| `cert-manager-porkbun-webhook` | 0.1.5 | Porkbun solver for Cert Manager |
+| Chart Name                     | Description                                            |
+| ------------------------------ | ------------------------------------------------------ |
+| `agedigitaltwins`              | Digital Twins for Apache AGE API and database          |
+| `ktrlplane`                    | Control plane solution (backend, frontend, PostgreSQL) |
+| `db-query-operator`            | Database Query Kubernetes operator                     |
+| `cert-manager-porkbun-webhook` | Porkbun solver for Cert Manager                        |
 
 ## Chart Values
 
