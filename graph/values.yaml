@@ -104,7 +104,8 @@ api:
   #     Microsoft: "Warning"
   #     System: "Warning"
 
-  extraEnv: []
+  # -- Topology spread constraints for pod scheduling
+  topologySpreadConstraints: []
 
   resources:
     # Uncomment and configure as needed
@@ -217,6 +218,8 @@ events:
       #   eventFormat: DataHistory
       # - sinkName: FabricEventHouseSink
       #   eventFormat: DataHistory
+  # -- Topology spread constraints for pod scheduling
+  topologySpreadConstraints: []
   extraEnv: []
     # - name: EventSinks__Kafka__0__SaslPassword
     #   valueFrom:

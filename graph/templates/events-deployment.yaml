@@ -86,6 +86,10 @@ spec:
             {{- toYaml .Values.events.readinessProbe | nindent 12 }}
           resources:
             {{- toYaml .Values.events.resources | nindent 12 }}
+      {{- with .Values.events.topologySpreadConstraints }}
+      topologySpreadConstraints:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.events.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
