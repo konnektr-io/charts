@@ -17,8 +17,8 @@ keywords:
   - postgresql
   - digital-twins
   - cloudnativepg
-version: 0.14.1
-appVersion: "1.26.1"
+version: 0.14.2
+appVersion: "1.27.0"
 dependencies:
   - name: cluster
     version: "0.7.0"
