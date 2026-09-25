@@ -59,3 +59,23 @@ logLevel: "info"
 
 # Optionally set the namespace for deployment
 namespaceOverride: ""
+
+# Validating admission webhook: rejects invalid DatabaseQueryResource specs
+# (unparseable pollInterval, empty query, malformed template, missing Secret
+# name) on create and update, instead of failing later during reconciliation.
+webhook:
+  enabled: true
+  # failurePolicy of the ValidatingWebhookConfiguration. "Fail" rejects
+  # DatabaseQueryResource writes while the webhook is unreachable, so an
+  # unvalidated spec can never slip through unseen; "Ignore" lets writes through
+  # when the webhook is down.
+  failurePolicy: Fail
+  # cert-manager (required when the webhook is enabled) issues the serving
+  # certificate and injects the CA bundle. The chart creates a self-signed Issuer
+  # by default; point issuerRef at an existing issuer to use that instead:
+  #   certManager:
+  #     issuerRef:
+  #       name: my-issuer
+  #       kind: ClusterIssuer
+  certManager:
+    issuerRef: {}

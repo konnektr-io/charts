@@ -4,3 +4,16 @@
 # If you want to use an existing ServiceAccount, set serviceAccount.create=false and serviceAccount.name=<your-sa>
 {{- end }}
 {{- end }}
+{{- if .Values.webhook.enabled }}
+---
+# Admission validation is ENABLED (release image must be >= 0.11.0):
+# invalid DatabaseQueryResource specs are rejected on create/update by
+# {{ include "db-query-operator.fullname" . }}-validating-webhook-configuration.
+# It needs cert-manager for the serving certificate, and because failurePolicy is
+# {{ .Values.webhook.failurePolicy }}, DatabaseQueryResource writes are refused while the
+# webhook is unreachable. Set webhook.enabled=false to run without validation.
+{{- else }}
+---
+# Admission validation is DISABLED (webhook.enabled=false): invalid DatabaseQueryResource
+# specs are accepted and only fail during reconciliation.
+{{- end }}

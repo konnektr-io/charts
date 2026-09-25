@@ -1,0 +1,92 @@
+{{- if .Values.webhook.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "db-query-operator.fullname" . }}-webhook-service
+  labels:
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: webhook
+spec:
+  ports:
+    # The operator serves the webhook on 9443 (controller-runtime's default).
+    - port: 443
+      targetPort: 9443
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+---
+{{- if not .Values.webhook.certManager.issuerRef }}
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: {{ include "db-query-operator.fullname" . }}-selfsigned-issuer
+  labels:
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: webhook
+spec:
+  selfSigned: {}
+---
+{{- end }}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "db-query-operator.fullname" . }}-serving-cert
+  labels:
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: webhook
+spec:
+  dnsNames:
+    - {{ include "db-query-operator.fullname" . }}-webhook-service.{{ .Release.Namespace }}.svc
+    - {{ include "db-query-operator.fullname" . }}-webhook-service.{{ .Release.Namespace }}.svc.cluster.local
+  issuerRef:
+    {{- if .Values.webhook.certManager.issuerRef }}
+    {{- toYaml .Values.webhook.certManager.issuerRef | nindent 4 }}
+    {{- else }}
+    kind: Issuer
+    name: {{ include "db-query-operator.fullname" . }}-selfsigned-issuer
+    {{- end }}
+  secretName: webhook-server-cert
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: {{ include "db-query-operator.fullname" . }}-validating-webhook-configuration
+  labels:
+    app.kubernetes.io/name: {{ include "db-query-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: webhook
+  annotations:
+    # cert-manager injects the CA bundle the API server must trust.
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace }}/{{ include "db-query-operator.fullname" . }}-serving-cert
+webhooks:
+  - name: vdatabasequeryresource-v1alpha1.konnektr.io
+    admissionReviewVersions:
+      - v1
+    sideEffects: None
+    failurePolicy: {{ .Values.webhook.failurePolicy }}
+    clientConfig:
+      service:
+        name: {{ include "db-query-operator.fullname" . }}-webhook-service
+        namespace: {{ .Release.Namespace }}
+        path: /validate-konnektr-io-v1alpha1-databasequeryresource
+        port: 443
+    rules:
+      - apiGroups:
+          - konnektr.io
+        apiVersions:
+          - v1alpha1
+        operations:
+          - CREATE
+          - UPDATE
+        resources:
+          - databasequeryresources
+        scope: "*"
+{{- end }}
