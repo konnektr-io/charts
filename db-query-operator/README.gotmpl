@@ -26,6 +26,7 @@ helm install db-query-operator \
 - Kubernetes 1.24+
 - Helm 3.8+
 - PostgreSQL database accessible from the cluster
+- [cert-manager](https://cert-manager.io) for the admission webhook certificate (enabled by default; install with `--set webhook.enabled=false` to skip it)
 
 ## Configuration
 
@@ -49,6 +50,34 @@ The `gvkPattern` parameter is required and specifies which Kubernetes resource t
 
 # Multiple types
 --set gvkPattern="v1/ConfigMap;apps/v1/Deployment;argoproj.io/v1alpha1/Application"
+```
+
+### Admission Validation (Webhook)
+
+The chart installs a validating admission webhook, so an invalid `DatabaseQueryResource` is
+rejected when it is created or updated instead of failing later during reconciliation:
+
+| Field | Rule |
+|---|---|
+| `spec.pollInterval` | must parse as a Go duration (`30s`, `5m`, `1h30m`) and be greater than zero |
+| `spec.database.connectionSecretRef.name` | must not be empty |
+| `spec.query` | must not be empty or whitespace only |
+| `spec.template` | must not be empty and must parse as a Go template with the operator's function set |
+| `spec.statusUpdateQueryTemplate` | when set, must parse as a Go template |
+| `spec.changeDetection.changePollInterval` | when set, must parse as a Go duration and be greater than zero |
+
+The chart creates the webhook `Service`, the `ValidatingWebhookConfiguration` and — using
+cert-manager — a self-signed `Issuer` plus the serving `Certificate` (stored in the
+`webhook-server-cert` Secret, mounted into the operator pod). cert-manager must be installed in
+the cluster. Point `webhook.certManager.issuerRef` at an existing issuer to use that instead of
+the self-signed one.
+
+Because the webhook is installed with `failurePolicy: Fail`, creating and updating
+`DatabaseQueryResource` objects is rejected while the webhook is unreachable. To run without
+admission validation:
+
+```bash
+--set webhook.enabled=false
 ```
 
 {{ template "chart.valuesSection" . }}
