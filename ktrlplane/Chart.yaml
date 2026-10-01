@@ -11,10 +11,10 @@ maintainers:
     email: info@konnektr.io
   - name: nikoraes
     url: https://github.com/nikoraes
-version: 0.3.87
+version: 0.3.88
 appVersion: "0.3.10"
 dependencies:
   - name: db-query-operator
-    version: "0.11.1"
+    version: "0.11.2"
     repository: "https://charts.konnektr.io"
     condition: db-query-operator.enabled
