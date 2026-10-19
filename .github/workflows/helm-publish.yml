@@ -43,6 +43,12 @@ jobs:
             helm template test "$chart"
           done
 
+      # `lint` + `template` only prove the chart renders — they cannot see the value
+      # of the connection string. This asserts on it (single-instance clusters must
+      # not advertise the endpoint-less `-ro` service). See konnektr-io/charts#8.
+      - name: Verify graph database connection string
+        run: ./scripts/verify-graph-connection-string.sh
+
     # This job should run before packaging and publishing
     # If it fails, the workflow will not continue
 

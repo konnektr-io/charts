@@ -37,6 +37,25 @@ api:
   # If not defined, the postgres cluster service account will be used
   serviceAccountName: ""
 
+  # Database connection string settings
+  database:
+    # -- Include the CloudNativePG read-only service (`<fullname>-ro`) in the API
+    # connection string, as the second host of the Npgsql multi-host `Server=` list.
+    #
+    # `auto` (the default) includes `-ro` only when a read-only replica can exist:
+    # this chart deploys the cluster (`cluster.enabled`) **and** the cluster runs more
+    # than one instance (`cluster.cluster.instances > 1`). A single-instance cluster
+    # has no replicas, so its `-ro` Service has no endpoints — and on some CNIs
+    # (observed on Cilium 1.20/AKS) connections to that ClusterIP are silently dropped
+    # instead of refused, so every new physical connection waits for the Npgsql
+    # connect timeout and requests 504 behind a gateway with a shorter timeout.
+    # Clusters managed outside this chart keep `-ro`, because the chart cannot know
+    # how many instances they run.
+    #
+    # `true`  — always include `-ro` (e.g. a replica exists behind an external cluster)
+    # `false` — never include `-ro` (e.g. an externally managed single-instance cluster)
+    readOnlyHost: auto
+
   # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
   service:
     # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
