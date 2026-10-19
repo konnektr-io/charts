@@ -62,8 +62,41 @@ spec:
                 secretKeyRef:
                   name: {{ include "graph.fullname" . }}-app
                   key: password
+            {{- /*
+              Build the Npgsql multi-host `Server=` list.
+
+              The CloudNativePG read-only service (`<fullname>-ro`) selects
+              `cnpg.io/instanceRole=replica`, so a CNPG cluster with a single instance
+              (the chart default) has NO endpoints behind it. On some CNIs (observed on
+              Cilium 1.20/AKS) connections to that ClusterIP are silently dropped rather
+              than refused, so every new physical connection stalls until Npgsql's
+              connect timeout expires — requests behind a gateway return 504 while
+              requests reusing a pooled connection keep working.
+
+              So only advertise `-ro` when a replica can actually exist: this chart
+              deploys the cluster (`cluster.enabled`) AND it has more than one instance
+              (`cluster.cluster.instances > 1`). Externally managed clusters keep the
+              previous behaviour (always `-ro`) unless `api.database.readOnlyHost` is
+              set explicitly. See https://github.com/konnektr-io/charts/issues/8
+            */}}
+            {{- $fullname := include "graph.fullname" . -}}
+            {{- $servers := printf "%s-rw" $fullname -}}
+            {{- $readOnlyHost := .Values.api.database.readOnlyHost | toString | lower -}}
+            {{- $hasReplica := true -}}
+            {{- if and .Values.cluster.enabled (le (int (.Values.cluster.cluster.instances | default 1)) 1) -}}
+              {{- $hasReplica = false -}}
+            {{- end -}}
+            {{- if eq $readOnlyHost "auto" -}}
+              {{- if $hasReplica -}}
+                {{- $servers = printf "%s,%s-ro" $servers $fullname -}}
+              {{- end -}}
+            {{- else if eq $readOnlyHost "true" -}}
+              {{- $servers = printf "%s,%s-ro" $servers $fullname -}}
+            {{- else if ne $readOnlyHost "false" -}}
+              {{- fail (printf "api.database.readOnlyHost must be one of \"auto\", \"true\" or \"false\" — got %q" .Values.api.database.readOnlyHost) -}}
+            {{- end }}
             - name: ConnectionStrings__agedb
-              value: "Server={{ include "graph.fullname" . }}-rw,{{ include "graph.fullname" . }}-ro;Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
+              value: "Server={{ $servers }};Port=$(AGEDB_PORT);Database=$(AGEDB_NAME);Username=$(AGEDB_USERNAME);Password=$(AGEDB_PASSWORD)"
             - name: Logging__LogLevel__Default
               value: {{ .Values.api.logLevel | quote }}
             {{- if .Values.api.openTelemetry.enabled }}
