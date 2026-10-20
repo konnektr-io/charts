@@ -92,10 +92,12 @@ api:
   config:
     authentication:
       enabled: false
-      # Konnektr Identity configuration
-      metadataAddress: https://auth.konnektr.io/.well-known/openid-configuration
-      audience: https://graph.konnektr.io
-      issuer: https://auth.konnektr.io/
+      # Required when enabled. Point these at YOUR identity provider: the values
+      # that used to ship here belonged to the retired Konnektr hosted service and
+      # no longer resolve, so they are intentionally empty.
+      metadataAddress: ""
+      audience: ""
+      issuer: ""
       # Microsoft Entra configuration
       # metadataAddress: https://login.microsoftonline.com/{tenantId}/v2.0/.well-known/openid-configuration
       # audience: https://digitaltwins.azure.net/
@@ -104,11 +106,11 @@ api:
       enabled: false
       provider: Api
       apiProvider:
-        tokenEndpoint: https://auth.konnektr.io/oauth/token
-        audience: https://ktrlplane.konnektr.io
+        tokenEndpoint: ""
+        audience: ""
         # clientId: {clientid}
         # clientSecret: {clientsecret}
-        baseUrl: http://ktrlplane-backend-service.ktrlplane.svc.cluster.local:8080
+        baseUrl: ""
         checkEndpoint: /api/v1/permissions/check
         # resourceName: {thisresource}
     # parameters:
