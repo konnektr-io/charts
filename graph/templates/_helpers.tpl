@@ -58,7 +58,7 @@ If a custom imageName is available, use it, otherwise use the defaults based on 
     {{- if .Values.api.imageName -}}
         {{- .Values.api.imageName -}}
     {{- else -}}
-        {{- printf "ghcr.io/konnektr-io/pg-age-digitaltwins/agedigitaltwins-api:%s" .Chart.AppVersion -}}
+        {{- printf "ghcr.io/konnektr-io/graph/graph-api:%s" .Chart.AppVersion -}}
     {{- end }}
 {{- end -}}
 
@@ -70,7 +70,7 @@ If a custom imageName is available, use it, otherwise use the defaults based on 
     {{- if .Values.events.imageName -}}
         {{- .Values.events.imageName -}}
     {{- else -}}
-        {{- printf "ghcr.io/konnektr-io/pg-age-digitaltwins/agedigitaltwins-events:%s" .Chart.AppVersion -}}
+        {{- printf "ghcr.io/konnektr-io/graph/graph-events:%s" .Chart.AppVersion -}}
     {{- end }}
 {{- end -}}
 
