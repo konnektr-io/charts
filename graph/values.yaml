@@ -250,13 +250,82 @@ events:
 cluster:
   enabled: false
 
+  # -- Type of the CloudNativePG cluster (`postgresql`, `postgis`, `timescaledb`).
+  #
+  # Keep `postgresql`: the konnektr-io AGE images already carry AGE + pgvector
+  # (plus PostGIS and/or TimescaleDB in the other variants), so the image is
+  # chosen with `imageCatalog.images` below, not through this type (which would
+  # select an upstream CNPG image without AGE).
   type: "postgresql"
 
   version:
-    # -- PostgreSQL major version to use
-    major: 18
-    # -- Apache AGE version to use (only necessary when using external imageCatalogRef)
-    age: "1.7.0"
+    # -- PostgreSQL major version — the only version knob the CNPG subchart reads.
+    # It becomes `imageCatalogRef.major` (so it picks the entry from
+    # `imageCatalog.images` below) and the tag of the upstream `<type>` fallback
+    # image.
+    #
+    # There is deliberately no `major`/`age` alias: the subchart ignores
+    # `version.major` entirely, and the Apache AGE release belongs to the image
+    # tags (AGE is not published for every major, so one scalar could not describe
+    # the catalog). Setting either of those keys fails the render with a pointer to
+    # the right place.
+    postgresql: "18"
+
+  # -- Image catalog for the Konnektr AGE images
+  # (https://github.com/konnektr-io/cnpg-age-containers).
+  #
+  # The CNPG `cluster` subchart renders this catalog and points the Cluster at it
+  # (`imageCatalogRef`, with `major` taken from `cluster.version.postgresql`), so
+  # the image is selected per PostgreSQL major instead of from a pinned tag. This
+  # is the chart's normal image path: `cluster.cluster.imageName` is empty by
+  # default on purpose.
+  #
+  # Only the majors actually published for a variant are listed — see the version
+  # matrix in konnektr-io/cnpg-age-containers. The default is `age-pgvector`
+  # (AGE + pgvector) because the Graph's bootstrap requires pgvector. To run
+  # another variant, replace the list with one of these blocks:
+  #
+  #   age-pgvector-postgis (AGE + pgvector + PostGIS):
+  #     - {major: 16, image: ghcr.io/konnektr-io/age-pgvector-postgis:16-1.6.0}
+  #     - {major: 17, image: ghcr.io/konnektr-io/age-pgvector-postgis:17-1.6.0}
+  #     - {major: 18, image: ghcr.io/konnektr-io/age-pgvector-postgis:18-1.8.0}
+  #
+  #   age-pgvector-timescale (AGE + pgvector + TimescaleDB — also add
+  #   `timescaledb` to cluster.cluster.postgresql.shared_preload_libraries):
+  #     - {major: 17, image: ghcr.io/konnektr-io/age-pgvector-timescale:17-1.6.0-standard-trixie}
+  #     - {major: 18, image: ghcr.io/konnektr-io/age-pgvector-timescale:18-1.8.0-standard-trixie}
+  #
+  #   age-pgvector-postgis-timescale (PostGIS + TimescaleDB):
+  #     - {major: 17, image: ghcr.io/konnektr-io/age-pgvector-postgis-timescale:17-1.6.0}
+  #     - {major: 18, image: ghcr.io/konnektr-io/age-pgvector-postgis-timescale:18-1.8.0}
+  #
+  # PostgreSQL 18 runs AGE 1.8.0: 1.8.0 is the current release and the age-pgvector
+  # / postgis / timescale tags are published for it. 16/17 stay on AGE 1.6.0, the
+  # newest release published for those majors.
+  #
+  # AGE has no in-place upgrade: `ALTER EXTENSION age UPDATE` fails with "no update
+  # path", and a database created with an older AGE keeps its old catalog when the
+  # pods move to a newer image — every cypher read then fails with "type with OID 0
+  # does not exist" while writes still land, so it breaks quietly. An EXISTING
+  # cluster moving to these tags therefore needs a fresh database (backup +
+  # restore), not a rolling image change. See README.md, "Moving to AGE 1.8.0".
+  #
+  # The bare `age` image is not offered: it has the same content as `age-pgvector`
+  # (pgvector comes from the CloudNativePG base image, so nothing installs it per
+  # variant — konnektr-io/cnpg-age-containers#3) and is kept upstream only for
+  # backwards compatibility of existing pins.
+  imageCatalog:
+    # -- Render the ImageCatalog (`<release>-cluster`) and run the Cluster from it.
+    create: true
+    # -- Image per PostgreSQL major. A major whose entry is missing makes the
+    # render fail rather than leaving CloudNativePG to fail at instance creation.
+    images:
+      - major: 16
+        image: ghcr.io/konnektr-io/age-pgvector:16-1.6.0-standard-trixie
+      - major: 17
+        image: ghcr.io/konnektr-io/age-pgvector:17-1.6.0-standard-trixie
+      - major: 18
+        image: ghcr.io/konnektr-io/age-pgvector:18-1.8.0-standard-trixie
 
   mode: standalone
 
@@ -264,9 +333,24 @@ cluster:
     # -- Number of instances
     instances: 1
 
-    # -- Name of the container image, supporting both tags (<image>:<tag>) and digests for deterministic and repeatable deployments:
-    # <image>:<tag>@sha256:<digestValue>
-    imageName: "ghcr.io/konnektr-io/age:18-1.7.0-standard-trixie"
+    # -- Name of the container image, supporting both tags (<image>:<tag>) and digests
+    # for deterministic and repeatable deployments: <image>:<tag>@sha256:<digestValue>
+    #
+    # Empty on purpose: the image comes from `cluster.imageCatalog.images` above,
+    # which is also how a variant (PostGIS, TimescaleDB) is chosen — the name
+    # states the extension set, the tag is kept in one place. A non-empty
+    # `imageCatalog.images` wins over `imageName` in the subchart, so only set this
+    # together with `imageCatalog.images: []`; the chart fails the render if both
+    # are set instead of silently ignoring one of them.
+    #
+    # Moving an EXISTING cluster onto an image that ships a different extension
+    # version does not change that database: `postInitApplicationSQL` only runs
+    # at initdb. The `age-pgvector*` images moved pgvector 0.8.6 -> 0.8.7, so
+    # reconcile the application database once after such a roll:
+    #   ALTER EXTENSION vector UPDATE;
+    # (no-op when they already match — see README.md, "After the image's
+    # extensions change").
+    imageName: ""
 
     postgresql:
       # -- PostgreSQL configuration options (postgresql.conf)
@@ -282,9 +366,25 @@ cluster:
         - age
 
     initdb:
+      # The konnektr-io AGE image variants differ in the extensions they carry
+      # (`age`/`age-pgvector`: AGE + pgvector, `age-pgvector-postgis`: + PostGIS,
+      # `age-pgvector-timescale`: + TimescaleDB, `age-pgvector-postgis-timescale`:
+      # both). The image is chosen through `cluster.imageCatalog` above, so one
+      # list has to work on every variant: the extensions that are only present
+      # in some images are created defensively — each one is attempted inside its
+      # own exception block, so a missing extension is logged (and skipped)
+      # instead of failing the bootstrap. That is what keeps consumers from
+      # having to REPLACE this list (lists replace, they do not merge) just to
+      # run the postgis image.
+      #
+      # `vector` and `age` stay unguarded on purpose: every image variant offered
+      # by `cluster.imageCatalog` is an `age-pgvector*` build, so both must be
+      # there — a wrong image should fail loudly at bootstrap rather than come up
+      # without vector search.
       postInitApplicationSQL:
         - CREATE EXTENSION vector SCHEMA public;
         - CREATE EXTENSION age;
+        - "DO $$ DECLARE e text; BEGIN FOR e IN SELECT unnest(ARRAY['postgis','postgis_topology','fuzzystrmatch','postgis_tiger_geocoder','timescaledb']) LOOP BEGIN EXECUTE 'CREATE EXTENSION IF NOT EXISTS ' || quote_ident(e); RAISE NOTICE 'konnektr graph - extension % enabled', e; EXCEPTION WHEN OTHERS THEN RAISE NOTICE 'konnektr graph - extension % not available in this image, skipped (%)', e, SQLERRM; END; END LOOP; END $$;"
         - GRANT SELECT ON ag_catalog.ag_graph TO app;
         - GRANT USAGE ON SCHEMA ag_catalog TO app;
         - ALTER USER app REPLICATION;

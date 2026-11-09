@@ -1,0 +1,34 @@
+{{/*
+Render-time validation of the cluster image configuration.
+
+This template emits no manifests: it only fails the render when values would be
+silently ignored — by the CNPG `cluster` subchart, whose image resolution order is
+`imageCatalogRef.name` -> `imageCatalog.create && imageCatalog.images` -> `imageName`,
+or by the chart itself.
+*/}}
+{{- if .Values.cluster.enabled -}}
+{{- $version := .Values.cluster.version -}}
+{{- $images := .Values.cluster.imageCatalog.images -}}
+{{- $imageName := .Values.cluster.cluster.imageName -}}
+{{- if hasKey $version "major" -}}
+{{- fail "cluster.version.major is not read by anything: the CNPG subchart takes the image major from cluster.version.postgresql (imageCatalogRef.major and the upstream image tag). Remove version.major and set version.postgresql instead." -}}
+{{- end -}}
+{{- if hasKey $version "age" -}}
+{{- fail "cluster.version.age is not used: the Apache AGE release is part of the image tags in cluster.imageCatalog.images (AGE is not published for every PostgreSQL major). Remove version.age and choose the image there." -}}
+{{- end -}}
+{{- if and $imageName (not (empty $images)) -}}
+{{- fail (printf "cluster.cluster.imageName (%s) would be ignored: the CNPG subchart prefers a non-empty cluster.imageCatalog.images. Move that image into cluster.imageCatalog.images under its PostgreSQL major, or set cluster.imageCatalog.images: [] to pin the image directly." $imageName) -}}
+{{- end -}}
+{{- if and (empty $imageName) (or (empty $images) (not .Values.cluster.imageCatalog.create)) -}}
+{{- fail "no Apache AGE image would be used: with cluster.imageCatalog.images empty (or cluster.imageCatalog.create false) and cluster.cluster.imageName unset, the CNPG subchart falls back to its own `<type>` default image, which has no AGE. Keep the catalog enabled with images, or set cluster.cluster.imageName." -}}
+{{- end -}}
+{{- if not (empty $images) -}}
+{{- $majors := list -}}
+{{- range $images -}}
+{{- $majors = append $majors (toString .major) -}}
+{{- end -}}
+{{- if not (has (toString $version.postgresql) $majors) -}}
+{{- fail (printf "cluster.version.postgresql (%v) has no entry in cluster.imageCatalog.images (entries for majors: %s), so CloudNativePG would find no image for this cluster" $version.postgresql (join ", " $majors)) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
