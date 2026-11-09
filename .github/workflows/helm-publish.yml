@@ -49,6 +49,12 @@ jobs:
       - name: Verify graph database connection string
         run: ./scripts/verify-graph-connection-string.sh
 
+      # Same reasoning for the AGE image catalogs and the bootstrap SQL: the
+      # render proves nothing about WHICH image or SQL a consumer ends up with.
+      # See konnektr-io/charts#2.
+      - name: Verify graph AGE image catalogs
+        run: ./scripts/verify-graph-image-catalog.sh
+
     # This job should run before packaging and publishing
     # If it fails, the workflow will not continue
 
